@@ -1,5 +1,5 @@
 Flow report for Pruebapwm
-Mon Jun 14 22:55:23 2021
+Wed Jun 16 12:23:50 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 14 22:55:23 2021       ;
+; Flow Status                        ; Successful - Wed Jun 16 12:23:50 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Pruebapwm                                   ;
-; Top-level Entity Name              ; pwm_basico                                  ;
+; Top-level Entity Name              ; pwm_mejorado                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10E22C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 37 / 10,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 37 / 10,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 29 / 10,320 ( < 1 % )                       ;
-; Total registers                    ; 29                                          ;
-; Total pins                         ; 11 / 92 ( 12 % )                            ;
+; Total logic elements               ; 45 / 10,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 43 / 10,320 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 24 / 10,320 ( < 1 % )                       ;
+; Total registers                    ; 24                                          ;
+; Total pins                         ; 12 / 92 ( 13 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                              ;
@@ -65,38 +65,42 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/14/2021 22:55:02 ;
+; Start date & time ; 06/16/2021 12:23:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Pruebapwm           ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 104156968683347.162372930204244        ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; pwm_basico_tb  ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; pwm_basico_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; pwm_basico_tb.v                        ; --            ; --          ; pwm_basico_tb  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; pwm_basico_tb                          ; --            ; --          ; pwm_basico_tb  ;
-; EDA_TEST_BENCH_NAME                  ; pwm_basico_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; pwm_basico  ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; pwm_basico  ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; pwm_basico  ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; pwm_basico                             ; Pruebapwm     ; --          ; --             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++--------------------------------------+----------------------------------------+---------------+--------------+-----------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name  ; Section Id      ;
++--------------------------------------+----------------------------------------+---------------+--------------+-----------------+
+; COMPILER_SIGNATURE_ID                ; 104156968683347.162386421013864        ; --            ; --           ; --              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --           ; pwm_mejorado_tb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --           ; pwm_basico_tb   ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; pwm_mejorado_tb                        ; --            ; --           ; eda_simulation  ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --           ; eda_simulation  ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --           ; --              ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --           ; eda_simulation  ;
+; EDA_TEST_BENCH_FILE                  ; pwm_mejorado_tb.v                      ; --            ; --           ; pwm_mejorado_tb ;
+; EDA_TEST_BENCH_FILE                  ; pwm_basico_tb.v                        ; --            ; --           ; pwm_basico_tb   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; pwm_mejorado_tb                        ; --            ; --           ; pwm_mejorado_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; pwm_basico_tb                          ; --            ; --           ; pwm_basico_tb   ;
+; EDA_TEST_BENCH_NAME                  ; pwm_basico_tb                          ; --            ; --           ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; pwm_mejorado_tb                        ; --            ; --           ; eda_simulation  ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --           ; eda_simulation  ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --           ; --              ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --           ; --              ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --           ; --              ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; pwm_mejorado ; Top             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; pwm_mejorado ; Top             ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; pwm_mejorado ; Top             ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --           ; --              ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --           ; --              ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --           ; --              ;
+; TOP_LEVEL_ENTITY                     ; pwm_mejorado                           ; Pruebapwm     ; --           ; --              ;
++--------------------------------------+----------------------------------------+---------------+--------------+-----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -104,12 +108,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4747 MB             ; 00:00:24                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5485 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4678 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4751 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4756 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5482 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4760 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

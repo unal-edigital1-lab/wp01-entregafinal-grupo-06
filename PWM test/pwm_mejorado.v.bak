@@ -2,27 +2,25 @@
 
 
 
-module pwm_mejorado
+module pwm_improved
     #(parameter R = 8, TIMER_BITS = 15)(
     input clk,
     input reset,
     input [R:0] ciclo, 
-    //input [TIMER_BITS - 1:0] FINAL_VALUE, 
+    input [TIMER_BITS - 1:0] FINAL_VALUE, 
     output pwm_out
     );
     
-    wire resetn;
-	 assign resetn=~reset;
-	 
-    reg [TIMER_BITS - 1:0] FINAL_VALUE=15'd10000;
+    
+    
     reg [R - 1:0] Q_reg, Q_next;
     reg d_reg, d_next;
     wire tick;
     
     
-    always @(posedge clk, negedge reset)
+    always @(posedge clk, negedge reset_n)
     begin
-        if (~reset)
+        if (~reset_n)
         begin
             Q_reg <= 'b0;
             d_reg <= 1'b0;
@@ -51,9 +49,9 @@ module pwm_mejorado
     
 
     
-    timer #(.BITS(TIMER_BITS)) timer0 (
+    timer_input #(.BITS(TIMER_BITS)) timer0 (
         .clk(clk),
-        .reset(reset),
+        .reset_n(reset_n),
         .enable(1'b1),
         .FINAL_VALUE(FINAL_VALUE),
         .done(tick)

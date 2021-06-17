@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ciclo[8]",
+					"strict" : false
+				},
+				{
 					"name" : "ciclo[7]",
 					"strict" : false
 				},
@@ -40,11 +44,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "reset",
 					"strict" : false
 				}
 			]
