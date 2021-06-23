@@ -1,0 +1,40 @@
+|pwm_basico
+clk => cfreq[0].CLK
+clk => cfreq[1].CLK
+clk => cfreq[2].CLK
+clk => cfreq[3].CLK
+clk => cfreq[4].CLK
+clk => cfreq[5].CLK
+clk => cfreq[6].CLK
+clk => cfreq[7].CLK
+clk => cfreq[8].CLK
+clk => cfreq[9].CLK
+clk => cfreq[10].CLK
+clk => cfreq[11].CLK
+clk => cfreq[12].CLK
+clk => cfreq[13].CLK
+clk => cfreq[14].CLK
+clk => cfreq[15].CLK
+clk => cfreq[16].CLK
+clk => cfreq[17].CLK
+clk => cfreq[18].CLK
+clk => cfreq[19].CLK
+clk => cfreq[20].CLK
+clk => cfreq[21].CLK
+clk => cfreq[22].CLK
+clk => cfreq[23].CLK
+clk => cfreq[24].CLK
+clk => cfreq[25].CLK
+clk => cfreq[26].CLK
+reset => Q_reg[0].ACLR
+reset => Q_reg[1].ACLR
+reset => Q_reg[2].ACLR
+reset => Q_reg[3].ACLR
+reset => Q_reg[4].ACLR
+reset => Q_reg[5].ACLR
+reset => Q_reg[6].ACLR
+reset => Q_reg[7].ACLR
+pwm_out << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+enable << cfreq[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
