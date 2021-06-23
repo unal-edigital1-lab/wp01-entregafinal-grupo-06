@@ -1,5 +1,4 @@
 # Reading pref.tcl
-# ERROR: No extended dataflow license exists
 # do Pruebapwm_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -11,44 +10,33 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM\ test {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_mejorado.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM\ test {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_basico.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:00:48 on Jun 16,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_mejorado.v 
-# -- Compiling module pwm_mejorado
+# Start time: 17:30:30 on Jun 23,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_basico.v 
+# -- Compiling module pwm_basico
 # 
 # Top level modules:
-# 	pwm_mejorado
-# End time: 12:00:48 on Jun 16,2021, Elapsed time: 0:00:00
+# 	pwm_basico
+# End time: 17:30:30 on Jun 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM\ test {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/timer.v}
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM\ test {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_basico_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:00:48 on Jun 16,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/timer.v 
-# -- Compiling module timer
+# Start time: 17:30:31 on Jun 23,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_basico_tb.v 
+# -- Compiling module pwm_basico_tb
 # 
 # Top level modules:
-# 	timer
-# End time: 12:00:48 on Jun 16,2021, Elapsed time: 0:00:00
+# 	pwm_basico_tb
+# End time: 17:30:31 on Jun 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM\ test {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_mejorado_tb.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:00:48 on Jun 16,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_mejorado_tb.v 
-# -- Compiling module pwm_mejorado_tb
-# 
-# Top level modules:
-# 	pwm_mejorado_tb
-# End time: 12:00:49 on Jun 16,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  pwm_mejorado_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" pwm_mejorado_tb 
-# Start time: 12:00:49 on Jun 16,2021
-# Loading work.pwm_mejorado_tb
-# Loading work.pwm_mejorado
-# Loading work.timer
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  pwm_basico_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" pwm_basico_tb 
+# Start time: 17:30:31 on Jun 23,2021
+# Loading work.pwm_basico_tb
+# Loading work.pwm_basico
 # 
 # add wave *
 # view structure
@@ -56,8 +44,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_mejorado_tb.v(28)
-#    Time: 3584 us  Iteration: 0  Instance: /pwm_mejorado_tb
-# Break in Module pwm_mejorado_tb at C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_mejorado_tb.v line 28
-# End time: 12:02:35 on Jun 16,2021, Elapsed time: 0:01:46
+# ** Note: $stop    : C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_basico_tb.v(23)
+#    Time: 143360 ns  Iteration: 0  Instance: /pwm_basico_tb
+# Break in Module pwm_basico_tb at C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/pwm_basico_tb.v line 23
+# End time: 17:31:23 on Jun 23,2021, Elapsed time: 0:00:52
 # Errors: 0, Warnings: 0

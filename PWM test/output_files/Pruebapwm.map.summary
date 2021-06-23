@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Jun 16 12:23:39 2021
+Analysis & Synthesis Status : Successful - Wed Jun 23 17:29:45 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Pruebapwm
-Top-level Entity Name : pwm_mejorado
+Top-level Entity Name : pwm_basico
 Family : Cyclone IV E
-Total logic elements : 43
-    Total combinational functions : 43
-    Dedicated logic registers : 24
-Total registers : 24
-Total pins : 12
+Total logic elements : 23
+    Total combinational functions : 23
+    Dedicated logic registers : 20
+Total registers : 20
+Total pins : 11
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

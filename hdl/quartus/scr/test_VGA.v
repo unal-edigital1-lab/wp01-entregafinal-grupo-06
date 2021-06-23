@@ -42,7 +42,7 @@ module test_VGA(
 parameter CAM_SCREEN_X = 184;
 parameter CAM_SCREEN_Y = 184;
 
-localparam AW = 16; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
+localparam AW = 6; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
 localparam DW = 6;
 
 // El color es RGB 222
@@ -77,8 +77,6 @@ por lo tanto, los bits menos significactivos deben ser cero
 	assign VGA_R = data_RGB444[5:4];
 	assign VGA_G = data_RGB444[3:2];
 	assign VGA_B = data_RGB444[1:0];
-
-
 
 
 
@@ -137,7 +135,6 @@ VGA_Driver640x480 VGA640x480
 	.posY(VGA_posY) 			// posición en vertical  del pixel siguiente
 
 );
-
  
 /* ****************************************************************************
 LÓgica para actualizar el pixel acorde con la buffer de memoria y el pixel de 
@@ -146,10 +143,55 @@ adicionales seran iguales al color del último pixel de memoria
 **************************************************************************** */
 
 always @ (VGA_posX, VGA_posY) begin
-		if ((VGA_posX>CAM_SCREEN_X-1) || (VGA_posY>CAM_SCREEN_Y-1))
+
+		if ((VGA_posX<=160) && (VGA_posY<=120))
 			DP_RAM_addr_out=0;
-		else
-			DP_RAM_addr_out=VGA_posX+VGA_posY*CAM_SCREEN_Y;
+			
+		else if ((VGA_posX<=320) && (VGA_posY<=120))
+			DP_RAM_addr_out=16;
+			
+		else if ((VGA_posX<=480) && (VGA_posY<=120))
+			DP_RAM_addr_out=55;
+			
+		else if ((VGA_posX<=640) && (VGA_posY<=120))
+			DP_RAM_addr_out=40;
+			
+		else if ((VGA_posX<=160) && (VGA_posY<=240))
+			DP_RAM_addr_out=1;
+		
+		else if ((VGA_posX<=320) && (VGA_posY<=240))
+			DP_RAM_addr_out=12;
+		
+		else if ((VGA_posX<=480) && (VGA_posY<=240))
+			DP_RAM_addr_out=52;
+		
+		else if ((VGA_posX<=640) && (VGA_posY<=240))
+			DP_RAM_addr_out=17;
+		
+		else if ((VGA_posX<=160) && (VGA_posY<=360))
+			DP_RAM_addr_out=34;
+		
+		else if ((VGA_posX<=320) && (VGA_posY<=360))
+			DP_RAM_addr_out=46;
+		
+		else if ((VGA_posX<=480) && (VGA_posY<=360))
+			DP_RAM_addr_out=5;
+		
+		else if ((VGA_posX<=640) && (VGA_posY<=360))
+			DP_RAM_addr_out=30;
+		
+		else if ((VGA_posX<=160) && (VGA_posY<=480))
+			DP_RAM_addr_out=0;
+		
+		else if ((VGA_posX<=320) && (VGA_posY<=480))
+			DP_RAM_addr_out=15;
+		
+		else if ((VGA_posX<=480) && (VGA_posY<=480))
+			DP_RAM_addr_out=24;
+		
+		else if ((VGA_posX<=640) && (VGA_posY<=480))
+			DP_RAM_addr_out=63;
+
 end
 
 

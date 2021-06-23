@@ -6,7 +6,7 @@ module pwm_basico_tb(
 	localparam R = 8;
 	localparam T = 10;
 	reg clk, reset;
-	reg[R - 1:0] ciclo;
+	wire [R - 1:0]ciclo;
 	wire pwm_out;
 	
 	//instanciacion del modulo
@@ -20,7 +20,7 @@ module pwm_basico_tb(
 	
 	
 	initial
-		#(7 * 2**R * T) $stop;
+		#(7 * 2**(R+3) * T) $stop;
 		
 		
 	//Generando señal de reloj
@@ -39,7 +39,6 @@ module pwm_basico_tb(
 		reset = 1'b0;
 		#2
 		reset = 1'b1;
-		ciclo = 0.25 * (2**R);
 
 	end
 		
