@@ -5,16 +5,16 @@ VGA_Hsync_n << VGA_Driver640x480:VGA640x480.Hsync_n
 VGA_Vsync_n << VGA_Driver640x480:VGA640x480.Vsync_n
 VGA_R[0] << VGA_Driver640x480:VGA640x480.pixelOut
 VGA_R[1] << VGA_Driver640x480:VGA640x480.pixelOut
-VGA_R[2] << VGA_Driver640x480:VGA640x480.pixelOut
-VGA_R[3] << VGA_Driver640x480:VGA640x480.pixelOut
+VGA_R[2] << <GND>
+VGA_R[3] << <GND>
 VGA_G[0] << VGA_Driver640x480:VGA640x480.pixelOut
 VGA_G[1] << VGA_Driver640x480:VGA640x480.pixelOut
-VGA_G[2] << VGA_Driver640x480:VGA640x480.pixelOut
-VGA_G[3] << VGA_Driver640x480:VGA640x480.pixelOut
+VGA_G[2] << <GND>
+VGA_G[3] << <GND>
 VGA_B[0] << VGA_Driver640x480:VGA640x480.pixelOut
 VGA_B[1] << VGA_Driver640x480:VGA640x480.pixelOut
-VGA_B[2] << VGA_Driver640x480:VGA640x480.pixelOut
-VGA_B[3] << VGA_Driver640x480:VGA640x480.pixelOut
+VGA_B[2] << <GND>
+VGA_B[3] << <GND>
 clkout << clk25M.DB_MAX_OUTPUT_PORT_TYPE
 bntr => ~NO_FANOUT~
 bntl => ~NO_FANOUT~
@@ -22,6 +22,7 @@ bntl => ~NO_FANOUT~
 
 |test_VGA|buffer_ram_dp:DP_RAM
 clk_w => ram.we_a.CLK
+clk_w => ram.waddr_a[15].CLK
 clk_w => ram.waddr_a[14].CLK
 clk_w => ram.waddr_a[13].CLK
 clk_w => ram.waddr_a[12].CLK
@@ -37,12 +38,6 @@ clk_w => ram.waddr_a[3].CLK
 clk_w => ram.waddr_a[2].CLK
 clk_w => ram.waddr_a[1].CLK
 clk_w => ram.waddr_a[0].CLK
-clk_w => ram.data_a[11].CLK
-clk_w => ram.data_a[10].CLK
-clk_w => ram.data_a[9].CLK
-clk_w => ram.data_a[8].CLK
-clk_w => ram.data_a[7].CLK
-clk_w => ram.data_a[6].CLK
 clk_w => ram.data_a[5].CLK
 clk_w => ram.data_a[4].CLK
 clk_w => ram.data_a[3].CLK
@@ -80,6 +75,8 @@ addr_in[13] => ram.waddr_a[13].DATAIN
 addr_in[13] => ram.WADDR13
 addr_in[14] => ram.waddr_a[14].DATAIN
 addr_in[14] => ram.WADDR14
+addr_in[15] => ram.waddr_a[15].DATAIN
+addr_in[15] => ram.WADDR15
 data_in[0] => ram.data_a[0].DATAIN
 data_in[0] => ram.DATAIN
 data_in[1] => ram.data_a[1].DATAIN
@@ -92,18 +89,6 @@ data_in[4] => ram.data_a[4].DATAIN
 data_in[4] => ram.DATAIN4
 data_in[5] => ram.data_a[5].DATAIN
 data_in[5] => ram.DATAIN5
-data_in[6] => ram.data_a[6].DATAIN
-data_in[6] => ram.DATAIN6
-data_in[7] => ram.data_a[7].DATAIN
-data_in[7] => ram.DATAIN7
-data_in[8] => ram.data_a[8].DATAIN
-data_in[8] => ram.DATAIN8
-data_in[9] => ram.data_a[9].DATAIN
-data_in[9] => ram.DATAIN9
-data_in[10] => ram.data_a[10].DATAIN
-data_in[10] => ram.DATAIN10
-data_in[11] => ram.data_a[11].DATAIN
-data_in[11] => ram.DATAIN11
 regwrite => ram.we_a.DATAIN
 regwrite => ram.WE
 clk_r => data_out[0]~reg0.CLK
@@ -112,12 +97,6 @@ clk_r => data_out[2]~reg0.CLK
 clk_r => data_out[3]~reg0.CLK
 clk_r => data_out[4]~reg0.CLK
 clk_r => data_out[5]~reg0.CLK
-clk_r => data_out[6]~reg0.CLK
-clk_r => data_out[7]~reg0.CLK
-clk_r => data_out[8]~reg0.CLK
-clk_r => data_out[9]~reg0.CLK
-clk_r => data_out[10]~reg0.CLK
-clk_r => data_out[11]~reg0.CLK
 addr_out[0] => ram.RADDR
 addr_out[1] => ram.RADDR1
 addr_out[2] => ram.RADDR2
@@ -133,18 +112,13 @@ addr_out[11] => ram.RADDR11
 addr_out[12] => ram.RADDR12
 addr_out[13] => ram.RADDR13
 addr_out[14] => ram.RADDR14
+addr_out[15] => ram.RADDR15
 data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[10] <= data_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[11] <= data_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 reset => ~NO_FANOUT~
 
 
@@ -196,9 +170,6 @@ pixelIn[5] => pixelOut.DATAB
 pixelIn[6] => pixelOut.DATAB
 pixelIn[7] => pixelOut.DATAB
 pixelIn[8] => pixelOut.DATAB
-pixelIn[9] => pixelOut.DATAB
-pixelIn[10] => pixelOut.DATAB
-pixelIn[11] => pixelOut.DATAB
 pixelOut[0] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
 pixelOut[1] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
 pixelOut[2] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
@@ -208,9 +179,6 @@ pixelOut[5] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
 pixelOut[6] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
 pixelOut[7] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
 pixelOut[8] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
-pixelOut[9] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
-pixelOut[10] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
-pixelOut[11] <= pixelOut.DB_MAX_OUTPUT_PORT_TYPE
 Hsync_n <= Hsync_n.DB_MAX_OUTPUT_PORT_TYPE
 Vsync_n <= Vsync_n.DB_MAX_OUTPUT_PORT_TYPE
 posX[0] <= countX[0].DB_MAX_OUTPUT_PORT_TYPE

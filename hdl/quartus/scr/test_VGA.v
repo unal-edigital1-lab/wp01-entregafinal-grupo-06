@@ -39,16 +39,16 @@ module test_VGA(
 );
 
 // TAMAÑO DE visualización 
-parameter CAM_SCREEN_X = 160;
-parameter CAM_SCREEN_Y = 120;
+parameter CAM_SCREEN_X = 184;
+parameter CAM_SCREEN_Y = 184;
 
-localparam AW = 15; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
-localparam DW = 12;
+localparam AW = 16; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
+localparam DW = 6;
 
-// El color es RGB 444
-localparam RED_VGA =   12'b111100000000;
-localparam GREEN_VGA = 12'b000011110000;
-localparam BLUE_VGA =  12'b000000001111;
+// El color es RGB 222
+localparam RED_VGA =   6'b110000;
+localparam GREEN_VGA = 6'b001100;
+localparam BLUE_VGA =  6'b000011;
 
 
 // Clk 
@@ -74,9 +74,9 @@ wire [8:0]VGA_posY;		   // Determinar la pos de memoria que viene del VGA
 la pantalla VGA es RGB 444, pero el almacenamiento en memoria se hace 332
 por lo tanto, los bits menos significactivos deben ser cero
 **************************************************************************** */
-	assign VGA_R = data_RGB444[11:8];
-	assign VGA_G = data_RGB444[7:4];
-	assign VGA_B = data_RGB444[3:0];
+	assign VGA_R = data_RGB444[5:4];
+	assign VGA_G = data_RGB444[3:2];
+	assign VGA_B = data_RGB444[1:0];
 
 
 
@@ -108,7 +108,7 @@ buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
 Se debe configurar AW  según los calculos realizados en el Wp01
 se recomiendia dejar DW a 8, con el fin de optimizar recursos  y hacer RGB 332
 **************************************************************************** */
-buffer_ram_dp #( AW,DW,"C:/Users/UECCI/Desktop/proyecto_digital1 2020-2/quartus/scr/image.men")
+buffer_ram_dp #( AW,DW,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/hdl/quartus/scr/image.men")
 	DP_RAM(  
 	.clk_w(clk25M), 
 	.addr_in(DP_RAM_addr_in), 
@@ -147,7 +147,7 @@ adicionales seran iguales al color del último pixel de memoria
 
 always @ (VGA_posX, VGA_posY) begin
 		if ((VGA_posX>CAM_SCREEN_X-1) || (VGA_posY>CAM_SCREEN_Y-1))
-			DP_RAM_addr_out=19212;
+			DP_RAM_addr_out=0;
 		else
 			DP_RAM_addr_out=VGA_posX+VGA_posY*CAM_SCREEN_Y;
 end

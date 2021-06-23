@@ -50,8 +50,13 @@ always @(posedge clk_r) begin
 end
 
 
+reg [7:0] contadorX;
+reg [7:0] contadorY;
+reg [15:0] contadorM;
+
 initial begin
-	$readmemh(imageFILE, ram);
+$readmemb(imageFILE, ram);
+	
 //	ram[0] = 0;
 //	ram[1] = 12'b111111111111;
 end

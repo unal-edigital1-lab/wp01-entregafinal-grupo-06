@@ -82,8 +82,8 @@ module test_VGA_TB;
 	/* ecsritura de log para cargar se cargados en https://ericeastwood.com/lab/vga-simulator/*/
 	initial forever begin
 	@(posedge clk_w)
-		$fwrite(f,"%0t ps: %b %b %b %b %b\n",$time,VGA_Hsync_n, VGA_Vsync_n, VGA_R[3:1],VGA_G[3:1],VGA_B[3:2]);
-		$display("%0t ps: %b %b %b %b %b\n",$time,VGA_Hsync_n, VGA_Vsync_n, VGA_R[3:1],VGA_G[3:1],VGA_B[3:2]);
+		$fwrite(f,"%0t ps: %b %b %b %b %b\n",$time,VGA_Hsync_n, VGA_Vsync_n, VGA_R[2:0],VGA_G[2:0],VGA_B[1:0]);
+		$display("%0t ps: %b %b %b %b %b\n",$time,VGA_Hsync_n, VGA_Vsync_n, VGA_R[3:0],VGA_G[3:0],VGA_B[3:0]);
 		
 	end
 	
