@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 module pwm_basico
-	#(parameter R = 8,parameter F = 0)(
+	#(parameter R = 11,parameter F = 2)(
 	
 	/*
 	El divisor de frecuencia total en F=0 y R=8 es de 10^12, es decir, de 50M, queda en 12.2k, 

@@ -1,5 +1,5 @@
-Analysis & Synthesis report for PWM
-Fri Jun 25 16:19:22 2021
+Analysis & Elaboration report for PWM
+Fri Jun 25 16:47:41 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,20 +7,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |pwm_basico
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |pwm_basico
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
@@ -45,27 +36,54 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 25 16:19:22 2021       ;
+; Analysis & Elaboration Status      ; Successful - Fri Jun 25 16:47:41 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; PWM                                         ;
 ; Top-level Entity Name              ; pwm_basico                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 18                                          ;
-;     Total combinational functions  ; 18                                          ;
-;     Dedicated logic registers      ; 9                                           ;
-; Total registers                    ; 9                                           ;
-; Total pins                         ; 4                                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |pwm_basico ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; R              ; 11    ; Signed Integer                                    ;
+; F              ; 2     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -150,204 +168,36 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; ../pwm_basico.v                  ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 18       ;
-;                                             ;          ;
-; Total combinational functions               ; 18       ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 3        ;
-;     -- 3 input functions                    ; 5        ;
-;     -- <=2 input functions                  ; 10       ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 12       ;
-;     -- arithmetic mode                      ; 6        ;
-;                                             ;          ;
-; Total registers                             ; 9        ;
-;     -- Dedicated logic registers            ; 9        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 4        ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; cfreq[0] ;
-; Maximum fan-out                             ; 10       ;
-; Total fan-out                               ; 76       ;
-; Average fan-out                             ; 2.17     ;
-+---------------------------------------------+----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |pwm_basico                ; 18 (18)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |pwm_basico         ; pwm_basico  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; caso[1]                                            ; Equal0              ; yes                    ;
-; caso[0]                                            ; Equal0              ; yes                    ;
-; caso[2]                                            ; Equal0              ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; cfreq[1..26]                           ; Lost fanout        ;
-; Total Number of Removed Registers = 26 ;                    ;
-+----------------------------------------+--------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                           ;
-+---------------+--------------------+--------------------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register           ;
-+---------------+--------------------+--------------------------------------------------+
-; cfreq[6]      ; Lost Fanouts       ; cfreq[5], cfreq[4], cfreq[1], cfreq[3], cfreq[2] ;
-+---------------+--------------------+--------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 9     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |pwm_basico ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; R              ; 8     ; Signed Integer                                    ;
-; F              ; 0     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 9                           ;
-;     CLR               ; 8                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 18                          ;
-;     arith             ; 6                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 12                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 3                           ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.99                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jun 25 16:19:08 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM -c PWM
+    Info: Processing started: Fri Jun 25 16:47:32 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM -c PWM --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andre/documents/github/wp01-testvga-grupo-6/timer.v
-    Info (12023): Found entity 1: timer File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/timer.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andre/documents/github/wp01-testvga-grupo-6/pwm_basico_tb.v
-    Info (12023): Found entity 1: pwm_basico_tb File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andre/documents/github/wp01-testvga-grupo-6/pwm_basico.v
-    Info (12023): Found entity 1: pwm_basico File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/equip/documents/github/wp01-testvga-grupo-6/timer.v
+    Info (12023): Found entity 1: timer File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/timer.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /users/equip/documents/github/wp01-testvga-grupo-6/pwm_basico_tb.v
+    Info (12023): Found entity 1: pwm_basico_tb File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/equip/documents/github/wp01-testvga-grupo-6/pwm_basico.v
+    Info (12023): Found entity 1: pwm_basico File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 3
 Info (12127): Elaborating entity "pwm_basico" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(33): truncated value with size 32 to match size of target (27) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 33
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(43): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 43
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(49): truncated value with size 32 to match size of target (3) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(52): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 52
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(59): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 59
-Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(49): inferring latch(es) for variable "caso", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
-Info (10041): Inferred latch for "caso[0]" at pwm_basico.v(49) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
-Info (10041): Inferred latch for "caso[1]" at pwm_basico.v(49) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
-Info (10041): Inferred latch for "caso[2]" at pwm_basico.v(49) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 26 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 18 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Fri Jun 25 16:19:22 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(33): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 33
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(43): truncated value with size 32 to match size of target (11) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 43
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(49): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(52): truncated value with size 32 to match size of target (11) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 52
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(59): truncated value with size 32 to match size of target (11) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(49): inferring latch(es) for variable "caso", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (10041): Inferred latch for "caso[0]" at pwm_basico.v(49) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (10041): Inferred latch for "caso[1]" at pwm_basico.v(49) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (10041): Inferred latch for "caso[2]" at pwm_basico.v(49) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Fri Jun 25 16:47:41 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
