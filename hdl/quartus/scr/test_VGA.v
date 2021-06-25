@@ -50,7 +50,6 @@ localparam RED_VGA =   6'b110000;
 localparam GREEN_VGA = 6'b001100;
 localparam BLUE_VGA =  6'b000011;
 
-
 // Clk 
 wire clk12M;
 wire clk25M;
@@ -96,11 +95,12 @@ cl_25_24_quartus clk25(
 	
 );
 */
-
-
-assign clk25M=clk;
+	reg [1:0] cfreq=0;
+	assign clk25M = cfreq[0];
+	always @(posedge clk) begin
+			cfreq<=cfreq+1;
+	end
 assign clkout=clk25M;
-
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
 Se debe configurar AW  según los calculos realizados en el Wp01
@@ -112,7 +112,6 @@ buffer_ram_dp #( AW,DW,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/hdl
 	.addr_in(DP_RAM_addr_in), 
 	.data_in(DP_RAM_data_in),
 	.regwrite(DP_RAM_regW), 
-	
 	.clk_r(clk25M), 
 	.addr_out(DP_RAM_addr_out),
 	.data_out(data_mem)
@@ -194,13 +193,15 @@ always @ (VGA_posX, VGA_posY) begin
 
 end
 
-
 //assign DP_RAM_addr_out=10000;
 
 /*****************************************************************************
 
 este bloque debe crear un nuevo archivo 
 **************************************************************************** */
+ 
+ /*
+ 
  FSM_game  juego(
 	 	.clk(clk25M),
 		.rst(rst),
@@ -210,4 +211,6 @@ este bloque debe crear un nuevo archivo
 		.mem_px_data(DP_RAM_data_in),
 		.px_wr(DP_RAM_regW)
    );
+	
+	*/
 endmodule
