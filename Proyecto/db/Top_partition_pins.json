@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "col[0]",
+					"strict" : false
+				},
+				{
+					"name" : "col[1]",
+					"strict" : false
+				},
+				{
+					"name" : "col[2]",
+					"strict" : false
+				},
+				{
+					"name" : "col[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led[8]",
+					"strict" : false
+				},
+				{
+					"name" : "led[9]",
+					"strict" : false
+				},
+				{
+					"name" : "led[10]",
+					"strict" : false
+				},
+				{
+					"name" : "led[11]",
+					"strict" : false
+				},
+				{
+					"name" : "led[12]",
+					"strict" : false
+				},
+				{
+					"name" : "led[13]",
+					"strict" : false
+				},
+				{
+					"name" : "led[14]",
+					"strict" : false
+				},
+				{
+					"name" : "led[15]",
+					"strict" : false
+				},
+				{
+					"name" : "opr",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "fila[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
