@@ -19,7 +19,7 @@
 module buffer_ram_dp#( 
 	parameter AW = 15, // Cantidad de bits  de la direccin 
 	parameter DW = 12, // cantidad de Bits de los datos 
-	parameter   imageFILE= "image.men")
+	parameter   imageFILE= "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/hdl/quartus/scr/image.men")
 	(  
 	input  clk_w, 
 	input  [AW-1: 0] addr_in, 

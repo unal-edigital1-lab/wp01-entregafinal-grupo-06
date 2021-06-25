@@ -25,9 +25,9 @@ module test_VGA(
 	// VGA input/output  
     output wire VGA_Hsync_n,  // horizontal sync output
     output wire VGA_Vsync_n,  // vertical sync output
-    output wire [3:0] VGA_R,	// 4-bit VGA red output
-    output wire [3:0] VGA_G,  // 4-bit VGA green output
-    output wire [3:0] VGA_B,  // 4-bit VGA blue output
+    output wire VGA_R,	// 4-bit VGA red output
+    output wire VGA_G,  // 4-bit VGA green output
+    output wire VGA_B,  // 4-bit VGA blue output
     output wire clkout,  
  	
 	// input/output
@@ -42,13 +42,13 @@ module test_VGA(
 parameter CAM_SCREEN_X = 184;
 parameter CAM_SCREEN_Y = 184;
 
-localparam AW = 6; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
-localparam DW = 6;
+localparam AW = 4; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
+localparam DW = 3;
 
 // El color es RGB 222
-localparam RED_VGA =   6'b110000;
-localparam GREEN_VGA = 6'b001100;
-localparam BLUE_VGA =  6'b000011;
+localparam RED_VGA =   3'b100;
+localparam GREEN_VGA = 3'b010;
+localparam BLUE_VGA =  3'b001;
 
 // Clk 
 wire clk12M;
@@ -73,9 +73,9 @@ wire [8:0]VGA_posY;		   // Determinar la pos de memoria que viene del VGA
 la pantalla VGA es RGB 444, pero el almacenamiento en memoria se hace 332
 por lo tanto, los bits menos significactivos deben ser cero
 **************************************************************************** */
-	assign VGA_R = data_RGB444[5:4];
-	assign VGA_G = data_RGB444[3:2];
-	assign VGA_B = data_RGB444[1:0];
+	assign VGA_R = data_RGB444[2];
+	assign VGA_G = data_RGB444[1];
+	assign VGA_B = data_RGB444[0];
 
 
 
@@ -106,7 +106,7 @@ buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
 Se debe configurar AW  según los calculos realizados en el Wp01
 se recomiendia dejar DW a 8, con el fin de optimizar recursos  y hacer RGB 332
 **************************************************************************** */
-buffer_ram_dp #( AW,DW,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/hdl/quartus/scr/image.men")
+buffer_ram_dp #( AW,DW,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/hdl/quartus/scr/image.men")
 	DP_RAM(  
 	.clk_w(clk25M), 
 	.addr_in(DP_RAM_addr_in), 
@@ -123,7 +123,7 @@ VGA_Driver640x480
 **************************************************************************** */
 VGA_Driver640x480 VGA640x480
 (
-	.rst(rst),
+	.rst(~rst),
 	.clk(clk25M), 				// 25MHz  para 60 hz de 640x480
 	.pixelIn(data_mem), 		// entrada del valor de color  pixel RGB 444 
 //	.pixelIn(RED_VGA), 		// entrada del valor de color  pixel RGB 444 
@@ -147,49 +147,49 @@ always @ (VGA_posX, VGA_posY) begin
 			DP_RAM_addr_out=0;
 			
 		else if ((VGA_posX<=320) && (VGA_posY<=120))
-			DP_RAM_addr_out=16;
+			DP_RAM_addr_out=1;
 			
 		else if ((VGA_posX<=480) && (VGA_posY<=120))
 			DP_RAM_addr_out=55;
 			
 		else if ((VGA_posX<=640) && (VGA_posY<=120))
-			DP_RAM_addr_out=40;
+			DP_RAM_addr_out=2;
 			
 		else if ((VGA_posX<=160) && (VGA_posY<=240))
-			DP_RAM_addr_out=1;
+			DP_RAM_addr_out=3;
 		
 		else if ((VGA_posX<=320) && (VGA_posY<=240))
-			DP_RAM_addr_out=12;
+			DP_RAM_addr_out=4;
 		
 		else if ((VGA_posX<=480) && (VGA_posY<=240))
-			DP_RAM_addr_out=52;
+			DP_RAM_addr_out=5;
 		
 		else if ((VGA_posX<=640) && (VGA_posY<=240))
-			DP_RAM_addr_out=17;
+			DP_RAM_addr_out=6;
 		
 		else if ((VGA_posX<=160) && (VGA_posY<=360))
-			DP_RAM_addr_out=34;
+			DP_RAM_addr_out=7;
 		
 		else if ((VGA_posX<=320) && (VGA_posY<=360))
-			DP_RAM_addr_out=46;
+			DP_RAM_addr_out=6;
 		
 		else if ((VGA_posX<=480) && (VGA_posY<=360))
 			DP_RAM_addr_out=5;
 		
 		else if ((VGA_posX<=640) && (VGA_posY<=360))
-			DP_RAM_addr_out=30;
+			DP_RAM_addr_out=4;
 		
 		else if ((VGA_posX<=160) && (VGA_posY<=480))
-			DP_RAM_addr_out=0;
+			DP_RAM_addr_out=3;
 		
 		else if ((VGA_posX<=320) && (VGA_posY<=480))
-			DP_RAM_addr_out=15;
+			DP_RAM_addr_out=2;
 		
 		else if ((VGA_posX<=480) && (VGA_posY<=480))
-			DP_RAM_addr_out=24;
+			DP_RAM_addr_out=1;
 		
 		else if ((VGA_posX<=640) && (VGA_posY<=480))
-			DP_RAM_addr_out=63;
+			DP_RAM_addr_out=0;
 
 end
 
