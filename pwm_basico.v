@@ -1,7 +1,15 @@
 `timescale 1ns/1ps
 
 module pwm_basico
-	#(parameter R = 8)(
+	#(parameter R = 8,parameter F = 0)(
+	
+	/*
+	El divisor de frecuencia total en F=0 y R=8 es de 10^12, es decir, de 50M, queda en 12.2k, 
+	Aumentar en 1 a R o F divide la frecuencia en 2.
+	
+	*/
+	
+	
 	input clk,
 	input reset,
 	//output reg [R - 1:0] ciclo,
@@ -13,11 +21,14 @@ module pwm_basico
 	//Contador de flanco positivo
 	reg [R - 1:0] Q_reg;
 	reg [R - 1:0] ciclo;
-	reg [2:0]true =0;
+	reg [2:0]caso =0;
 			// Divisor de frecuecia
 	//wire enable;
 	reg [26:0] cfreq=0;
-	assign enable = cfreq[1];
+	assign enable = cfreq[F];
+	
+	//Divide la frecuencia en 2**(n+2)
+	
 	always @(posedge clk) begin
 			cfreq<=cfreq+1;
 	end
@@ -35,25 +46,22 @@ module pwm_basico
 	
 	
 	always @(*) begin
-	if(Q_reg==255) true=true+1;	
-	case(true)
-			0: ciclo=8'b10111110; // F1C1
-			1: ciclo=8'b11111111; // F1C2
-			2: ciclo=8'b10001000; // F1C3
-			3: ciclo=8'b10011001; // F1C4
-			4: ciclo=8'b01100110; // F2C1
-			5: ciclo=8'b00110011; // F2C2
-			6: ciclo=8'b00000000; // F2C3
-			7: ciclo=8'b10011001; // F2C4
-			default:     ciclo=8'b00000000; // F1C1
+	if(Q_reg==2**R-1) caso=caso+1;	
+	case(caso)
+			0: ciclo=2**R*0.75; // 
+			1: ciclo=2**R-1; // 
+			2: ciclo=2**R*0.6; // 
+			3: ciclo=2**R*0.55; // 
+			4: ciclo=2**R*0.4; // 
+			5: ciclo=2**R*0.2; // 
+			6: ciclo=0; // 
+			7: ciclo=2**R*0.6; // 
+			default:     ciclo=2**R-1; // 
 		endcase
 	end
 	
 	
-	
-	
-	
-	assign pwm_out = (Q_reg < ciclo);
+	assign pwm_out = (Q_reg <ciclo);
 	
 endmodule	
 	

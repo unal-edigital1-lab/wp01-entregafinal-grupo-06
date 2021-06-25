@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PWM
-Thu Jun 24 20:09:54 2021
+Fri Jun 25 16:19:22 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |pwm_basico
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |pwm_basico
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 24 20:09:54 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 25 16:19:22 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; PWM                                         ;
 ; Top-level Entity Name              ; pwm_basico                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 37                                          ;
-;     Total combinational functions  ; 37                                          ;
-;     Dedicated logic registers      ; 10                                          ;
-; Total registers                    ; 10                                          ;
+; Total logic elements               ; 18                                          ;
+;     Total combinational functions  ; 18                                          ;
+;     Dedicated logic registers      ; 9                                           ;
+; Total registers                    ; 9                                           ;
 ; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -176,36 +177,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 37      ;
-;                                             ;         ;
-; Total combinational functions               ; 37      ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 15      ;
-;     -- 3 input functions                    ; 11      ;
-;     -- <=2 input functions                  ; 11      ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 31      ;
-;     -- arithmetic mode                      ; 6       ;
-;                                             ;         ;
-; Total registers                             ; 10      ;
-;     -- Dedicated logic registers            ; 10      ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 4       ;
-;                                             ;         ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; true[1] ;
-; Maximum fan-out                             ; 16      ;
-; Total fan-out                               ; 146     ;
-; Average fan-out                             ; 2.65    ;
-+---------------------------------------------+---------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 18       ;
+;                                             ;          ;
+; Total combinational functions               ; 18       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 3        ;
+;     -- 3 input functions                    ; 5        ;
+;     -- <=2 input functions                  ; 10       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 12       ;
+;     -- arithmetic mode                      ; 6        ;
+;                                             ;          ;
+; Total registers                             ; 9        ;
+;     -- Dedicated logic registers            ; 9        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 4        ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; cfreq[0] ;
+; Maximum fan-out                             ; 10       ;
+; Total fan-out                               ; 76       ;
+; Average fan-out                             ; 2.17     ;
++---------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |pwm_basico                ; 37 (37)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |pwm_basico         ; pwm_basico  ; work         ;
+; |pwm_basico                ; 18 (18)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |pwm_basico         ; pwm_basico  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -223,9 +224,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
-; true[2]                                            ; Equal0              ; yes                    ;
-; true[1]                                            ; Equal0              ; yes                    ;
-; true[0]                                            ; Equal0              ; yes                    ;
+; caso[1]                                            ; Equal0              ; yes                    ;
+; caso[0]                                            ; Equal0              ; yes                    ;
+; caso[2]                                            ; Equal0              ; yes                    ;
 ; Number of user-specified and inferred latches = 3  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -236,9 +237,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+--------------------+
 ; Register name                          ; Reason for Removal ;
 +----------------------------------------+--------------------+
-; cfreq[2..26]                           ; Lost fanout        ;
-; Total Number of Removed Registers = 25 ;                    ;
+; cfreq[1..26]                           ; Lost fanout        ;
+; Total Number of Removed Registers = 26 ;                    ;
 +----------------------------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                           ;
++---------------+--------------------+--------------------------------------------------+
+; Register name ; Reason for Removal ; Registers Removed due to This Register           ;
++---------------+--------------------+--------------------------------------------------+
+; cfreq[6]      ; Lost Fanouts       ; cfreq[5], cfreq[4], cfreq[1], cfreq[3], cfreq[2] ;
++---------------+--------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -246,7 +256,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
+; Total registers                              ; 9     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
@@ -262,6 +272,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
 ; R              ; 8     ; Signed Integer                                    ;
+; F              ; 0     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -272,21 +283,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 10                          ;
+; cycloneiii_ff         ; 9                           ;
 ;     CLR               ; 8                           ;
-;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 37                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 18                          ;
 ;     arith             ; 6                           ;
 ;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 31                          ;
+;     normal            ; 12                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 15                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.62                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.99                        ;
 +-----------------------+-----------------------------+
 
 
@@ -295,7 +306,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -305,7 +316,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun 24 20:09:40 2021
+    Info: Processing started: Fri Jun 25 16:19:08 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM -c PWM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -316,24 +327,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/andre/documents/github/wp01-testvga-grupo-6/pwm_basico.v
     Info (12023): Found entity 1: pwm_basico File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 3
 Info (12127): Elaborating entity "pwm_basico" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(22): truncated value with size 32 to match size of target (27) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 22
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(32): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 32
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(38): truncated value with size 32 to match size of target (3) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 38
-Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(38): inferring latch(es) for variable "true", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 38
-Info (10041): Inferred latch for "true[0]" at pwm_basico.v(38) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 38
-Info (10041): Inferred latch for "true[1]" at pwm_basico.v(38) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 38
-Info (10041): Inferred latch for "true[2]" at pwm_basico.v(38) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 38
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(33): truncated value with size 32 to match size of target (27) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 33
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(43): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 43
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(49): truncated value with size 32 to match size of target (3) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(52): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 52
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(59): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(49): inferring latch(es) for variable "caso", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (10041): Inferred latch for "caso[0]" at pwm_basico.v(49) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (10041): Inferred latch for "caso[1]" at pwm_basico.v(49) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (10041): Inferred latch for "caso[2]" at pwm_basico.v(49) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 25 registers lost all their fanouts during netlist optimizations.
+Info (17049): 26 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 37 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info (21061): Implemented 18 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Thu Jun 24 20:09:54 2021
+    Info: Processing ended: Fri Jun 25 16:19:22 2021
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:26
 

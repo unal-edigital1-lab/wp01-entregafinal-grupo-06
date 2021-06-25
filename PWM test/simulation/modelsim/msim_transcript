@@ -12,45 +12,45 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6 {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:10:17 on Jun 24,2021
+# Start time: 16:19:51 on Jun 25,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v 
 # -- Compiling module pwm_basico
 # 
 # Top level modules:
 # 	pwm_basico
-# End time: 20:10:17 on Jun 24,2021, Elapsed time: 0:00:00
+# End time: 16:19:51 on Jun 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM\ test/.. {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/../pwm_basico_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:10:18 on Jun 24,2021
+# Start time: 16:19:51 on Jun 25,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/.." C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/../pwm_basico_tb.v 
 # -- Compiling module pwm_basico_tb
 # 
 # Top level modules:
 # 	pwm_basico_tb
-# End time: 20:10:18 on Jun 24,2021, Elapsed time: 0:00:00
+# End time: 16:19:51 on Jun 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  pwm_basico_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" pwm_basico_tb 
-# Start time: 20:10:18 on Jun 24,2021
+# Start time: 16:19:51 on Jun 25,2021
 # Loading work.pwm_basico_tb
 # Loading work.pwm_basico
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: equip  Hostname: ANDRÉS-HPPAVILI  ProcessID: 16464
-#           Attempting to use alternate WLF file "./wlft87y3rs".
+#           Attempting to use alternate WLF file "./wlftmm1h5e".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft87y3rs
+#           Using alternate file: ./wlftmm1h5e
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Note: $stop    : C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/../pwm_basico_tb.v(25)
-#    Time: 18350080 ns  Iteration: 0  Instance: /pwm_basico_tb
+#    Time: 35840 ns  Iteration: 0  Instance: /pwm_basico_tb
 # Break in Module pwm_basico_tb at C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM test/../pwm_basico_tb.v line 25
-# End time: 20:14:09 on Jun 24,2021, Elapsed time: 0:03:51
+# End time: 16:20:50 on Jun 25,2021, Elapsed time: 0:00:59
 # Errors: 0, Warnings: 2

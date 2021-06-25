@@ -22,7 +22,7 @@ module pwm_basico_tb(
 	
 	
 	initial
-		#(7 * 2**(R+10) * T) $stop;
+		#(7 * 2**(R+2) * T) $stop;
 		
 		
 	//Generando señal de reloj
