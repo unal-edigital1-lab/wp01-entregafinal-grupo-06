@@ -6,8 +6,6 @@ module BancoRegistro #(      		 //   #( Parametros
          parameter BIT_DATO = 3,
          parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"
 			//parameter MEMORYREG ="C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"
-			
-
 	)
 	(
     input [BIT_ADDR-1:0] addrR,
@@ -36,7 +34,7 @@ always @(posedge clk) begin
 end
 
 //cambiar clk a enable para implementacion en fpga
-always @(posedge enable) begin
+always @(posedge clk) begin
 	if (rst)
     for(i=0;i<NREG;i=i+1)begin
      breg[i] <= datRST; 

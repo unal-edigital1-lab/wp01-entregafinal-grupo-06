@@ -34,10 +34,10 @@ BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proye
 .rst(~rst),
 .datOutR(datOutR)
 );
-	
+
 test_VGA VGA(
 	.clk(clk),           
-	.rst(rst),
+	.rst(~rst),
 	.posicion(posVGA),
 	.dirColor(datOutR),
 	.VGA_Hsync_n(VGA_Hsync_n), 
