@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Fri Jun 25 22:07:28 2021
+Sat Jun 26 18:17:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 25 22:07:28 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 26 18:17:01 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -179,12 +179,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
-; BancoRegistro.v                  ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v ;         ;
-; VGA_driver.v                     ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v    ;         ;
-; test_VGA.v                       ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v      ;         ;
-; buffer_ram_dp.v                  ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v ;         ;
-; teclado.v                        ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v       ;         ;
-; Top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v           ;         ;
+; BancoRegistro.v                  ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v ;         ;
+; VGA_driver.v                     ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v    ;         ;
+; test_VGA.v                       ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v      ;         ;
+; buffer_ram_dp.v                  ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v ;         ;
+; teclado.v                        ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v       ;         ;
+; Top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v           ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
 
 
@@ -315,7 +315,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------------------------------------------------------------------+----------------+
 ; BIT_ADDR       ; 4                                                                        ; Signed Integer ;
 ; BIT_DATO       ; 3                                                                        ; Signed Integer ;
-; MEMORYREG      ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men ; String         ;
+; MEMORYREG      ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men ; String         ;
 +----------------+--------------------------------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -327,7 +327,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------------------------------------------------------------------------+----------------+
 ; AW             ; 4                                                                       ; Signed Integer ;
 ; DW             ; 3                                                                       ; Signed Integer ;
-; imageFILE      ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/image.men ; String         ;
+; imageFILE      ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/image.men ; String         ;
 +----------------+-------------------------------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -412,77 +412,77 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jun 25 22:07:15 2021
+    Info: Processing started: Sat Jun 26 18:16:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bancoregistro.v
-    Info (12023): Found entity 1: BancoRegistro File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 3
+    Info (12023): Found entity 1: BancoRegistro File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file vga_driver.v
-    Info (12023): Found entity 1: VGA_Driver640x480 File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 18
+    Info (12023): Found entity 1: VGA_Driver640x480 File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file test_vga.v
-    Info (12023): Found entity 1: test_VGA File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 21
+    Info (12023): Found entity 1: test_VGA File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file buffer_ram_dp.v
-    Info (12023): Found entity 1: buffer_ram_dp File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 19
+    Info (12023): Found entity 1: buffer_ram_dp File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file teclado.v
-    Info (12023): Found entity 1: Teclado File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at Top.v(48): ignored dangling comma in List of Port Connections File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 48
+    Info (12023): Found entity 1: Teclado File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at Top.v(48): ignored dangling comma in List of Port Connections File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: Top File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 4
+    Info (12023): Found entity 1: Top File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 4
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 27
-Warning (10230): Verilog HDL assignment warning at teclado.v(41): truncated value with size 32 to match size of target (2) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 41
-Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 36
-Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(33): truncated value with size 32 to match size of target (27) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 33
-Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(40): truncated value with size 32 to match size of target (3) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 40
-Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(39): truncated value with size 32 to match size of target (5) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 39
-Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(43): truncated value with size 32 to match size of target (3) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 43
-Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 48
-Warning (10230): Verilog HDL assignment warning at test_VGA.v(71): truncated value with size 32 to match size of target (2) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 71
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(106): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 106
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(108): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(111): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 111
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(114): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 114
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(117): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 117
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(120): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 120
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(123): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 123
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(126): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 126
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(129): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 129
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(132): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 132
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(135): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 135
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(138): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 138
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(141): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 141
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(144): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 144
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(147): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 147
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(150): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 150
-Warning (10240): Verilog HDL Always Construct warning at test_VGA.v(104): inferring latch(es) for variable "posicion", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 104
-Warning (10240): Verilog HDL Always Construct warning at test_VGA.v(104): inferring latch(es) for variable "DP_RAM_addr_out", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 104
-Info (10041): Inferred latch for "DP_RAM_addr_out[0]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "DP_RAM_addr_out[1]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "DP_RAM_addr_out[2]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "DP_RAM_addr_out[3]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "posicion[0]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "posicion[1]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "posicion[2]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (10041): Inferred latch for "posicion[3]" at test_VGA.v(108) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
-Info (12128): Elaborating entity "buffer_ram_dp" for hierarchy "test_VGA:VGA|buffer_ram_dp:DP_RAM" File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 87
-Warning (10850): Verilog HDL warning at buffer_ram_dp.v(58): number of words (8) in memory file does not match the number of elements in the address range [0:15] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 58
-Info (12128): Elaborating entity "VGA_Driver640x480" for hierarchy "test_VGA:VGA|VGA_Driver640x480:VGA640x480" File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 101
-Warning (10230): Verilog HDL assignment warning at VGA_driver.v(57): truncated value with size 32 to match size of target (10) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 57
-Warning (10230): Verilog HDL assignment warning at VGA_driver.v(58): truncated value with size 32 to match size of target (9) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 58
-Warning (10230): Verilog HDL assignment warning at VGA_driver.v(67): truncated value with size 32 to match size of target (9) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 67
-Warning (10230): Verilog HDL assignment warning at VGA_driver.v(71): truncated value with size 32 to match size of target (10) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 71
+Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 27
+Warning (10230): Verilog HDL assignment warning at teclado.v(41): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 41
+Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 36
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(35): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 35
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(42): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 42
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(41): truncated value with size 32 to match size of target (5) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 41
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(45): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 45
+Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 48
+Warning (10230): Verilog HDL assignment warning at test_VGA.v(71): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 71
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(106): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 106
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(108): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(111): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 111
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(114): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 114
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(117): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 117
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(120): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 120
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(123): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 123
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(126): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 126
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(129): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 129
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(132): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 132
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(135): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 135
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(138): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 138
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(141): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 141
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(144): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 144
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(147): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 147
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(150): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 150
+Warning (10240): Verilog HDL Always Construct warning at test_VGA.v(104): inferring latch(es) for variable "posicion", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 104
+Warning (10240): Verilog HDL Always Construct warning at test_VGA.v(104): inferring latch(es) for variable "DP_RAM_addr_out", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 104
+Info (10041): Inferred latch for "DP_RAM_addr_out[0]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "DP_RAM_addr_out[1]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "DP_RAM_addr_out[2]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "DP_RAM_addr_out[3]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "posicion[0]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "posicion[1]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "posicion[2]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (10041): Inferred latch for "posicion[3]" at test_VGA.v(108) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 108
+Info (12128): Elaborating entity "buffer_ram_dp" for hierarchy "test_VGA:VGA|buffer_ram_dp:DP_RAM" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 87
+Warning (10850): Verilog HDL warning at buffer_ram_dp.v(58): number of words (8) in memory file does not match the number of elements in the address range [0:15] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 58
+Info (12128): Elaborating entity "VGA_Driver640x480" for hierarchy "test_VGA:VGA|VGA_Driver640x480:VGA640x480" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 101
+Warning (10230): Verilog HDL assignment warning at VGA_driver.v(57): truncated value with size 32 to match size of target (10) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 57
+Warning (10230): Verilog HDL assignment warning at VGA_driver.v(58): truncated value with size 32 to match size of target (9) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 58
+Warning (10230): Verilog HDL assignment warning at VGA_driver.v(67): truncated value with size 32 to match size of target (9) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 67
+Warning (10230): Verilog HDL assignment warning at VGA_driver.v(71): truncated value with size 32 to match size of target (10) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 71
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 19
+    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 19
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 19
+    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 19
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "test_VGA:VGA|buffer_ram_dp:DP_RAM|ram" is uninferred due to inappropriate RAM size File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 38
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/db/Top.ram0_buffer_ram_dp_58aacbd3.hdl.mif" contains "don't care" values -- overwriting them with 0s
+    Info (276004): RAM logic "test_VGA:VGA|buffer_ram_dp:DP_RAM|ram" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 38
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/db/Top.ram0_buffer_ram_dp_faaedf64.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 22 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/output_files/Top.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/output_files/Top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 257 device resources after synthesis - the final resource count might be different
@@ -490,15 +490,15 @@ Info (21057): Implemented 257 device resources after synthesis - the final resou
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 241 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Fri Jun 25 22:07:28 2021
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Sat Jun 26 18:17:02 2021
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/output_files/Top.map.smsg.
+The suppressed messages can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/output_files/Top.map.smsg.
 
 

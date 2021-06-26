@@ -26,7 +26,7 @@ Teclado teclado(
 .opr(opr)
 );
 	
-BancoRegistro #( 4,3,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
+BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
 .addrR(posVGA),
 .addrW(posT),
 .RegWrite(opr),
@@ -37,7 +37,7 @@ BancoRegistro #( 4,3,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proye
 	
 test_VGA VGA(
 	.clk(clk),           
-	.rst(~rst),
+	.rst(rst),
 	.posicion(posVGA),
 	.dirColor(datOutR),
 	.VGA_Hsync_n(VGA_Hsync_n), 

@@ -4,7 +4,9 @@ module BancoRegistro #(      		 //   #( Parametros
 			//parameter MEMORYREG ="./reg16.men",
          parameter BIT_ADDR = 4,  //   BIT_ADDR Número de bit para la dirección
          parameter BIT_DATO = 3,
-         parameter MEMORYREG ="C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"
+         parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"
+			//parameter MEMORYREG ="C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"
+			
 
 	)
 	(

@@ -1,0 +1,32 @@
+-- begin_signature
+-- buffer_ram_dp(AW
+-- 4
+-- DW
+-- 3
+-- imageFILE
+-- "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/image.men")
+-- end_signature
+WIDTH=3;
+DEPTH=16;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	15 :	XXX;
+	14 :	XXX;
+	13 :	XXX;
+	12 :	XXX;
+	11 :	XXX;
+	10 :	XXX;
+	9 :	XXX;
+	8 :	XXX;
+	7 :	111;
+	6 :	101;
+	5 :	011;
+	4 :	110;
+	3 :	001;
+	2 :	010;
+	1 :	100;
+	0 :	111;
+END;

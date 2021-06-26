@@ -1,6 +1,6 @@
 |Top
 clk => clk.IN3
-rst => rst.IN2
+rst => rst.IN1
 col[0] <= Teclado:teclado.col
 col[1] <= Teclado:teclado.col
 col[2] <= Teclado:teclado.col

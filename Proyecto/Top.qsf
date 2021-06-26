@@ -71,14 +71,15 @@ set_location_assignment PIN_32 -to fila[2]
 set_location_assignment PIN_34 -to fila[1]
 set_location_assignment PIN_39 -to fila[0]
 set_location_assignment PIN_72 -to opr
-set_location_assignment PIN_75 -to led[0]
-set_location_assignment PIN_84 -to led[15]
-set_location_assignment PIN_77 -to led[5]
-set_location_assignment PIN_76 -to led[10]
 set_global_assignment -name VERILOG_FILE BancoRegistro.v
 set_global_assignment -name VERILOG_FILE VGA_driver.v
 set_global_assignment -name VERILOG_FILE test_VGA.v
 set_global_assignment -name VERILOG_FILE buffer_ram_dp.v
 set_global_assignment -name VERILOG_FILE teclado.v
 set_global_assignment -name VERILOG_FILE Top.v
+set_location_assignment PIN_2 -to VGA_R
+set_location_assignment PIN_1 -to VGA_G
+set_location_assignment PIN_144 -to VGA_B
+set_location_assignment PIN_143 -to VGA_Vsync_n
+set_location_assignment PIN_142 -to VGA_Hsync_n
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

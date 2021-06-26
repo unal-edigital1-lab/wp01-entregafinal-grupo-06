@@ -2,40 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'BancoRegistro:banco|cfreq[5]'
+Slack : -6.503
+TNS   : -274.727
+
+Type  : Slow 1200mV 85C Model Setup 'test_VGA:VGA|cfreq[0]'
+Slack : -5.702
+TNS   : -55.521
+
+Type  : Slow 1200mV 85C Model Setup 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -4.340
+TNS   : -11.934
+
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -0.201
-TNS   : -1.305
+Slack : -1.190
+TNS   : -10.778
+
+Type  : Slow 1200mV 85C Model Hold 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -1.230
+TNS   : -3.046
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.452
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'test_VGA:VGA|cfreq[0]'
+Slack : 0.628
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'BancoRegistro:banco|cfreq[5]'
+Slack : 1.274
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -25.305
+TNS   : -32.740
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -2.111
+TNS   : -40.169
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BancoRegistro:banco|cfreq[5]'
+Slack : -1.487
+TNS   : -71.376
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'test_VGA:VGA|cfreq[0]'
+Slack : -1.487
+TNS   : -32.714
+
+Type  : Slow 1200mV 0C Model Setup 'BancoRegistro:banco|cfreq[5]'
+Slack : -6.134
+TNS   : -255.776
+
+Type  : Slow 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
+Slack : -5.254
+TNS   : -50.100
+
+Type  : Slow 1200mV 0C Model Setup 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -4.258
+TNS   : -11.749
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -0.099
-TNS   : -0.530
+Slack : -1.096
+TNS   : -9.015
+
+Type  : Slow 1200mV 0C Model Hold 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -1.288
+TNS   : -3.341
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.401
+Slack : 0.418
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'test_VGA:VGA|cfreq[0]'
+Slack : 0.505
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'BancoRegistro:banco|cfreq[5]'
+Slack : 1.057
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -25.305
+TNS   : -32.740
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -2.157
+TNS   : -36.523
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BancoRegistro:banco|cfreq[5]'
+Slack : -1.487
+TNS   : -71.376
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'test_VGA:VGA|cfreq[0]'
+Slack : -1.487
+TNS   : -32.714
+
+Type  : Fast 1200mV 0C Model Setup 'BancoRegistro:banco|cfreq[5]'
+Slack : -2.304
+TNS   : -95.182
+
+Type  : Fast 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
+Slack : -1.830
+TNS   : -11.591
+
+Type  : Fast 1200mV 0C Model Setup 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -1.321
+TNS   : -3.582
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 0.478
+Slack : -0.467
+TNS   : -0.674
+
+Type  : Fast 1200mV 0C Model Hold 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -0.576
+TNS   : -1.466
+
+Type  : Fast 1200mV 0C Model Hold 'test_VGA:VGA|cfreq[0]'
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.186
+Slack : 0.194
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'BancoRegistro:banco|cfreq[5]'
+Slack : 0.496
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -18.975
+TNS   : -24.316
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BancoRegistro:banco|cfreq[5]'
+Slack : -1.000
+TNS   : -48.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'test_VGA:VGA|cfreq[0]'
+Slack : -1.000
+TNS   : -22.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[0]'
+Slack : -0.799
+TNS   : -11.426
 
 ------------------------------------------------------------
