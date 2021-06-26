@@ -39,10 +39,10 @@ module Teclado(clk,fila,col,posicion,opr);
 
 always@(posedge clk)begin
 		count<= count+1;
-		if(fila==4'b1000 | fila==4'b0100 | fila==4'b0010 | fila==4'b0001) begin
-			opr=1'b1;
-		end else begin
+		if(fila==4'b1000 || fila==4'b0100 || fila==4'b0010 || fila==4'b0001) begin
 			opr=1'b0;
+		end else begin
+			opr=1'b1;
 		end
 
 		case (count) 

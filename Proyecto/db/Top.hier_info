@@ -1,31 +1,31 @@
 |Top
 clk => clk.IN1
 rst => ~NO_FANOUT~
-col[0] <= Teclado:teclado.col
-col[1] <= Teclado:teclado.col
-col[2] <= Teclado:teclado.col
-col[3] <= Teclado:teclado.col
+col[0] << Teclado:teclado.col
+col[1] << Teclado:teclado.col
+col[2] << Teclado:teclado.col
+col[3] << Teclado:teclado.col
 fila[0] => fila[0].IN1
 fila[1] => fila[1].IN1
 fila[2] => fila[2].IN1
 fila[3] => fila[3].IN1
-led[0] <= Teclado:teclado.posicion
-led[1] <= Teclado:teclado.posicion
-led[2] <= Teclado:teclado.posicion
-led[3] <= Teclado:teclado.posicion
-led[4] <= Teclado:teclado.posicion
-led[5] <= Teclado:teclado.posicion
-led[6] <= Teclado:teclado.posicion
-led[7] <= Teclado:teclado.posicion
-led[8] <= Teclado:teclado.posicion
-led[9] <= Teclado:teclado.posicion
-led[10] <= Teclado:teclado.posicion
-led[11] <= Teclado:teclado.posicion
-led[12] <= Teclado:teclado.posicion
-led[13] <= Teclado:teclado.posicion
-led[14] <= Teclado:teclado.posicion
-led[15] <= Teclado:teclado.posicion
-opr <= Teclado:teclado.opr
+led[0] << Teclado:teclado.posicion
+led[1] << Teclado:teclado.posicion
+led[2] << Teclado:teclado.posicion
+led[3] << Teclado:teclado.posicion
+led[4] << Teclado:teclado.posicion
+led[5] << Teclado:teclado.posicion
+led[6] << Teclado:teclado.posicion
+led[7] << Teclado:teclado.posicion
+led[8] << Teclado:teclado.posicion
+led[9] << Teclado:teclado.posicion
+led[10] << Teclado:teclado.posicion
+led[11] << Teclado:teclado.posicion
+led[12] << Teclado:teclado.posicion
+led[13] << Teclado:teclado.posicion
+led[14] << Teclado:teclado.posicion
+led[15] << Teclado:teclado.posicion
+opr << Teclado:teclado.opr
 
 
 |Top|Teclado:teclado
