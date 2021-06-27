@@ -34,12 +34,12 @@ always @(posedge clk) begin
 end
 
 //cambiar clk a enable para implementacion en fpga
-always @(posedge clk) begin
-	if (rst)
+always @(posedge RegWrite) begin
+	/*if (rst)
     for(i=0;i<NREG;i=i+1)begin
      breg[i] <= datRST; 
-    end 
-    else if (RegWrite == 1)
+    end*/ 
+    //else if (RegWrite)
      breg[addrW] <= breg[addrW]+1;
   end
 
