@@ -34,7 +34,6 @@ always @(posedge clk) begin
 end
 
 
-reg [2:0] cambio=0;
 
 //cambiar clk a enable para implementacion en fpga
 always @(posedge RegWrite) begin
@@ -43,8 +42,7 @@ always @(posedge RegWrite) begin
      breg[i] <= datRST; 
     end*/ 
     //else if (RegWrite)
-     breg[15] <= cambio;
-     cambio<=cambio+1;
+     breg[addrW] <= breg[addrW]+1;
   end
 
 initial begin  

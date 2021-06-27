@@ -29,7 +29,7 @@ Teclado teclado(
 );
 	
 BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
-.addrR(15),
+.addrR(posVGA),
 .addrW(posT),
 .RegWrite(opr),
 .clk(clk),
