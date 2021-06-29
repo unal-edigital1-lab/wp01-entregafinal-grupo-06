@@ -98,7 +98,7 @@ VCCIO2                       : 26        : power  :                   : 2.5V    
 GND                          : 27        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 2         :                
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 2         :                
+enable                       : 30        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
@@ -167,7 +167,7 @@ GND                          : 95        : gnd    :                   :         
 MSEL1                        : 96        :        :                   :         : 6         :                
 MSEL2                        : 97        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
-enable                       : 99        : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 99        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 100       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : 101       : output : 2.5 V             :         : 6         : N              
 VCCINT                       : 102       : power  :                   : 1.2V    :           :                

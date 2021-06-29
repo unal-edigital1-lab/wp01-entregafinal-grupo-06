@@ -1,5 +1,5 @@
 Fitter report for PWM
-Fri Jun 25 16:47:00 2021
+Mon Jun 28 22:38:02 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,17 +68,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jun 25 16:47:00 2021       ;
+; Fitter Status                      ; Successful - Mon Jun 28 22:38:02 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; PWM                                         ;
 ; Top-level Entity Name              ; pwm_basico                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10E22C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 24 / 10,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 24 / 10,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 14 / 10,320 ( < 1 % )                       ;
-; Total registers                    ; 14                                          ;
+; Total logic elements               ; 16 / 10,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 14 / 10,320 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 6 / 10,320 ( < 1 % )                        ;
+; Total registers                    ; 6                                           ;
 ; Total pins                         ; 4 / 92 ( 4 % )                              ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
@@ -160,9 +160,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -172,8 +172,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 59 ) ; 0.00 % ( 0 / 59 )          ; 0.00 % ( 0 / 59 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 59 ) ; 0.00 % ( 0 / 59 )          ; 0.00 % ( 0 / 59 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 40 ) ; 0.00 % ( 0 / 40 )          ; 0.00 % ( 0 / 40 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 40 ) ; 0.00 % ( 0 / 40 )          ; 0.00 % ( 0 / 40 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -196,7 +196,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 49 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 30 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -212,26 +212,26 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 24 / 10,320 ( < 1 % ) ;
+; Total logic elements                        ; 16 / 10,320 ( < 1 % ) ;
 ;     -- Combinational with no register       ; 10                    ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 14                    ;
+;     -- Register only                        ; 2                     ;
+;     -- Combinational with a register        ; 4                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 4                     ;
-;     -- 3 input functions                    ; 7                     ;
-;     -- <=2 input functions                  ; 13                    ;
-;     -- Register only                        ; 0                     ;
+;     -- 4 input functions                    ; 2                     ;
+;     -- 3 input functions                    ; 5                     ;
+;     -- <=2 input functions                  ; 7                     ;
+;     -- Register only                        ; 2                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 14                    ;
-;     -- arithmetic mode                      ; 10                    ;
+;     -- normal mode                          ; 11                    ;
+;     -- arithmetic mode                      ; 3                     ;
 ;                                             ;                       ;
-; Total registers*                            ; 14 / 10,732 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 14 / 10,320 ( < 1 % ) ;
+; Total registers*                            ; 6 / 10,732 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 6 / 10,320 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 412 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 3 / 645 ( < 1 % )     ;
+; Total LABs:  partially or completely used   ; 1 / 645 ( < 1 % )     ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 4 / 92 ( 4 % )        ;
 ;     -- Clock pins                           ; 1 / 3 ( 33 % )        ;
@@ -242,19 +242,19 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 ; Total block memory implementation bits      ; 0 / 423,936 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 46 ( 0 % )        ;
 ; PLLs                                        ; 0 / 2 ( 0 % )         ;
-; Global signals                              ; 2                     ;
-;     -- Global clocks                        ; 2 / 10 ( 20 % )       ;
+; Global signals                              ; 1                     ;
+;     -- Global clocks                        ; 1 / 10 ( 10 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%    ;
-; Peak interconnect usage (total/H/V)         ; 0.3% / 0.2% / 0.5%    ;
-; Maximum fan-out                             ; 13                    ;
-; Highest non-global fan-out                  ; 13                    ;
-; Total fan-out                               ; 111                   ;
-; Average fan-out                             ; 1.91                  ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.0%    ;
+; Peak interconnect usage (total/H/V)         ; 0.3% / 0.4% / 0.1%    ;
+; Maximum fan-out                             ; 7                     ;
+; Highest non-global fan-out                  ; 7                     ;
+; Total fan-out                               ; 65                    ;
+; Average fan-out                             ; 1.59                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -267,33 +267,33 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 24 / 10320 ( < 1 % ) ; 0 / 10320 ( 0 % )              ;
+; Total logic elements                        ; 16 / 10320 ( < 1 % ) ; 0 / 10320 ( 0 % )              ;
 ;     -- Combinational with no register       ; 10                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 14                   ; 0                              ;
+;     -- Register only                        ; 2                    ; 0                              ;
+;     -- Combinational with a register        ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 4                    ; 0                              ;
-;     -- 3 input functions                    ; 7                    ; 0                              ;
-;     -- <=2 input functions                  ; 13                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
+;     -- 4 input functions                    ; 2                    ; 0                              ;
+;     -- 3 input functions                    ; 5                    ; 0                              ;
+;     -- <=2 input functions                  ; 7                    ; 0                              ;
+;     -- Register only                        ; 2                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 14                   ; 0                              ;
-;     -- arithmetic mode                      ; 10                   ; 0                              ;
+;     -- normal mode                          ; 11                   ; 0                              ;
+;     -- arithmetic mode                      ; 3                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 14                   ; 0                              ;
-;     -- Dedicated logic registers            ; 14 / 10320 ( < 1 % ) ; 0 / 10320 ( 0 % )              ;
+; Total registers                             ; 6                    ; 0                              ;
+;     -- Dedicated logic registers            ; 6 / 10320 ( < 1 % )  ; 0 / 10320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 3 / 645 ( < 1 % )    ; 0 / 645 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 1 / 645 ( < 1 % )    ; 0 / 645 ( 0 % )                ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 4                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 46 ( 0 % )       ; 0 / 46 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 2 / 12 ( 16 % )      ; 0 / 12 ( 0 % )                 ;
+; Clock control block                         ; 1 / 12 ( 8 % )       ; 0 / 12 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -302,8 +302,8 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 106                  ; 5                              ;
-;     -- Registered Connections               ; 39                   ; 0                              ;
+;     -- Total Connections                    ; 60                   ; 5                              ;
+;     -- Registered Connections               ; 19                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -335,8 +335,8 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk   ; 23    ; 1        ; 0            ; 11           ; 7            ; 3                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; reset ; 86    ; 5        ; 34           ; 9            ; 0            ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; clk   ; 23    ; 1        ; 0            ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; reset ; 86    ; 5        ; 34           ; 9            ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -345,7 +345,7 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; enable  ; 99    ; 6        ; 34           ; 17           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; enable  ; 30    ; 2        ; 0            ; 8            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; pwm_out ; 141   ; 8        ; 5            ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
@@ -368,7 +368,6 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 ; 96       ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 97       ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 97       ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
-; 99       ; DIFFIO_R4p, CRC_ERROR       ; Use as regular IO        ; enable                  ; Dual Purpose Pin          ;
 ; 101      ; DIFFIO_R3n, nCEO            ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
@@ -379,11 +378,11 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
 ; 1        ; 5 / 11 ( 45 % ) ; 2.5V          ; --           ;
-; 2        ; 0 / 8 ( 0 % )   ; 2.5V          ; --           ;
+; 2        ; 1 / 8 ( 13 % )  ; 2.5V          ; --           ;
 ; 3        ; 0 / 11 ( 0 % )  ; 2.5V          ; --           ;
 ; 4        ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ;
 ; 5        ; 1 / 13 ( 8 % )  ; 2.5V          ; --           ;
-; 6        ; 2 / 10 ( 20 % ) ; 2.5V          ; --           ;
+; 6        ; 1 / 10 ( 10 % ) ; 2.5V          ; --           ;
 ; 7        ; 0 / 13 ( 0 % )  ; 2.5V          ; --           ;
 ; 8        ; 1 / 12 ( 8 % )  ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
@@ -423,7 +422,7 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 ; 27       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 28       ; 31         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 29       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 30       ; 34         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 30       ; 34         ; 2        ; enable                                                    ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 31       ; 36         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 32       ; 39         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 33       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -493,7 +492,7 @@ The pin-out file can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-gr
 ; 97       ; 132        ; 6        ; ^MSEL2                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 97       ; 133        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 98       ; 136        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 99       ; 137        ; 6        ; enable                                                    ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 99       ; 137        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 100      ; 138        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 101      ; 139        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 102      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -562,7 +561,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; |pwm_basico                ; 24 (24)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 4    ; 0            ; 10 (10)      ; 0 (0)             ; 14 (14)          ; |pwm_basico         ; pwm_basico  ; work         ;
+; |pwm_basico                ; 16 (16)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 4    ; 0            ; 10 (10)      ; 2 (2)             ; 4 (4)            ; |pwm_basico         ; pwm_basico  ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -586,12 +585,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; reset               ;                   ;         ;
 ;      - Q_reg[0]     ; 0                 ; 6       ;
-;      - Q_reg[10]    ; 0                 ; 6       ;
-;      - Q_reg[9]     ; 0                 ; 6       ;
-;      - Q_reg[8]     ; 0                 ; 6       ;
-;      - Q_reg[7]     ; 0                 ; 6       ;
-;      - Q_reg[6]     ; 0                 ; 6       ;
-;      - Q_reg[5]     ; 0                 ; 6       ;
 ;      - Q_reg[4]     ; 0                 ; 6       ;
 ;      - Q_reg[3]     ; 0                 ; 6       ;
 ;      - Q_reg[2]     ; 0                 ; 6       ;
@@ -605,10 +598,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name     ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Equal0~3 ; LCCOMB_X33_Y16_N2 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; cfreq[2] ; FF_X31_Y16_N21    ; 13      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk      ; PIN_23            ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; reset    ; PIN_86            ; 11      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Equal0~1 ; LCCOMB_X1_Y11_N20 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; cfreq[0] ; FF_X1_Y11_N17     ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk      ; PIN_23            ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; reset    ; PIN_86            ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +----------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -617,8 +610,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name     ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Equal0~3 ; LCCOMB_X33_Y16_N2 ; 2       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; clk      ; PIN_23            ; 3       ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; Equal0~1 ; LCCOMB_X1_Y11_N20 ; 2       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 +----------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -627,63 +619,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 20 / 32,401 ( < 1 % ) ;
+; Block interconnects   ; 18 / 32,401 ( < 1 % ) ;
 ; C16 interconnects     ; 1 / 1,326 ( < 1 % )   ;
-; C4 interconnects      ; 22 / 21,816 ( < 1 % ) ;
-; Direct links          ; 5 / 32,401 ( < 1 % )  ;
-; Global clocks         ; 2 / 10 ( 20 % )       ;
-; Local interconnects   ; 18 / 10,320 ( < 1 % ) ;
+; C4 interconnects      ; 7 / 21,816 ( < 1 % )  ;
+; Direct links          ; 6 / 32,401 ( < 1 % )  ;
+; Global clocks         ; 1 / 10 ( 10 % )       ;
+; Local interconnects   ; 10 / 10,320 ( < 1 % ) ;
 ; R24 interconnects     ; 2 / 1,289 ( < 1 % )   ;
-; R4 interconnects      ; 22 / 28,186 ( < 1 % ) ;
+; R4 interconnects      ; 16 / 28,186 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 8.00) ; Number of LABs  (Total = 3) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 1                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 1                           ;
-; 6                                          ; 0                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 0                           ;
-; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 1                           ;
-+--------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++---------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 16.00) ; Number of LABs  (Total = 1) ;
++---------------------------------------------+-----------------------------+
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 1                           ;
++---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 3) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 1) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 1                           ;
-; 1 Clock                            ; 2                           ;
+; 1 Clock                            ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 12.67) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced  (Average = 22.00) ; Number of LABs  (Total = 1) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 1                           ;
-; 6                                            ; 1                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
@@ -699,34 +691,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 1                           ;
+; 22                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 1.33) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced Out  (Average = 3.00) ; Number of LABs  (Total = 1) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
-; 2                                               ; 1                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 2.00) ; Number of LABs  (Total = 3) ;
+; Number of Distinct Inputs  (Average = 3.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
-; 2                                           ; 1                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
 ; 3                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
@@ -840,10 +828,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+----------------------+-------------------+
 ; Source Clock(s)   ; Destination Clock(s) ; Delay Added in ns ;
 +-------------------+----------------------+-------------------+
-; clk               ; clk                  ; 4.0               ;
-; cfreq[2]          ; cfreq[2]             ; 3.5               ;
-; cfreq[2]          ; Q_reg[0]             ; 2.8               ;
-; cfreq[2],Q_reg[0] ; Q_reg[0]             ; 2.8               ;
+; cfreq[0],Q_reg[0] ; Q_reg[0]             ; 2.5               ;
+; cfreq[0]          ; Q_reg[0]             ; 2.5               ;
+; cfreq[0]          ; cfreq[0]             ; 2.4               ;
+; clk               ; clk                  ; 2.2               ;
 +-------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -854,22 +842,16 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; cfreq[2]        ; cfreq[2]             ; 4.011             ;
-; Q_reg[9]        ; caso[1]              ; 2.774             ;
-; Q_reg[8]        ; caso[1]              ; 2.774             ;
-; Q_reg[7]        ; caso[1]              ; 2.774             ;
-; Q_reg[6]        ; caso[1]              ; 2.774             ;
-; Q_reg[5]        ; caso[1]              ; 2.774             ;
-; Q_reg[4]        ; caso[1]              ; 2.774             ;
-; Q_reg[3]        ; caso[1]              ; 2.774             ;
-; Q_reg[2]        ; caso[1]              ; 2.774             ;
-; Q_reg[0]        ; caso[1]              ; 2.774             ;
-; Q_reg[1]        ; caso[1]              ; 2.774             ;
-; Q_reg[10]       ; caso[1]              ; 2.774             ;
-; caso[1]         ; caso[1]              ; 1.387             ;
-; caso[2]         ; caso[2]              ; 1.386             ;
+; Q_reg[3]        ; caso[1]              ; 2.520             ;
+; Q_reg[2]        ; caso[1]              ; 2.520             ;
+; Q_reg[4]        ; caso[1]              ; 2.520             ;
+; Q_reg[0]        ; caso[1]              ; 2.520             ;
+; Q_reg[1]        ; caso[1]              ; 2.520             ;
+; cfreq[0]        ; cfreq[0]             ; 2.160             ;
+; caso[1]         ; caso[1]              ; 1.260             ;
+; caso[2]         ; caso[2]              ; 1.259             ;
 +-----------------+----------------------+-------------------+
-Note: This table only shows the top 14 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 8 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -899,13 +881,11 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'PWM
 Info (332144): No user constrained base clocks found in the design
 Warning (332125): Found combinational loop of 2 nodes File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
     Warning (332126): Node "caso[0]~0|combout"
-    Warning (332126): Node "caso[0]~0|dataa"
+    Warning (332126): Node "caso[0]~0|datab"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 13
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node Equal0~3  File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
+Info (176353): Automatically promoted node Equal0~1  File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 49
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node LessThan0~0 File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/pwm_basico.v Line: 64
@@ -925,7 +905,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  9 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  13 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has 2.5V VCCIO pins. 1 total pin(s) used --  11 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -934,20 +914,20 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X23_Y12 to location X34_Y24
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM test/output_files/PWM.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 5486 megabytes
-    Info: Processing ended: Fri Jun 25 16:47:00 2021
+    Info: Processing ended: Mon Jun 28 22:38:02 2021
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:05
 

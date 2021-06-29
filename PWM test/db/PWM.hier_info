@@ -31,13 +31,7 @@ reset => Q_reg[1].ACLR
 reset => Q_reg[2].ACLR
 reset => Q_reg[3].ACLR
 reset => Q_reg[4].ACLR
-reset => Q_reg[5].ACLR
-reset => Q_reg[6].ACLR
-reset => Q_reg[7].ACLR
-reset => Q_reg[8].ACLR
-reset => Q_reg[9].ACLR
-reset => Q_reg[10].ACLR
-pwm_out << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-enable << cfreq[2].DB_MAX_OUTPUT_PORT_TYPE
+pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+enable <= cfreq[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
