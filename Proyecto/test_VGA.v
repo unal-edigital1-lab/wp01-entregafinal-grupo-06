@@ -102,37 +102,37 @@ VGA_Driver640x480 VGA640x480
  
 always @ (VGA_posX, VGA_posY) begin
 
-		if ((VGA_posX<=160) && (VGA_posY<=120)&&(VGA_posX>=0)&&(VGA_posY>=0)) begin posicion=15;	DP_RAM_addr_out=dirColor;	end
+		if ((VGA_posX<=160) && (VGA_posY<=120)) begin posicion=15;	DP_RAM_addr_out=dirColor;	end
 	
-		else if ((VGA_posX<=320) && (VGA_posY<=120)&&(VGA_posX>160)&&(VGA_posY>0)) begin posicion=11;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=320) && (VGA_posY<=120)) begin posicion=11;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=480) && (VGA_posY<=120)&&(VGA_posX>320)&&(VGA_posY>0)) begin posicion=7;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=480) && (VGA_posY<=120)) begin posicion=7;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=640) && (VGA_posY<=120)&&(VGA_posX>480)&&(VGA_posY>0)) begin posicion=3;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=640) && (VGA_posY<=120)) begin posicion=3;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=160) && (VGA_posY<=240)&&(VGA_posX>0)&&(VGA_posY>120)) begin posicion=14;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=160) && (VGA_posY<=240)) begin posicion=14;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=320) && (VGA_posY<=240)&&(VGA_posX>160)&&(VGA_posY>120)) begin posicion=10;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=320) && (VGA_posY<=240)) begin posicion=10;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=480) && (VGA_posY<=240)&&(VGA_posX>320)&&(VGA_posY>120)) begin posicion=6;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=480) && (VGA_posY<=240)) begin posicion=6;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=640) && (VGA_posY<=240)&&(VGA_posX>480)&&(VGA_posY>120)) begin posicion=2;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=640) && (VGA_posY<=240)) begin posicion=2;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=160) && (VGA_posY<=360)&&(VGA_posX>0)&&(VGA_posY>240)) begin posicion=13;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=160) && (VGA_posY<=360)) begin posicion=13;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=320) && (VGA_posY<=360)&&(VGA_posX>160)&&(VGA_posY>240)) begin posicion=9;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=320) && (VGA_posY<=360)) begin posicion=9;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=480) && (VGA_posY<=360)&&(VGA_posX>320)&&(VGA_posY>240)) begin posicion=5;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=480) && (VGA_posY<=360)) begin posicion=5;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=640) && (VGA_posY<=360)&&(VGA_posX>480)&&(VGA_posY>240)) begin posicion=1;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=640) && (VGA_posY<=360)) begin posicion=1;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=160) && (VGA_posY<=480)&&(VGA_posX>0)&&(VGA_posY>360)) begin posicion=12;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=160) && (VGA_posY<=480)) begin posicion=12;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=320) && (VGA_posY<=480)&&(VGA_posX>160)&&(VGA_posY>360)) begin posicion=8;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=320) && (VGA_posY<=480)) begin posicion=8;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=480) && (VGA_posY<=480)&&(VGA_posX>320)&&(VGA_posY>360)) begin posicion=4;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=480) && (VGA_posY<=480)) begin posicion=4;	DP_RAM_addr_out=dirColor;	end
 		
-		else if ((VGA_posX<=640) && (VGA_posY<=480)&&(VGA_posX>480)&&(VGA_posY>360)) begin posicion=0;	DP_RAM_addr_out=dirColor;	end
+		else if ((VGA_posX<=640) && (VGA_posY<=480)) begin posicion=0;	DP_RAM_addr_out=dirColor;	end
 		
 
 	else begin DP_RAM_addr_out=0;	end
