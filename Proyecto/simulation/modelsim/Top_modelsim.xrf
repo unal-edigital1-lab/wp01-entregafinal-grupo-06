@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/antirrebote.v
 source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BCDtoSSeg.v
 source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v
 source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v
