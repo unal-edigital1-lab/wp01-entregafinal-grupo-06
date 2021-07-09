@@ -22,9 +22,6 @@ wire [3:0] posVGA;
 wire opr;
 wire [3:0] datOutR;
 	
-	
-	
-	
 
 
 antirrebote fila4(.clk(clk),.rst(rst),.ButtonIn(fila[3]),.ButtonOut(filaAntirrebote[3]));
@@ -33,6 +30,7 @@ antirrebote fila2(.clk(clk),.rst(rst),.ButtonIn(fila[1]),.ButtonOut(filaAntirreb
 antirrebote fila1(.clk(clk),.rst(rst),.ButtonIn(fila[0]),.ButtonOut(filaAntirrebote[0]));
 	
 	
+
 	
 Teclado teclado(
 .clk(clk),
