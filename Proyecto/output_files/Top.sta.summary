@@ -3,23 +3,23 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'Teclado:teclado|opr'
-Slack : -7.420
-TNS   : -326.481
-
-Type  : Slow 1200mV 85C Model Setup 'test_VGA:VGA|cfreq[0]'
-Slack : -4.034
-TNS   : -55.876
+Slack : -6.773
+TNS   : -292.278
 
 Type  : Slow 1200mV 85C Model Setup 'Display:display|cfreq[16]'
-Slack : -2.643
-TNS   : -8.873
+Slack : -5.127
+TNS   : -14.900
+
+Type  : Slow 1200mV 85C Model Setup 'test_VGA:VGA|cfreq[0]'
+Slack : -4.862
+TNS   : -55.488
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.167
-TNS   : -31.880
+Slack : -2.267
+TNS   : -191.642
 
 Type  : Slow 1200mV 85C Model Hold 'Display:display|cfreq[16]'
-Slack : 0.453
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
@@ -27,16 +27,16 @@ Slack : 0.465
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'test_VGA:VGA|cfreq[0]'
-Slack : 0.717
+Slack : 0.722
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Teclado:teclado|opr'
-Slack : 1.970
+Slack : 1.496
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -49.097
+TNS   : -185.901
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Teclado:teclado|opr'
 Slack : -1.487
@@ -51,23 +51,23 @@ Slack : -1.487
 TNS   : -13.383
 
 Type  : Slow 1200mV 0C Model Setup 'Teclado:teclado|opr'
-Slack : -7.000
-TNS   : -307.489
-
-Type  : Slow 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
-Slack : -3.634
-TNS   : -49.723
+Slack : -6.343
+TNS   : -271.018
 
 Type  : Slow 1200mV 0C Model Setup 'Display:display|cfreq[16]'
-Slack : -2.477
-TNS   : -7.778
+Slack : -4.760
+TNS   : -13.371
+
+Type  : Slow 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
+Slack : -4.573
+TNS   : -50.232
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.853
-TNS   : -27.218
+Slack : -2.106
+TNS   : -166.569
 
 Type  : Slow 1200mV 0C Model Hold 'Display:display|cfreq[16]'
-Slack : 0.402
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
@@ -75,16 +75,16 @@ Slack : 0.416
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'test_VGA:VGA|cfreq[0]'
-Slack : 0.652
+Slack : 0.651
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Teclado:teclado|opr'
-Slack : 1.818
+Slack : 1.276
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -49.097
+TNS   : -185.901
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Teclado:teclado|opr'
 Slack : -1.487
@@ -99,23 +99,23 @@ Slack : -1.487
 TNS   : -13.383
 
 Type  : Fast 1200mV 0C Model Setup 'Teclado:teclado|opr'
-Slack : -2.575
-TNS   : -110.832
-
-Type  : Fast 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
-Slack : -1.146
-TNS   : -11.641
-
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.761
-TNS   : -2.506
+Slack : -2.466
+TNS   : -103.827
 
 Type  : Fast 1200mV 0C Model Setup 'Display:display|cfreq[16]'
-Slack : -0.605
-TNS   : -1.781
+Slack : -1.825
+TNS   : -4.806
+
+Type  : Fast 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
+Slack : -1.681
+TNS   : -11.722
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.487
+TNS   : -21.582
 
 Type  : Fast 1200mV 0C Model Hold 'Display:display|cfreq[16]'
-Slack : 0.187
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
@@ -127,12 +127,12 @@ Slack : 0.279
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Teclado:teclado|opr'
-Slack : 0.768
+Slack : 0.593
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -36.014
+TNS   : -134.002
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Teclado:teclado|opr'
 Slack : -1.000

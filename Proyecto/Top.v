@@ -27,16 +27,16 @@ wire [3:0] datOutR;
 	
 
 
-antirrebote fila4(.clk(clk),.rst(rst),.ButtonIn(fila[3]),.ButtonOut(filaAntirrebote[3]));
-antirrebote fila3(.clk(clk),.rst(rst),.ButtonIn(fila[2]),.ButtonOut(filaAntirrebote[2]));
-antirrebote fila2(.clk(clk),.rst(rst),.ButtonIn(fila[1]),.ButtonOut(filaAntirrebote[1]));
-antirrebote fila1(.clk(clk),.rst(rst),.ButtonIn(fila[0]),.ButtonOut(filaAntirrebote[0]));
+antirrebote fila4(.clk(clk),.ButtonIn(fila[3]),.ButtonOut(filaAntirrebote[3]));
+antirrebote fila3(.clk(clk),.ButtonIn(fila[2]),.ButtonOut(filaAntirrebote[2]));
+antirrebote fila2(.clk(clk),.ButtonIn(fila[1]),.ButtonOut(filaAntirrebote[1]));
+antirrebote fila1(.clk(clk),.ButtonIn(fila[0]),.ButtonOut(filaAntirrebote[0]));
 	
 	
 	
 Teclado teclado(
 .clk(clk),
-.fila(fila),
+.fila(filaAntirrebote),
 .col(col),
 .posicion(posT),
 .opr(opr)

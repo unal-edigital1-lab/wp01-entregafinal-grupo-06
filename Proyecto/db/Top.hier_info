@@ -1,14 +1,15 @@
 |Top
 clk => clk.IN8
-rst => rst.IN4
+rst => _.IN1
+rst => _.IN1
 col[0] <= Teclado:teclado.col
 col[1] <= Teclado:teclado.col
 col[2] <= Teclado:teclado.col
 col[3] <= Teclado:teclado.col
-fila[0] => fila[0].IN2
-fila[1] => fila[1].IN2
-fila[2] => fila[2].IN2
-fila[3] => fila[3].IN2
+fila[0] => fila[0].IN1
+fila[1] => fila[1].IN1
+fila[2] => fila[2].IN1
+fila[3] => fila[3].IN1
 opr <= opr.DB_MAX_OUTPUT_PORT_TYPE
 VGA_Hsync_n <= test_VGA:VGA.VGA_Hsync_n
 VGA_Vsync_n <= test_VGA:VGA.VGA_Vsync_n
