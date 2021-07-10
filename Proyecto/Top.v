@@ -21,7 +21,7 @@ wire [3:0] posT;
 wire [3:0] posVGA;
 wire opr;
 wire [3:0] datOutR;
-	
+wire [3:0] posDispay;	
 	
 	
 	
@@ -43,7 +43,7 @@ Teclado teclado(
 );
 	
 BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
-.addrR(posVGA),
+.addrR(posDispay),
 .addrW(posT),
 .RegWrite(opr),
 .clk(clk),
@@ -63,6 +63,11 @@ test_VGA VGA(
 	.VGA_B(VGA_B),   	
 );
 
-Display display(.clk(clk),.numA(datOutR),.sseg(sseg),.an(an));
+
+
+
+Display display(.clk(clk),.numA(datOutR),.sseg(sseg),.an(an),.posicion(posDispay);
 	
-endmodule
+	
+
+endmodule 

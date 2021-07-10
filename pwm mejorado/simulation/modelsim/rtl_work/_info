@@ -8,52 +8,76 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/simulation/modelsim
+Z0 dC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/simulation/modelsim
 vpwm
-Z1 !s110 1625883021
+Z1 !s110 1625883991
 !i10b 1
 !s100 3@AG<6^oP6?PeO88?hOjn1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ic>?aOAmKmhoCQPY?:5ha32
+I0@oF`V7Zma;ehXR3448Dl0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1625703332
-8C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v
-FC:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v
+Z4 w1625883519
+8C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v
+FC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v
 !i122 0
 L0 4 57
-Z4 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1625883021.000000
-!s107 C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm|C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v|
+Z6 !s108 1625883991.000000
+!s107 C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado|C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm}
-Z8 tCvgOpt 0
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado}
+Z9 tCvgOpt 0
+vpwm_tb
+R1
+!i10b 1
+!s100 i<C:mHFoHn3EjR^2RdiK@2
+R2
+I8<0Gl@eEmllf`CkbMe1]Y1
+R3
+R0
+w1625883944
+8C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm_tb.v
+FC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm_tb.v
+!i122 2
+L0 4 56
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado|C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm_tb.v|
+!i113 1
+R7
+R8
+R9
 vtimer_input
 R1
 !i10b 1
 !s100 cMDf^dWEd2bNzZMmX^Y]n2
 R2
-I16Hm]Cez<:0P_IJK6G3dk1
+ICDmZZBRIAQ7oIWXHoc9QP2
 R3
 R0
-w1625779668
-8C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v
-FC:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v
+R4
+8C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v
+FC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v
 !i122 1
 L0 3 30
-R4
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm|C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v|
-!i113 1
 R6
+!s107 C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado|C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v|
+!i113 1
 R7
 R8
+R9

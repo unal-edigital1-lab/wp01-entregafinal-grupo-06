@@ -6,7 +6,6 @@ module pwm_tb(
     );
     localparam R = 8;
     localparam TIMER_BITS = 8;
-	 localparam T = 10;
     
     reg clk, reset_n;
     reg [R:0] duty;
@@ -14,7 +13,7 @@ module pwm_tb(
     wire pwm_out;
 
     // Instantiate module under test    
-    pwm #(.R(R), .TIMER_BITS(TIMER_BITS)) uut (
+    pwm_improved #(.R(R), .TIMER_BITS(TIMER_BITS)) uut (
         .clk(clk),
         .reset_n(reset_n),
         .duty(duty),
@@ -29,7 +28,7 @@ module pwm_tb(
     // Generate stimuli
     
     // Generating a clk signal
-
+    localparam T = 10;
     always
     begin
         clk = 1'b0;

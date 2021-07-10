@@ -1,5 +1,5 @@
-Analysis & Elaboration report for pwm
-Fri Jul 09 22:09:48 2021
+Analysis & Synthesis report for pwm
+Fri Jul 09 21:25:57 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,13 +7,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |pwm
-  5. Parameter Settings for User Entity Instance: timer_input:timer0
-  6. Analysis & Elaboration Settings
-  7. Port Connectivity Checks: "timer_input:timer0"
-  8. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |pwm
+ 10. Parameter Settings for User Entity Instance: timer_input:timer0
+ 11. Port Connectivity Checks: "timer_input:timer0"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -38,64 +44,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Jul 09 22:09:48 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 09 21:25:57 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwm                                         ;
 ; Top-level Entity Name              ; pwm                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 42                                          ;
+;     Total combinational functions  ; 42                                          ;
+;     Dedicated logic registers      ; 24                                          ;
+; Total registers                    ; 24                                          ;
+; Total pins                         ; 27                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |pwm ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; R              ; 8     ; Signed Integer                             ;
-; TIMER_BITS     ; 15    ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: timer_input:timer0 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; BITS           ; 15    ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -180,6 +149,112 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; pwm.v                            ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v         ;         ;
+; timer_input.v                    ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimated Total logic elements              ; 42                          ;
+;                                             ;                             ;
+; Total combinational functions               ; 42                          ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 9                           ;
+;     -- 3 input functions                    ; 9                           ;
+;     -- <=2 input functions                  ; 24                          ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 15                          ;
+;     -- arithmetic mode                      ; 27                          ;
+;                                             ;                             ;
+; Total registers                             ; 24                          ;
+;     -- Dedicated logic registers            ; 24                          ;
+;     -- I/O registers                        ; 0                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 27                          ;
+;                                             ;                             ;
+; Embedded Multiplier 9-bit elements          ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; timer_input:timer0|Equal0~9 ;
+; Maximum fan-out                             ; 24                          ;
+; Total fan-out                               ; 232                         ;
+; Average fan-out                             ; 1.93                        ;
++---------------------------------------------+-----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+; |pwm                       ; 42 (17)             ; 24 (9)                    ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |pwm                    ; pwm         ; work         ;
+;    |timer_input:timer0|    ; 25 (25)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwm|timer_input:timer0 ; timer_input ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 24    ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |pwm ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; R              ; 8     ; Signed Integer                             ;
+; TIMER_BITS     ; 15    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer_input:timer0 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; BITS           ; 15    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------+
 ; Port Connectivity Checks: "timer_input:timer0" ;
 +--------+-------+----------+--------------------+
@@ -189,30 +264,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 24                          ;
+;     CLR SCLR          ; 15                          ;
+;     ENA CLR           ; 9                           ;
+; cycloneiii_lcell_comb ; 42                          ;
+;     arith             ; 27                          ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 8                           ;
+;     normal            ; 15                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 9                           ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.23                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jul 09 22:09:24 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwm -c pwm --analysis_and_elaboration
+    Info: Processing started: Fri Jul 09 21:25:44 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwm -c pwm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pwm.v
-    Info (12023): Found entity 1: pwm File: C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v Line: 4
+    Info (12023): Found entity 1: pwm File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file timer_input.v
-    Info (12023): Found entity 1: timer_input File: C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v Line: 3
+    Info (12023): Found entity 1: timer_input File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_tb.v
-    Info (12023): Found entity 1: pwm_tb File: C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm_tb.v Line: 4
+    Info (12023): Found entity 1: pwm_tb File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm_tb.v Line: 4
 Info (12127): Elaborating entity "pwm" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwm.v(42): truncated value with size 32 to match size of target (8) File: C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v Line: 42
-Info (12128): Elaborating entity "timer_input" for hierarchy "timer_input:timer0" File: C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v Line: 57
-Warning (10230): Verilog HDL assignment warning at timer_input.v(29): truncated value with size 32 to match size of target (15) File: C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v Line: 29
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4697 megabytes
-    Info: Processing ended: Fri Jul 09 22:09:48 2021
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:32
+Warning (10230): Verilog HDL assignment warning at pwm.v(42): truncated value with size 32 to match size of target (8) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v Line: 42
+Info (12128): Elaborating entity "timer_input" for hierarchy "timer_input:timer0" File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/pwm.v Line: 57
+Warning (10230): Verilog HDL assignment warning at timer_input.v(29): truncated value with size 32 to match size of target (15) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/pwm mejorado/timer_input.v Line: 29
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 42 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Fri Jul 09 21:25:57 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
 
 
