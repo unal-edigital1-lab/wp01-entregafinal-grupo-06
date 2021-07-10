@@ -92,7 +92,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "fila[2]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
@@ -104,11 +104,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "fila[1]",
+					"name" : "fila[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "fila[1]",
 					"strict" : false
 				}
 			]
