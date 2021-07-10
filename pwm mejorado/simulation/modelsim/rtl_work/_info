@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/simulation/modelsim
+vpwm
+Z1 !s110 1625883021
+!i10b 1
+!s100 3@AG<6^oP6?PeO88?hOjn1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ic>?aOAmKmhoCQPY?:5ha32
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1625703332
+8C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v
+FC:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v
+!i122 0
+L0 4 57
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1625883021.000000
+!s107 C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm|C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/pwm.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm}
+Z8 tCvgOpt 0
+vtimer_input
+R1
+!i10b 1
+!s100 cMDf^dWEd2bNzZMmX^Y]n2
+R2
+I16Hm]Cez<:0P_IJK6G3dk1
+R3
+R0
+w1625779668
+8C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v
+FC:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v
+!i122 1
+L0 3 30
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm|C:/Users/nicov/OneDrive/Escritorio/Labs digitales/Nuevopwm/timer_input.v|
+!i113 1
+R6
+R7
+R8
