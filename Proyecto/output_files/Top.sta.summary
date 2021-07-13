@@ -2,148 +2,112 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'pruebaOPR'
-Slack : -4.372
-TNS   : -178.736
+Type  : Slow 1200mV 85C Model Setup 'antirrebote:bloqueOPR|ButtonOut'
+Slack : -5.239
+TNS   : -226.196
 
 Type  : Slow 1200mV 85C Model Setup 'test_VGA:VGA|cfreq[0]'
-Slack : -3.742
-TNS   : -56.481
-
-Type  : Slow 1200mV 85C Model Setup 'Display:display|cfreq[16]'
-Slack : -3.481
-TNS   : -10.789
+Slack : -3.188
+TNS   : -49.722
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.166
-TNS   : -27.378
-
-Type  : Slow 1200mV 85C Model Hold 'Display:display|cfreq[16]'
-Slack : 0.454
-TNS   : 0.000
+Slack : -2.247
+TNS   : -188.447
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.466
+Slack : 0.444
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'test_VGA:VGA|cfreq[0]'
-Slack : 0.533
+Slack : 0.522
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'pruebaOPR'
-Slack : 1.988
+Type  : Slow 1200mV 85C Model Hold 'antirrebote:bloqueOPR|ButtonOut'
+Slack : 1.905
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pruebaOPR'
-Slack : -3.000
-TNS   : -74.376
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -37.201
+TNS   : -185.901
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'antirrebote:bloqueOPR|ButtonOut'
+Slack : -1.487
+TNS   : -71.376
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'test_VGA:VGA|cfreq[0]'
 Slack : -1.487
 TNS   : -32.714
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Display:display|cfreq[16]'
-Slack : -1.487
-TNS   : -13.383
-
-Type  : Slow 1200mV 0C Model Setup 'pruebaOPR'
-Slack : -4.140
-TNS   : -168.689
+Type  : Slow 1200mV 0C Model Setup 'antirrebote:bloqueOPR|ButtonOut'
+Slack : -4.946
+TNS   : -212.477
 
 Type  : Slow 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
-Slack : -3.564
-TNS   : -52.225
-
-Type  : Slow 1200mV 0C Model Setup 'Display:display|cfreq[16]'
-Slack : -3.316
-TNS   : -9.719
+Slack : -3.015
+TNS   : -45.477
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.853
-TNS   : -23.064
-
-Type  : Slow 1200mV 0C Model Hold 'Display:display|cfreq[16]'
-Slack : 0.402
-TNS   : 0.000
+Slack : -2.020
+TNS   : -162.682
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.417
+Slack : 0.397
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'test_VGA:VGA|cfreq[0]'
-Slack : 0.491
+Slack : 0.481
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'pruebaOPR'
-Slack : 1.780
+Type  : Slow 1200mV 0C Model Hold 'antirrebote:bloqueOPR|ButtonOut'
+Slack : 1.726
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pruebaOPR'
-Slack : -3.000
-TNS   : -74.376
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -37.201
+TNS   : -185.901
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'antirrebote:bloqueOPR|ButtonOut'
+Slack : -1.487
+TNS   : -71.376
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'test_VGA:VGA|cfreq[0]'
 Slack : -1.487
 TNS   : -32.714
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Display:display|cfreq[16]'
-Slack : -1.487
-TNS   : -13.383
-
-Type  : Fast 1200mV 0C Model Setup 'pruebaOPR'
-Slack : -1.312
-TNS   : -49.579
+Type  : Fast 1200mV 0C Model Setup 'antirrebote:bloqueOPR|ButtonOut'
+Slack : -1.725
+TNS   : -71.970
 
 Type  : Fast 1200mV 0C Model Setup 'test_VGA:VGA|cfreq[0]'
-Slack : -1.077
-TNS   : -11.594
-
-Type  : Fast 1200mV 0C Model Setup 'Display:display|cfreq[16]'
-Slack : -0.975
-TNS   : -2.609
+Slack : -0.803
+TNS   : -8.365
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.564
-TNS   : -2.434
-
-Type  : Fast 1200mV 0C Model Hold 'Display:display|cfreq[16]'
-Slack : 0.187
-TNS   : 0.000
+Slack : -0.432
+TNS   : -21.210
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.194
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'test_VGA:VGA|cfreq[0]'
-Slack : 0.217
+Slack : 0.211
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'pruebaOPR'
-Slack : 0.799
+Type  : Fast 1200mV 0C Model Hold 'antirrebote:bloqueOPR|ButtonOut'
+Slack : 0.754
 TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pruebaOPR'
-Slack : -3.000
-TNS   : -54.240
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -27.472
+TNS   : -133.858
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'antirrebote:bloqueOPR|ButtonOut'
+Slack : -1.000
+TNS   : -48.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'test_VGA:VGA|cfreq[0]'
 Slack : -1.000
 TNS   : -22.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Display:display|cfreq[16]'
-Slack : -1.000
-TNS   : -9.000
 
 ------------------------------------------------------------
