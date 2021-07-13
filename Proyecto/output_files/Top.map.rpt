@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Tue Jul 13 15:06:38 2021
+Tue Jul 13 15:19:09 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,27 +17,24 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: antirrebote:bloqueOPR
- 13. Parameter Settings for User Entity Instance: antirrebote:fila3
- 14. Parameter Settings for User Entity Instance: antirrebote:fila2
- 15. Parameter Settings for User Entity Instance: antirrebote:fila1
- 16. Parameter Settings for User Entity Instance: antirrebote:fila0
- 17. Parameter Settings for User Entity Instance: BancoRegistro:banco
- 18. Parameter Settings for User Entity Instance: test_VGA:VGA|buffer_ram_dp:DP_RAM
- 19. Port Connectivity Checks: "test_VGA:VGA|VGA_Driver640x480:VGA640x480"
- 20. Port Connectivity Checks: "test_VGA:VGA|buffer_ram_dp:DP_RAM"
- 21. Port Connectivity Checks: "test_VGA:VGA"
- 22. Port Connectivity Checks: "BancoRegistro:banco"
- 23. Port Connectivity Checks: "Teclado:teclado"
- 24. Port Connectivity Checks: "antirrebote:fila0"
- 25. Port Connectivity Checks: "antirrebote:fila1"
- 26. Port Connectivity Checks: "antirrebote:fila2"
- 27. Port Connectivity Checks: "antirrebote:fila3"
- 28. Port Connectivity Checks: "antirrebote:bloqueOPR"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
+ 12. Parameter Settings for User Entity Instance: antirrebote:fila3
+ 13. Parameter Settings for User Entity Instance: antirrebote:fila2
+ 14. Parameter Settings for User Entity Instance: antirrebote:fila1
+ 15. Parameter Settings for User Entity Instance: antirrebote:fila0
+ 16. Parameter Settings for User Entity Instance: BancoRegistro:banco
+ 17. Parameter Settings for User Entity Instance: test_VGA:VGA|buffer_ram_dp:DP_RAM
+ 18. Port Connectivity Checks: "test_VGA:VGA|VGA_Driver640x480:VGA640x480"
+ 19. Port Connectivity Checks: "test_VGA:VGA|buffer_ram_dp:DP_RAM"
+ 20. Port Connectivity Checks: "test_VGA:VGA"
+ 21. Port Connectivity Checks: "BancoRegistro:banco"
+ 22. Port Connectivity Checks: "antirrebote:fila0"
+ 23. Port Connectivity Checks: "antirrebote:fila1"
+ 24. Port Connectivity Checks: "antirrebote:fila2"
+ 25. Port Connectivity Checks: "antirrebote:fila3"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,16 +61,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 13 15:06:38 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 13 15:19:09 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 323                                         ;
-;     Total combinational functions  ; 263                                         ;
-;     Dedicated logic registers      ; 193                                         ;
-; Total registers                    ; 193                                         ;
-; Total pins                         ; 21                                          ;
+;     Total combinational functions  ; 258                                         ;
+;     Dedicated logic registers      ; 178                                         ;
+; Total registers                    ; 178                                         ;
+; Total pins                         ; 20                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -207,27 +204,27 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Estimated Total logic elements              ; 323       ;
 ;                                             ;           ;
-; Total combinational functions               ; 263       ;
+; Total combinational functions               ; 258       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 111       ;
-;     -- 3 input functions                    ; 14        ;
-;     -- <=2 input functions                  ; 138       ;
+;     -- 4 input functions                    ; 121       ;
+;     -- 3 input functions                    ; 18        ;
+;     -- <=2 input functions                  ; 119       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 151       ;
-;     -- arithmetic mode                      ; 112       ;
+;     -- normal mode                          ; 165       ;
+;     -- arithmetic mode                      ; 93        ;
 ;                                             ;           ;
-; Total registers                             ; 193       ;
-;     -- Dedicated logic registers            ; 193       ;
+; Total registers                             ; 178       ;
+;     -- Dedicated logic registers            ; 178       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 21        ;
+; I/O pins                                    ; 20        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 123       ;
-; Total fan-out                               ; 1560      ;
+; Maximum fan-out                             ; 108       ;
+; Total fan-out                               ; 1491      ;
 ; Average fan-out                             ; 3.13      ;
 +---------------------------------------------+-----------+
 
@@ -237,15 +234,14 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name       ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
-; |Top                                 ; 263 (2)             ; 193 (0)                   ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |Top                                           ; Top               ; work         ;
+; |Top                                 ; 258 (2)             ; 178 (0)                   ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |Top                                           ; Top               ; work         ;
 ;    |BancoRegistro:banco|             ; 78 (78)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|BancoRegistro:banco                       ; BancoRegistro     ; work         ;
-;    |Teclado:teclado|                 ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Teclado:teclado                           ; Teclado           ; work         ;
-;    |antirrebote:bloqueOPR|           ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:bloqueOPR                     ; antirrebote       ; work         ;
+;    |Teclado:teclado|                 ; 18 (18)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Teclado:teclado                           ; Teclado           ; work         ;
 ;    |antirrebote:fila0|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila0                         ; antirrebote       ; work         ;
 ;    |antirrebote:fila1|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila1                         ; antirrebote       ; work         ;
 ;    |antirrebote:fila2|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila2                         ; antirrebote       ; work         ;
 ;    |antirrebote:fila3|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila3                         ; antirrebote       ; work         ;
-;    |test_VGA:VGA|                    ; 71 (39)             ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA                              ; test_VGA          ; work         ;
+;    |test_VGA:VGA|                    ; 76 (44)             ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA                              ; test_VGA          ; work         ;
 ;       |VGA_Driver640x480:VGA640x480| ; 29 (29)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480 ; VGA_Driver640x480 ; work         ;
 ;       |buffer_ram_dp:DP_RAM|         ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA|buffer_ram_dp:DP_RAM         ; buffer_ram_dp     ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
@@ -281,12 +277,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 193   ;
-; Number of registers using Synchronous Clear  ; 100   ;
-; Number of registers using Synchronous Load   ; 119   ;
+; Total registers                              ; 178   ;
+; Number of registers using Synchronous Clear  ; 80    ;
+; Number of registers using Synchronous Load   ; 99    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 62    ;
+; Number of registers using Clock Enable       ; 69    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,16 +295,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countY[8] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[9] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-
-
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: antirrebote:bloqueOPR ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; Ncount         ; 20    ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------+
@@ -413,15 +399,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Teclado:teclado"                                                                        ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; posicion ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "antirrebote:fila0"                                                                                                                          ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -458,39 +435,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "antirrebote:bloqueOPR"                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 21                          ;
-; cycloneiii_ff         ; 193                         ;
-;     ENA               ; 53                          ;
+; boundary_port         ; 20                          ;
+; cycloneiii_ff         ; 178                         ;
+;     ENA               ; 60                          ;
 ;     ENA SLD           ; 9                           ;
-;     SCLR SLD          ; 100                         ;
+;     SCLR SLD          ; 80                          ;
 ;     SLD               ; 10                          ;
-;     plain             ; 21                          ;
-; cycloneiii_lcell_comb ; 263                         ;
-;     arith             ; 112                         ;
-;         2 data inputs ; 112                         ;
-;     normal            ; 151                         ;
+;     plain             ; 19                          ;
+; cycloneiii_lcell_comb ; 258                         ;
+;     arith             ; 93                          ;
+;         2 data inputs ; 93                          ;
+;     normal            ; 165                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 111                         ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 121                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.01                        ;
+; Average LUT depth     ; 3.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -509,7 +477,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jul 13 15:06:24 2021
+    Info: Processing started: Tue Jul 13 15:18:55 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -529,20 +497,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file buffer_
     Info (12023): Found entity 1: buffer_ram_dp File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file teclado.v
     Info (12023): Found entity 1: Teclado File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at Top.v(71): ignored dangling comma in List of Port Connections File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 71
+Warning (10275): Verilog HDL Module Instantiation warning at Top.v(75): ignored dangling comma in List of Port Connections File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 75
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: Top File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 4
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Top.v(23): object "RegPrueba" assigned a value but never read File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 23
-Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:bloqueOPR" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 36
+Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:fila3" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 43
 Warning (10230): Verilog HDL assignment warning at antirrebote.v(30): truncated value with size 32 to match size of target (20) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/antirrebote.v Line: 30
-Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 50
+Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 54
 Warning (10230): Verilog HDL assignment warning at teclado.v(41): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 41
-Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 59
+Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 63
 Warning (10036): Verilog HDL or VHDL warning at BancoRegistro.v(28): object "enable" assigned a value but never read File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 28
 Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(33): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 33
 Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(45): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 45
-Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 71
+Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 75
 Warning (10230): Verilog HDL assignment warning at test_VGA.v(71): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 71
 Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(105): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 105
 Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(107): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 107
@@ -584,27 +551,31 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 26
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 26
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 26
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "test_VGA:VGA|buffer_ram_dp:DP_RAM|ram" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 38
     Info (276004): RAM logic "BancoRegistro:banco|breg" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 23
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/db/Top.ram0_buffer_ram_dp_faaedf64.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/output_files/Top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 347 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "prueba[0]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 17
+    Warning (15610): No output dependent on input pin "prueba[1]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 17
+    Warning (15610): No output dependent on input pin "prueba[2]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 17
+    Warning (15610): No output dependent on input pin "prueba[3]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 17
+    Warning (15610): No output dependent on input pin "pruebaOPR" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 18
+Info (21057): Implemented 346 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 10 output pins
+    Info (21059): Implemented 9 output pins
     Info (21061): Implemented 326 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Tue Jul 13 15:06:38 2021
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Tue Jul 13 15:19:09 2021
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+

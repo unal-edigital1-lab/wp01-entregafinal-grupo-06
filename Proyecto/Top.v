@@ -1,12 +1,11 @@
 `timescale 1ns/1ps
 
 
-module Top(clk,rst,col,fila, opr,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,prueba,pruebaOPR);
+module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,prueba,pruebaOPR);
 	input clk;
 	input rst;
 	output [3:0]col;
 	input [3:0]fila;
-	output opr;
 	output wire VGA_Hsync_n;  
 	output wire VGA_Vsync_n;  
 	output wire VGA_R;	
@@ -22,13 +21,14 @@ wire[3:0] filaAntirrebote;
 wire [3:0] posT;
 reg[3:0]RegPrueba;
 wire [3:0] posVGA;
-//wire opr;
+wire opr;
+wire oprAR;
 wire [3:0] datOutR;
 wire [3:0] posDispay;	
 	
 wire pruebaOPRAntiR;
 wire [3:0] pruebaAntiR;
-
+/*
 always@(*)begin
 	RegPrueba=prueba;
 end
@@ -38,12 +38,16 @@ antirrebote fila3(.clk(clk),.ButtonIn(prueba[3]),.ButtonOut(pruebaAntiR[3]));
 antirrebote fila2(.clk(clk),.ButtonIn(prueba[2]),.ButtonOut(pruebaAntiR[2]));
 antirrebote fila1(.clk(clk),.ButtonIn(prueba[1]),.ButtonOut(pruebaAntiR[1]));
 antirrebote fila0(.clk(clk),.ButtonIn(prueba[0]),.ButtonOut(pruebaAntiR[0]));
-	
-
+*/	
+//antirrebote bloqueOPR(.clk(clk),.ButtonIn(opr),.ButtonOut(oprAR));
+antirrebote fila3(.clk(clk),.ButtonIn(fila[3]),.ButtonOut(filaAntirrebote[3]));
+antirrebote fila2(.clk(clk),.ButtonIn(fila[2]),.ButtonOut(filaAntirrebote[2]));
+antirrebote fila1(.clk(clk),.ButtonIn(fila[1]),.ButtonOut(filaAntirrebote[1]));
+antirrebote fila0(.clk(clk),.ButtonIn(fila[0]),.ButtonOut(filaAntirrebote[0]));
 	
 Teclado teclado(
 .clk(clk),
-.fila(fila),
+.fila(filaAntirrebote),
 .col(col),
 .posicion(posT),
 .opr(opr)
@@ -51,8 +55,8 @@ Teclado teclado(
 	
 BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
 .addrR(posVGA),
-.addrW(pruebaAntiR),
-.RegWrite(pruebaOPRAntiR),
+.addrW(posT),
+.RegWrite(opr),
 .clk(clk),
 .rst(~rst),
 .datOutR(datOutR)

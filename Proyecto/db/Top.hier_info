@@ -1,5 +1,5 @@
 |Top
-clk => clk.IN8
+clk => clk.IN7
 rst => _.IN1
 rst => _.IN1
 col[0] <= Teclado:teclado.col
@@ -10,67 +10,16 @@ fila[0] => fila[0].IN1
 fila[1] => fila[1].IN1
 fila[2] => fila[2].IN1
 fila[3] => fila[3].IN1
-opr <= Teclado:teclado.opr
 VGA_Hsync_n <= test_VGA:VGA.VGA_Hsync_n
 VGA_Vsync_n <= test_VGA:VGA.VGA_Vsync_n
 VGA_R <= test_VGA:VGA.VGA_R
 VGA_G <= test_VGA:VGA.VGA_G
 VGA_B <= test_VGA:VGA.VGA_B
-prueba[0] => prueba[0].IN1
-prueba[1] => prueba[1].IN1
-prueba[2] => prueba[2].IN1
-prueba[3] => prueba[3].IN1
-pruebaOPR => pruebaOPR.IN1
-
-
-|Top|antirrebote:bloqueOPR
-clk => ButtonOut~reg0.CLK
-clk => counter[0].CLK
-clk => counter[1].CLK
-clk => counter[2].CLK
-clk => counter[3].CLK
-clk => counter[4].CLK
-clk => counter[5].CLK
-clk => counter[6].CLK
-clk => counter[7].CLK
-clk => counter[8].CLK
-clk => counter[9].CLK
-clk => counter[10].CLK
-clk => counter[11].CLK
-clk => counter[12].CLK
-clk => counter[13].CLK
-clk => counter[14].CLK
-clk => counter[15].CLK
-clk => counter[16].CLK
-clk => counter[17].CLK
-clk => counter[18].CLK
-clk => counter[19].CLK
-clk => state2.CLK
-clk => state1.CLK
-rst => state1.OUTPUTSELECT
-rst => state2.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-rst => counter.OUTPUTSELECT
-ButtonIn => state1.DATAA
-ButtonOut <= ButtonOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+prueba[0] => ~NO_FANOUT~
+prueba[1] => ~NO_FANOUT~
+prueba[2] => ~NO_FANOUT~
+prueba[3] => ~NO_FANOUT~
+pruebaOPR => ~NO_FANOUT~
 
 
 |Top|antirrebote:fila3
