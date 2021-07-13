@@ -110,6 +110,26 @@
 				{
 					"name" : "rst",
 					"strict" : false
+				},
+				{
+					"name" : "prueba[1]",
+					"strict" : false
+				},
+				{
+					"name" : "prueba[0]",
+					"strict" : false
+				},
+				{
+					"name" : "prueba[2]",
+					"strict" : false
+				},
+				{
+					"name" : "prueba[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pruebaOPR",
+					"strict" : false
 				}
 			]
 		}
