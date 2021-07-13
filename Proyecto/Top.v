@@ -31,7 +31,6 @@ wire [3:0] posDispay;
 //antirrebote fila2(.clk(clk),.ButtonIn(fila[1]),.ButtonOut(filaAntirrebote[1]));
 //antirrebote fila1(.clk(clk),.ButtonIn(fila[0]),.ButtonOut(filaAntirrebote[0]));
 	
-	
 always@(*)begin
 	RegPrueba=prueba;
 end
@@ -46,7 +45,7 @@ Teclado teclado(
 );
 	
 BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
-.addrR(posVGA),
+.addrR(prueba),
 .addrW(prueba),
 .RegWrite(pruebaOPR),
 .clk(clk),
@@ -68,8 +67,7 @@ test_VGA VGA(
 
 
 
-
-Display display(.clk(clk),.numA(datOutR),.sseg(sseg),.an(an),.posicion(posDispay));
+Display display(.clk(clk),.numA(datOutR),.sseg(sseg),.an(an));
 	
 	
 
