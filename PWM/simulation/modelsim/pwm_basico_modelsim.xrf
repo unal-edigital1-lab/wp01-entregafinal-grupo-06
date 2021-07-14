@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/timer.v
+source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
+source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
+source_file = 1, C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/db/pwm_basico.cbx.xml
+design_name = pwm_basico
+instance = comp, \pwm_out~output , pwm_out~output, pwm_basico, 1
+instance = comp, \reset~input , reset~input, pwm_basico, 1
+instance = comp, \clk~input , clk~input, pwm_basico, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

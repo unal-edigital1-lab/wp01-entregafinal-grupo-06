@@ -1,7 +1,7 @@
 module Display(
 	output [0:6] sseg,
 	output reg [3:0] an,
-	input wire [3:0] numA,
+	input wire [7:0] numA,
 	input clk);
 
 reg [3:0]bcd;
@@ -29,7 +29,7 @@ always @(posedge enable) begin
 		an<=4'b1101; 
 		case (count) 
 			2'h0: begin bcd<= numA[3:0]; an<=4'b1110; end 
-			2'h1: begin bcd<=0; an<=4'b1101; end 
+			2'h1: begin bcd<=numA[7:4]; an<=4'b1101; end 
 			2'h2: begin bcd<=0; an<=4'b1011; end 
 			2'h3: begin bcd<=0; an<=4'b0111; end 	
 		endcase

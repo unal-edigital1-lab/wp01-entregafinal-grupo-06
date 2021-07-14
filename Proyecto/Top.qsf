@@ -76,6 +76,13 @@ set_location_assignment PIN_1 -to VGA_G
 set_location_assignment PIN_144 -to VGA_B
 set_location_assignment PIN_143 -to VGA_Vsync_n
 set_location_assignment PIN_142 -to VGA_Hsync_n
+set_location_assignment PIN_58 -to prueba[3] -disable
+set_location_assignment PIN_59 -to prueba[2] -disable
+set_location_assignment PIN_60 -to prueba[1] -disable
+set_location_assignment PIN_64 -to prueba[0] -disable
+set_location_assignment PIN_68 -to pruebaOPR -disable
+set_global_assignment -name VERILOG_FILE timer.v
+set_global_assignment -name VERILOG_FILE pwm_basico.v
 set_global_assignment -name VERILOG_FILE antirrebote.v
 set_global_assignment -name VERILOG_FILE BCDtoSSeg.v
 set_global_assignment -name VERILOG_FILE Display.v
@@ -85,9 +92,17 @@ set_global_assignment -name VERILOG_FILE test_VGA.v
 set_global_assignment -name VERILOG_FILE buffer_ram_dp.v
 set_global_assignment -name VERILOG_FILE teclado.v
 set_global_assignment -name VERILOG_FILE Top.v
-set_location_assignment PIN_58 -to prueba[3] -disable
-set_location_assignment PIN_59 -to prueba[2] -disable
-set_location_assignment PIN_60 -to prueba[1] -disable
-set_location_assignment PIN_64 -to prueba[0] -disable
-set_location_assignment PIN_68 -to pruebaOPR -disable
+set_location_assignment PIN_133 -to an[3]
+set_location_assignment PIN_132 -to an[2]
+set_location_assignment PIN_129 -to an[1]
+set_location_assignment PIN_128 -to an[0]
+set_location_assignment PIN_127 -to sseg[0]
+set_location_assignment PIN_126 -to sseg[1]
+set_location_assignment PIN_125 -to sseg[2]
+set_location_assignment PIN_124 -to sseg[3]
+set_location_assignment PIN_121 -to sseg[4]
+set_location_assignment PIN_120 -to sseg[5]
+set_location_assignment PIN_119 -to sseg[6]
+set_location_assignment PIN_141 -to bell
+set_location_assignment PIN_87 -to clkPWM
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

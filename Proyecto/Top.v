@@ -1,9 +1,10 @@
 `timescale 1ns/1ps
 
 
-module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,prueba,pruebaOPR);
+module Top(clk,rst,clkPWM,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,sseg,an,bell,prueba,pruebaOPR);
 	input clk;
 	input rst;
+	input clkPWM;
 	output [3:0]col;
 	input [3:0]fila;
 	output wire VGA_Hsync_n;  
@@ -11,8 +12,9 @@ module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,prueba,pru
 	output wire VGA_R;	
 	output wire VGA_G;  
 	output wire VGA_B;
-	//output [0:6] sseg;
-	//output [3:0] an;
+	output [0:6] sseg;
+	output [3:0] an;
+	output bell;
 
 	input[3:0]prueba;
 	input pruebaOPR;
@@ -28,6 +30,9 @@ wire [3:0] posDispay;
 	
 wire pruebaOPRAntiR;
 wire [3:0] pruebaAntiR;
+
+wire [7:0] numCaso;
+
 /*
 always@(*)begin
 	RegPrueba=prueba;
@@ -73,10 +78,10 @@ test_VGA VGA(
 	.VGA_G(VGA_G),  
 	.VGA_B(VGA_B),   	
 );
+pwm_basico#(8,15)(.clk(clk),.reset(rst),.pwm_out(bell),.caso(numCaso));
 
 
-
-//Display display(.clk(clk),.numA(datOutR),.sseg(sseg),.an(an));
+Display display(.clk(clk),.numA(numCaso),.sseg(sseg),.an(an));
 	
 
 endmodule
