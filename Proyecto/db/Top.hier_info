@@ -26,12 +26,13 @@ an[0] << Display:display.an
 an[1] << Display:display.an
 an[2] << Display:display.an
 an[3] << Display:display.an
-bell << pwm_basico:comb_5.pwm_out
+bell << pwm_basico:comb_6.pwm_out
 prueba[0] => ~NO_FANOUT~
 prueba[1] => ~NO_FANOUT~
 prueba[2] => ~NO_FANOUT~
 prueba[3] => ~NO_FANOUT~
 pruebaOPR => ~NO_FANOUT~
+pin << <VCC>
 
 
 |Top|antirrebote:fila3
@@ -499,7 +500,7 @@ posY[7] <= countY[7].DB_MAX_OUTPUT_PORT_TYPE
 posY[8] <= countY[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top|pwm_basico:comb_5
+|Top|pwm_basico:comb_6
 clk => caso[0]~reg0.CLK
 clk => caso[1]~reg0.CLK
 clk => caso[2]~reg0.CLK
@@ -514,6 +515,12 @@ clk => Q_reg[4].CLK
 clk => Q_reg[5].CLK
 clk => Q_reg[6].CLK
 clk => Q_reg[7].CLK
+clk => Q_reg[8].CLK
+clk => Q_reg[9].CLK
+clk => Q_reg[10].CLK
+clk => Q_reg[11].CLK
+clk => Q_reg[12].CLK
+clk => Q_reg[13].CLK
 reset => ~NO_FANOUT~
 pwm_out <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
 caso[0] <= caso[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE

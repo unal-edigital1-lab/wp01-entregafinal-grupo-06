@@ -3,9 +3,9 @@
 module pwm_basico_tb(
 
 	);
-	localparam R = 8;
+	localparam R = 6;
 	localparam T = 20;
-	localparam N = 5;
+	localparam N = 3;
 	reg clk, reset;
 	//wire [R - 1:0]ciclo;
 	wire pwm_out;

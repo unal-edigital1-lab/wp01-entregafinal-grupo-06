@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/simulation/modelsim
 vpwm_basico
-Z1 !s110 1626227218
+Z1 !s110 1627430302
 !i10b 1
-!s100 Z=8]lFUBc2VDdY`mIhDH32
+!s100 EO@WZ4m`73LjiMHd9Tjo12
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I@SRenzKXjhSWZJRaz:=j90
+IM<01KeE09zJEeT0fA:KbD3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1626226691
+w1627430252
 8C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
 FC:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
 !i122 0
-L0 3 76
+L0 3 128
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1626227218.000000
+Z5 !s108 1627430302.000000
 !s107 C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM|C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v|
 !i113 1
@@ -36,12 +36,12 @@ Z8 tCvgOpt 0
 vpwm_basico_tb
 R1
 !i10b 1
-!s100 mE2BS]5`>9=P^h5lim>Dz1
+!s100 zGkzc<z^fe>^aLF;LkDnF3
 R2
-I3KQYcH8X:>E_OPOV5l==b2
+IS0Q?7oiNPBbNIPM2OC29n3
 R3
 R0
-w1626226692
+w1627430019
 8C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
 FC:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
 !i122 1

@@ -2,7 +2,36 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "caso[0]",
+					"strict" : false
+				},
+				{
+					"name" : "caso[1]",
+					"strict" : false
+				},
+				{
+					"name" : "caso[2]",
+					"strict" : false
+				},
+				{
+					"name" : "caso[3]",
+					"strict" : false
+				},
+				{
+					"name" : "caso[4]",
+					"strict" : false
+				},
+				{
+					"name" : "caso[5]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
