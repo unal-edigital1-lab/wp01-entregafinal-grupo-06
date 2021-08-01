@@ -5,7 +5,7 @@ module pwm_basico_tb(
 	);
 	localparam R = 6;
 	localparam T = 20;
-	localparam N = 3;
+	localparam N = 1600;
 	reg clk, reset;
 	
 	//wire [R - 1:0]ciclo;

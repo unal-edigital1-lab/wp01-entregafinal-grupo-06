@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 module pwm_basico
-	#(parameter R = 8, parameter N=5)(
+	#(parameter R = 6, parameter N=2000)(
 	input clk,
 	//output reg [R - 1:0] ciclo,
 	output pwm_out
@@ -12,7 +12,7 @@ module pwm_basico
 	reg [R - 1:0] Q_reg=0;
 	reg [R - 1:0] ciclo=0;
 	reg [5:0]caso =0;
-	reg[6:0] n=0;
+	reg [15:0] n=0;
 	assign pwm_out = (Q_reg <ciclo);
 	always @(posedge clk)
 	begin

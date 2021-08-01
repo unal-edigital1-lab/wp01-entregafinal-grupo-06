@@ -8,52 +8,52 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/simulation/modelsim
+Z0 dC:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/simulation/modelsim
 vpwm_basico
-!s110 1627435087
+Z1 !s110 1627678416
 !i10b 1
-!s100 OfGGGG2^WjJgdETO0P<fn3
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IDUzddhV<Uhcbg^m:mb]Fd1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 kYYE^3^SZJ4]nYZl]e1UX3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IchEd[MD;jkLe7>8H<H6N^1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1627434951
-8C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
-FC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
+Z4 w1627678347
+8C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
+FC:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v
 !i122 0
 L0 3 75
-Z3 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1627435087.000000
-!s107 C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM|C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v|
+Z6 !s108 1627678416.000000
+!s107 C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM|C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v|
 !i113 1
-Z4 o-vlog01compat -work work
-Z5 !s92 -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM
-Z6 tCvgOpt 0
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM
+Z9 tCvgOpt 0
 vpwm_basico_tb
-!s110 1627435088
-!i10b 1
-!s100 nYIBI;B54<6KAC87odD1_3
 R1
-IOLbITGKjc]fPaIYdeVIck2
+!i10b 1
+!s100 ^J<;E]k^njJnkiPz5;l>X0
 R2
+Ilgj8knA2A:lolXSOoJ8?n0
+R3
 R0
-w1627435037
-8C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
-FC:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
+R4
+8C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
+FC:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v
 !i122 1
 L0 3 46
-R3
+R5
 r1
 !s85 0
 31
-!s108 1627435088.000000
-!s107 C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM|C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v|
-!i113 1
-R4
-R5
 R6
+!s107 C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM|C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v|
+!i113 1
+R7
+R8
+R9
