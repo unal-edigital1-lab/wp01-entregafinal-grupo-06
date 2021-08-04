@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Sun Jul 18 22:48:53 2021
+Tue Aug 03 19:17:35 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,26 +17,21 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: antirrebote:fila3
- 13. Parameter Settings for User Entity Instance: antirrebote:fila2
- 14. Parameter Settings for User Entity Instance: antirrebote:fila1
- 15. Parameter Settings for User Entity Instance: antirrebote:fila0
- 16. Parameter Settings for User Entity Instance: BancoRegistro:banco
- 17. Parameter Settings for User Entity Instance: test_VGA:VGA|buffer_ram_dp:DP_RAM
- 18. Parameter Settings for User Entity Instance: pwm_basico:comb_6
- 19. Port Connectivity Checks: "pwm_basico:comb_6"
- 20. Port Connectivity Checks: "test_VGA:VGA|VGA_Driver640x480:VGA640x480"
- 21. Port Connectivity Checks: "test_VGA:VGA|buffer_ram_dp:DP_RAM"
- 22. Port Connectivity Checks: "test_VGA:VGA"
- 23. Port Connectivity Checks: "BancoRegistro:banco"
- 24. Port Connectivity Checks: "antirrebote:fila0"
- 25. Port Connectivity Checks: "antirrebote:fila1"
- 26. Port Connectivity Checks: "antirrebote:fila2"
- 27. Port Connectivity Checks: "antirrebote:fila3"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 12. Parameter Settings for User Entity Instance: BancoRegistro:banco
+ 13. Parameter Settings for User Entity Instance: test_VGA:VGA|buffer_ram_dp:DP_RAM
+ 14. Parameter Settings for User Entity Instance: pwm_basico:pwm
+ 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "Display:display"
+ 18. Port Connectivity Checks: "pwm_basico:pwm"
+ 19. Port Connectivity Checks: "test_VGA:VGA|VGA_Driver640x480:VGA640x480"
+ 20. Port Connectivity Checks: "test_VGA:VGA|buffer_ram_dp:DP_RAM"
+ 21. Port Connectivity Checks: "test_VGA:VGA"
+ 22. Port Connectivity Checks: "BancoRegistro:banco"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,16 +58,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 18 22:48:53 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Aug 03 19:17:35 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 368                                         ;
-;     Total combinational functions  ; 303                                         ;
-;     Dedicated logic registers      ; 209                                         ;
-; Total registers                    ; 209                                         ;
-; Total pins                         ; 34                                          ;
+; Total logic elements               ; 389                                         ;
+;     Total combinational functions  ; 336                                         ;
+;     Dedicated logic registers      ; 119                                         ;
+; Total registers                    ; 119                                         ;
+; Total pins                         ; 27                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -179,8 +174,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -190,7 +185,6 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
 ; pwm_basico.v                     ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v    ;         ;
-; antirrebote.v                    ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/antirrebote.v   ;         ;
 ; BCDtoSSeg.v                      ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BCDtoSSeg.v     ;         ;
 ; Display.v                        ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v       ;         ;
 ; BancoRegistro.v                  ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v ;         ;
@@ -199,39 +193,56 @@ https://fpgasoftware.intel.com/eula.
 ; buffer_ram_dp.v                  ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v ;         ;
 ; teclado.v                        ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v       ;         ;
 ; Top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v           ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf           ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc         ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc        ;         ;
+; multcore.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc           ;         ;
+; bypassff.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc           ;         ;
+; altshift.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc           ;         ;
+; multcore.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf           ;         ;
+; csa_add.inc                      ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/csa_add.inc            ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc           ;         ;
+; muleabz.inc                      ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muleabz.inc            ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_lfrg.inc           ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_boothc.inc         ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult.inc       ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc     ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc            ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf           ;         ;
+; altshift.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.tdf           ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 368       ;
-;                                             ;           ;
-; Total combinational functions               ; 303       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 136       ;
-;     -- 3 input functions                    ; 22        ;
-;     -- <=2 input functions                  ; 145       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 190       ;
-;     -- arithmetic mode                      ; 113       ;
-;                                             ;           ;
-; Total registers                             ; 209       ;
-;     -- Dedicated logic registers            ; 209       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 34        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 129       ;
-; Total fan-out                               ; 1711      ;
-; Average fan-out                             ; 2.95      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 389                 ;
+;                                             ;                     ;
+; Total combinational functions               ; 336                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 188                 ;
+;     -- 3 input functions                    ; 30                  ;
+;     -- <=2 input functions                  ; 118                 ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 260                 ;
+;     -- arithmetic mode                      ; 76                  ;
+;                                             ;                     ;
+; Total registers                             ; 119                 ;
+;     -- Dedicated logic registers            ; 119                 ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 27                  ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; Teclado:teclado|opr ;
+; Maximum fan-out                             ; 48                  ;
+; Total fan-out                               ; 1449                ;
+; Average fan-out                             ; 2.85                ;
++---------------------------------------------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -239,34 +250,50 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name       ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
-; |Top                                 ; 303 (2)             ; 209 (0)                   ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |Top                                           ; Top               ; work         ;
+; |Top                                 ; 336 (12)            ; 119 (0)                   ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Top                                           ; Top               ; work         ;
 ;    |BancoRegistro:banco|             ; 78 (78)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|BancoRegistro:banco                       ; BancoRegistro     ; work         ;
 ;    |Display:display|                 ; 34 (27)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Display:display                           ; Display           ; work         ;
 ;       |BCDtoSSeg:bcdtosseg|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Display:display|BCDtoSSeg:bcdtosseg       ; BCDtoSSeg         ; work         ;
-;    |Teclado:teclado|                 ; 15 (15)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Teclado:teclado                           ; Teclado           ; work         ;
-;    |antirrebote:fila0|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila0                         ; antirrebote       ; work         ;
-;    |antirrebote:fila1|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila1                         ; antirrebote       ; work         ;
-;    |antirrebote:fila2|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila2                         ; antirrebote       ; work         ;
-;    |antirrebote:fila3|               ; 21 (21)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|antirrebote:fila3                         ; antirrebote       ; work         ;
-;    |pwm_basico:comb_6|               ; 13 (13)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|pwm_basico:comb_6                         ; pwm_basico        ; work         ;
-;    |test_VGA:VGA|                    ; 77 (45)             ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA                              ; test_VGA          ; work         ;
+;    |Teclado:teclado|                 ; 40 (40)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Teclado:teclado                           ; Teclado           ; work         ;
+;    |lpm_mult:Mult0|                  ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|lpm_mult:Mult0                            ; lpm_mult          ; work         ;
+;       |multcore:mult_core|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|lpm_mult:Mult0|multcore:mult_core         ; multcore          ; work         ;
+;    |pwm_basico:pwm|                  ; 72 (72)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|pwm_basico:pwm                            ; pwm_basico        ; work         ;
+;    |test_VGA:VGA|                    ; 94 (62)             ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA                              ; test_VGA          ; work         ;
 ;       |VGA_Driver640x480:VGA640x480| ; 29 (29)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480 ; VGA_Driver640x480 ; work         ;
 ;       |buffer_ram_dp:DP_RAM|         ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA|buffer_ram_dp:DP_RAM         ; buffer_ram_dp     ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; test_VGA:VGA|posicion[1]                           ; GND                 ; yes                    ;
-; test_VGA:VGA|posicion[0]                           ; GND                 ; yes                    ;
-; test_VGA:VGA|posicion[3]                           ; GND                 ; yes                    ;
-; test_VGA:VGA|posicion[2]                           ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------+------------------------+
+; pwm_basico:pwm|caso[3]                              ; pwm_basico:pwm|Equal1 ; yes                    ;
+; pwm_basico:pwm|caso[5]                              ; pwm_basico:pwm|Equal1 ; yes                    ;
+; pwm_basico:pwm|caso[0]                              ; pwm_basico:pwm|Equal1 ; yes                    ;
+; pwm_basico:pwm|caso[1]                              ; pwm_basico:pwm|Equal1 ; yes                    ;
+; pwm_basico:pwm|caso[2]                              ; pwm_basico:pwm|Equal1 ; yes                    ;
+; pwm_basico:pwm|caso[4]                              ; pwm_basico:pwm|Equal1 ; yes                    ;
+; test_VGA:VGA|posicion[1]                            ; GND                   ; yes                    ;
+; test_VGA:VGA|posicion[0]                            ; GND                   ; yes                    ;
+; test_VGA:VGA|posicion[3]                            ; GND                   ; yes                    ;
+; test_VGA:VGA|posicion[2]                            ; GND                   ; yes                    ;
+; pwm_basico:pwm|n[11]                                ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[10]                                ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[9]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[8]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[7]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[6]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[5]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[4]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[3]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[2]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[1]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; pwm_basico:pwm|n[0]                                 ; pwm_basico:pwm|Equal0 ; yes                    ;
+; Number of user-specified and inferred latches = 22  ;                       ;                        ;
++-----------------------------------------------------+-----------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -275,25 +302,27 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------------------------------------+
 ; Register name                          ; Reason for Removal                    ;
 +----------------------------------------+---------------------------------------+
-; pwm_basico:comb_6|Q_reg[0]             ; Merged with Display:display|cfreq[0]  ;
-; Teclado:teclado|count[0]               ; Merged with Display:display|cfreq[0]  ;
-; Teclado:teclado|count[1]               ; Merged with Display:display|cfreq[1]  ;
-; pwm_basico:comb_6|Q_reg[1]             ; Merged with Display:display|cfreq[1]  ;
-; pwm_basico:comb_6|Q_reg[2]             ; Merged with Display:display|cfreq[2]  ;
-; pwm_basico:comb_6|Q_reg[3]             ; Merged with Display:display|cfreq[3]  ;
-; pwm_basico:comb_6|Q_reg[4]             ; Merged with Display:display|cfreq[4]  ;
-; pwm_basico:comb_6|Q_reg[5]             ; Merged with Display:display|cfreq[5]  ;
-; pwm_basico:comb_6|Q_reg[6]             ; Merged with Display:display|cfreq[6]  ;
-; pwm_basico:comb_6|Q_reg[7]             ; Merged with Display:display|cfreq[7]  ;
-; pwm_basico:comb_6|Q_reg[8]             ; Merged with Display:display|cfreq[8]  ;
-; pwm_basico:comb_6|Q_reg[9]             ; Merged with Display:display|cfreq[9]  ;
-; pwm_basico:comb_6|Q_reg[10]            ; Merged with Display:display|cfreq[10] ;
-; pwm_basico:comb_6|Q_reg[11]            ; Merged with Display:display|cfreq[11] ;
-; pwm_basico:comb_6|Q_reg[12]            ; Merged with Display:display|cfreq[12] ;
-; pwm_basico:comb_6|Q_reg[13]            ; Merged with Display:display|cfreq[13] ;
+; Teclado:teclado|cfreq[0]               ; Merged with Display:display|cfreq[0]  ;
+; Teclado:teclado|cfreq[1]               ; Merged with Display:display|cfreq[1]  ;
+; Teclado:teclado|cfreq[2]               ; Merged with Display:display|cfreq[2]  ;
+; Teclado:teclado|cfreq[3]               ; Merged with Display:display|cfreq[3]  ;
+; Teclado:teclado|cfreq[4]               ; Merged with Display:display|cfreq[4]  ;
+; Teclado:teclado|cfreq[5]               ; Merged with Display:display|cfreq[5]  ;
+; Teclado:teclado|cfreq[6]               ; Merged with Display:display|cfreq[6]  ;
+; Teclado:teclado|cfreq[7]               ; Merged with Display:display|cfreq[7]  ;
+; Teclado:teclado|cfreq[8]               ; Merged with Display:display|cfreq[8]  ;
+; Teclado:teclado|cfreq[9]               ; Merged with Display:display|cfreq[9]  ;
+; Teclado:teclado|cfreq[10]              ; Merged with Display:display|cfreq[10] ;
+; Teclado:teclado|cfreq[11]              ; Merged with Display:display|cfreq[11] ;
+; Teclado:teclado|cfreq[12]              ; Merged with Display:display|cfreq[12] ;
+; Teclado:teclado|cfreq[13]              ; Merged with Display:display|cfreq[13] ;
+; Teclado:teclado|cfreq[14]              ; Merged with Display:display|cfreq[14] ;
+; Teclado:teclado|cfreq[15]              ; Merged with Display:display|cfreq[15] ;
 ; test_VGA:VGA|cfreq[1]                  ; Lost fanout                           ;
+; pwm_basico:pwm|Q_reg[0]                ; Merged with Display:display|cfreq[0]  ;
+; Teclado:teclado|cfreq[17..26]          ; Lost fanout                           ;
 ; Display:display|cfreq[17..26]          ; Lost fanout                           ;
-; Total Number of Removed Registers = 27 ;                                       ;
+; Total Number of Removed Registers = 38 ;                                       ;
 +----------------------------------------+---------------------------------------+
 
 
@@ -302,12 +331,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 209   ;
-; Number of registers using Synchronous Clear  ; 86    ;
-; Number of registers using Synchronous Load   ; 99    ;
+; Total registers                              ; 119   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 19    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 75    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -317,50 +346,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Top|Display:display|bcd[0]                              ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countY[1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[1] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countY[8] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: antirrebote:fila3 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; Ncount         ; 20    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: antirrebote:fila2 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; Ncount         ; 20    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: antirrebote:fila1 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; Ncount         ; 20    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: antirrebote:fila0 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; Ncount         ; 20    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -387,24 +375,87 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pwm_basico:comb_6 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; R              ; 14    ; Signed Integer                        ;
-; N              ; 15    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pwm_basico:pwm ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; R              ; 6     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pwm_basico:comb_6"                                                                                                                                                    ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; caso ; Output ; Warning  ; Output or bidir port (6 bits) is smaller than the port expression (8 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 6            ; Untyped             ;
+; LPM_WIDTHB                                     ; 4            ; Untyped             ;
+; LPM_WIDTHP                                     ; 10           ; Untyped             ;
+; LPM_WIDTHR                                     ; 10           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; YES          ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance         ;
++---------------------------------------+----------------+
+; Name                                  ; Value          ;
++---------------------------------------+----------------+
+; Number of entity instances            ; 1              ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 6              ;
+;     -- LPM_WIDTHB                     ; 4              ;
+;     -- LPM_WIDTHP                     ; 10             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
+;     -- INPUT_A_IS_CONSTANT            ; YES            ;
+;     -- INPUT_B_IS_CONSTANT            ; NO             ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
++---------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Display:display"                                                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; numA ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "numA[11..4]" will be connected to GND. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "pwm_basico:pwm"     ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; Nentrada[11] ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -445,68 +496,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "antirrebote:fila0"                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "antirrebote:fila1"                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "antirrebote:fila2"                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "antirrebote:fila3"                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 209                         ;
-;     ENA               ; 60                          ;
-;     ENA SCLR          ; 6                           ;
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 119                         ;
+;     ENA               ; 56                          ;
 ;     ENA SLD           ; 9                           ;
-;     SCLR SLD          ; 80                          ;
 ;     SLD               ; 10                          ;
 ;     plain             ; 44                          ;
-; cycloneiii_lcell_comb ; 305                         ;
-;     arith             ; 113                         ;
-;         2 data inputs ; 112                         ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 192                         ;
+; cycloneiii_lcell_comb ; 337                         ;
+;     arith             ; 76                          ;
+;         2 data inputs ; 70                          ;
+;         3 data inputs ; 6                           ;
+;     normal            ; 261                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 136                         ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 188                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.24                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -525,7 +538,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jul 18 22:48:42 2021
+    Info: Processing started: Tue Aug 03 19:17:25 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -549,44 +562,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file buffer_
     Info (12023): Found entity 1: buffer_ram_dp File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file teclado.v
     Info (12023): Found entity 1: Teclado File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at Top.v(85): ignored dangling comma in List of Port Connections File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 85
+Warning (10275): Verilog HDL Module Instantiation warning at Top.v(83): ignored dangling comma in List of Port Connections File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 83
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: Top File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file controlador.v
     Info (12023): Found entity 1: Controlador File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Controlador.v Line: 40
-Critical Warning (10846): Verilog HDL Instantiation warning at Top.v(88): instance has no name File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 88
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:fila3" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 53
-Warning (10230): Verilog HDL assignment warning at antirrebote.v(30): truncated value with size 32 to match size of target (20) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/antirrebote.v Line: 30
-Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 64
-Warning (10230): Verilog HDL assignment warning at teclado.v(41): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 41
-Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 73
+Warning (10230): Verilog HDL assignment warning at Top.v(88): truncated value with size 32 to match size of target (12) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 88
+Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 62
+Warning (10230): Verilog HDL assignment warning at teclado.v(43): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 43
+Warning (10230): Verilog HDL assignment warning at teclado.v(48): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 48
+Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 71
 Warning (10036): Verilog HDL or VHDL warning at BancoRegistro.v(28): object "enable" assigned a value but never read File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 28
 Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(33): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 33
 Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(45): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 45
-Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 85
+Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 83
 Warning (10230): Verilog HDL assignment warning at test_VGA.v(71): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 71
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(105): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 105
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(107): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 107
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(109): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 109
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(111): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 111
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(113): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 113
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(115): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 115
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(117): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 117
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(119): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 119
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(121): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 121
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(123): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 123
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(125): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 125
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(127): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 127
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(129): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 129
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(131): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 131
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(133): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 133
-Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(135): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 135
-Warning (10240): Verilog HDL Always Construct warning at test_VGA.v(103): inferring latch(es) for variable "posicion", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 103
-Info (10041): Inferred latch for "posicion[0]" at test_VGA.v(107) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 107
-Info (10041): Inferred latch for "posicion[1]" at test_VGA.v(107) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 107
-Info (10041): Inferred latch for "posicion[2]" at test_VGA.v(107) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 107
-Info (10041): Inferred latch for "posicion[3]" at test_VGA.v(107) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 107
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(143): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 143
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(145): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 145
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(147): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 147
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(149): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 149
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(151): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 151
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(153): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 153
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(155): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 155
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(157): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 157
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(159): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 159
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(161): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 161
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(163): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 163
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(165): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 165
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(167): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 167
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(169): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 169
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(171): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 171
+Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(173): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 173
+Warning (10240): Verilog HDL Always Construct warning at test_VGA.v(142): inferring latch(es) for variable "posicion", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 142
+Info (10041): Inferred latch for "posicion[0]" at test_VGA.v(145) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 145
+Info (10041): Inferred latch for "posicion[1]" at test_VGA.v(145) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 145
+Info (10041): Inferred latch for "posicion[2]" at test_VGA.v(145) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 145
+Info (10041): Inferred latch for "posicion[3]" at test_VGA.v(145) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 145
 Info (12128): Elaborating entity "buffer_ram_dp" for hierarchy "test_VGA:VGA|buffer_ram_dp:DP_RAM" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 87
 Warning (10850): Verilog HDL warning at buffer_ram_dp.v(58): number of words (8) in memory file does not match the number of elements in the address range [0:15] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 58
 Info (12128): Elaborating entity "VGA_Driver640x480" for hierarchy "test_VGA:VGA|VGA_Driver640x480:VGA640x480" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/test_VGA.v Line: 101
@@ -594,72 +606,101 @@ Warning (10230): Verilog HDL assignment warning at VGA_driver.v(57): truncated v
 Warning (10230): Verilog HDL assignment warning at VGA_driver.v(58): truncated value with size 32 to match size of target (9) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 58
 Warning (10230): Verilog HDL assignment warning at VGA_driver.v(67): truncated value with size 32 to match size of target (9) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 67
 Warning (10230): Verilog HDL assignment warning at VGA_driver.v(71): truncated value with size 32 to match size of target (10) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/VGA_driver.v Line: 71
-Info (12128): Elaborating entity "pwm_basico" for hierarchy "pwm_basico:comb_6" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 88
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(33): truncated value with size 32 to match size of target (14) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 33
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(41): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 41
-Info (12128): Elaborating entity "Display" for hierarchy "Display:display" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 91
+Info (12128): Elaborating entity "pwm_basico" for hierarchy "pwm_basico:pwm" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 101
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(25): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 25
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(31): truncated value with size 32 to match size of target (12) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 31
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(36): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 36
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(48): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 48
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(49): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 49
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(50): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 50
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(76): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 76
+Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(30): inferring latch(es) for variable "n", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 30
+Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(30): inferring latch(es) for variable "caso", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 30
+Info (10041): Inferred latch for "n[0]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[1]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[2]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[3]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[4]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[5]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[6]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[7]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[8]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[9]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[10]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "n[11]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "caso[0]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "caso[1]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "caso[2]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "caso[3]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "caso[4]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (10041): Inferred latch for "caso[5]" at pwm_basico.v(34) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+Info (12128): Elaborating entity "Display" for hierarchy "Display:display" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 103
 Warning (10230): Verilog HDL assignment warning at Display.v(19): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 19
 Warning (10230): Verilog HDL assignment warning at Display.v(28): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 28
 Info (12128): Elaborating entity "BCDtoSSeg" for hierarchy "Display:display|BCDtoSSeg:bcdtosseg" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 12
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
+    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 29
-    Warning (12110): Net "numCaso[7]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
-    Warning (12110): Net "numCaso[6]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 35
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "test_VGA:VGA|buffer_ram_dp:DP_RAM|ram" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/buffer_ram_dp.v Line: 38
     Info (276004): RAM logic "BancoRegistro:banco|breg" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v Line: 23
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/db/Top.ram0_buffer_ram_dp_faaedf64.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "bell" is stuck at GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 17
-    Warning (13410): Pin "pin" is stuck at VCC File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 18
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 88
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 88
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 88
+    Info (12134): Parameter "LPM_WIDTHA" = "6"
+    Info (12134): Parameter "LPM_WIDTHB" = "4"
+    Info (12134): Parameter "LPM_WIDTHP" = "10"
+    Info (12134): Parameter "LPM_WIDTHR" = "10"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch pwm_basico:pwm|n[11] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[10] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[9] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[8] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[7] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[6] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[5] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[4] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[3] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[2] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[1] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
+Warning (13012): Latch pwm_basico:pwm|n[0] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 34
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Display:display|cfreq[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/output_files/Top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clkPWM" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 7
-    Warning (15610): No output dependent on input pin "prueba[0]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 20
-    Warning (15610): No output dependent on input pin "prueba[1]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 20
-    Warning (15610): No output dependent on input pin "prueba[2]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 20
-    Warning (15610): No output dependent on input pin "prueba[3]" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 20
-    Warning (15610): No output dependent on input pin "pruebaOPR" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 21
-Info (21057): Implemented 406 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 372 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 4777 megabytes
-    Info: Processing ended: Sun Jul 18 22:48:53 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+Info (21057): Implemented 420 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 393 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Tue Aug 03 19:17:35 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

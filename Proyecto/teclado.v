@@ -35,14 +35,21 @@ module Teclado(clk,fila,col,posicion,opr);
 		posicion=4'b0000;
 	end
 	
-	
+// Divisor de frecuecia
+wire enable;
+reg [26:0] cfreq=0;
+assign enable = cfreq[16];
+always @(posedge clk) begin
+		cfreq<=cfreq+1;
+end	
 
-always@(posedge clk)begin
+
+always@(posedge enable)begin
 		count<= count+1;
-		if(fila==4'b1000 || fila==4'b0100 || fila==4'b0010 || fila==4'b0001) begin
-			opr=1'b0;
-		end else begin
+		if(~(fila==4'b0000)) begin
 			opr=1'b1;
+		end else begin
+			opr=1'b0;
 		end
 
 		case (count) 

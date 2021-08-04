@@ -70,17 +70,16 @@ set_location_assignment PIN_30 -to fila[3]
 set_location_assignment PIN_32 -to fila[2]
 set_location_assignment PIN_34 -to fila[1]
 set_location_assignment PIN_39 -to fila[0]
-set_location_assignment PIN_72 -to opr -disable
 set_location_assignment PIN_2 -to VGA_R
 set_location_assignment PIN_1 -to VGA_G
 set_location_assignment PIN_144 -to VGA_B
 set_location_assignment PIN_143 -to VGA_Vsync_n
 set_location_assignment PIN_142 -to VGA_Hsync_n
-set_location_assignment PIN_58 -to prueba[3] -disable
-set_location_assignment PIN_59 -to prueba[2] -disable
-set_location_assignment PIN_60 -to prueba[1] -disable
-set_location_assignment PIN_64 -to prueba[0] -disable
-set_location_assignment PIN_68 -to pruebaOPR -disable
+set_location_assignment PIN_58 -to prueba[3]
+set_location_assignment PIN_59 -to prueba[2]
+set_location_assignment PIN_60 -to prueba[1]
+set_location_assignment PIN_64 -to prueba[0]
+set_location_assignment PIN_68 -to pruebaOPR
 set_global_assignment -name VERILOG_FILE timer.v
 set_global_assignment -name VERILOG_FILE pwm_basico.v
 set_global_assignment -name VERILOG_FILE antirrebote.v
@@ -104,7 +103,10 @@ set_location_assignment PIN_121 -to sseg[4]
 set_location_assignment PIN_120 -to sseg[5]
 set_location_assignment PIN_119 -to sseg[6]
 set_location_assignment PIN_55 -to bell
-set_location_assignment PIN_87 -to clkPWM
 set_global_assignment -name QIP_FILE Controlador.qip
-set_location_assignment PIN_58 -to pin
+set_location_assignment PIN_65 -to posT[3] -disable
+set_location_assignment PIN_66 -to posT[2] -disable
+set_location_assignment PIN_67 -to posT[1] -disable
+set_location_assignment PIN_68 -to posT[0] -disable
+set_location_assignment PIN_69 -to oprN
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

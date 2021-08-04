@@ -12,7 +12,11 @@ module pwm_basico
 	reg [5:0]caso =0;
 	reg[11:0] N;
 	reg [11:0] n=0;
-	assign N=Nentrada;
+	
+	always @(*) begin
+		N=Nentrada;
+	end
+	 
 	
 	assign pwm_out = (Q_reg <ciclo);	
 	

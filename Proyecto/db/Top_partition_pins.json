@@ -40,6 +40,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "bell",
+					"strict" : false
+				},
+				{
 					"name" : "sseg[6]",
 					"strict" : false
 				},
@@ -84,11 +88,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "fila[1]",
 					"strict" : false
 				},
 				{
@@ -96,15 +104,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "fila[3]",
-					"strict" : false
-				},
-				{
 					"name" : "fila[0]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[1]",
+					"name" : "fila[3]",
 					"strict" : false
 				}
 			]
