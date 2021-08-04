@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwm_basico
-Fri Jul 30 17:00:33 2021
+Tue Aug 03 14:18:09 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 30 17:00:33 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Aug 03 14:18:09 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwm_basico                                  ;
 ; Top-level Entity Name              ; pwm_basico                                  ;
@@ -154,7 +154,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -162,7 +162,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -171,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
-; pwm_basico.v                     ; yes             ; User Verilog HDL File  ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v ;         ;
+; pwm_basico.v                     ; yes             ; User Verilog HDL File  ; C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v ;         ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 
 
@@ -313,82 +314,82 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jul 30 17:00:24 2021
+    Info: Processing started: Tue Aug 03 14:17:56 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwm_basico -c pwm_basico
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file timer.v
-    Info (12023): Found entity 1: timer File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/timer.v Line: 5
+    Info (12023): Found entity 1: timer File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/timer.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_basico_tb.v
-    Info (12023): Found entity 1: pwm_basico_tb File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v Line: 3
+    Info (12023): Found entity 1: pwm_basico_tb File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_basico.v
-    Info (12023): Found entity 1: pwm_basico File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 3
+    Info (12023): Found entity 1: pwm_basico File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 3
 Info (12127): Elaborating entity "pwm_basico" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(19): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 19
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(25): truncated value with size 32 to match size of target (16) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 25
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(30): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 30
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(42): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 42
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(43): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 43
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(44): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 44
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(70): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 70
-Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(24): inferring latch(es) for variable "n", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 24
-Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(24): inferring latch(es) for variable "caso", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 24
-Info (10041): Inferred latch for "n[0]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[1]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[2]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[3]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[4]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[5]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[6]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[7]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[8]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[9]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[10]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[11]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[12]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[13]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[14]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "n[15]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "caso[0]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "caso[1]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "caso[2]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "caso[3]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "caso[4]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Info (10041): Inferred latch for "caso[5]" at pwm_basico.v(28) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-Warning (13012): Latch n[15] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[14] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[13] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[12] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[11] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[10] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[9] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[8] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[7] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[6] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[5] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[4] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[3] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[2] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[1] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
-Warning (13012): Latch n[0] has unsafe behavior File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(19): truncated value with size 32 to match size of target (6) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 19
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(25): truncated value with size 32 to match size of target (16) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 25
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(30): truncated value with size 32 to match size of target (6) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 30
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(42): truncated value with size 32 to match size of target (6) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 42
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(43): truncated value with size 32 to match size of target (6) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 43
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(44): truncated value with size 32 to match size of target (6) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 44
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(70): truncated value with size 32 to match size of target (6) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 70
+Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(24): inferring latch(es) for variable "n", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at pwm_basico.v(24): inferring latch(es) for variable "caso", which holds its previous value in one or more paths through the always construct File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 24
+Info (10041): Inferred latch for "n[0]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[1]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[2]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[3]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[4]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[5]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[6]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[7]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[8]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[9]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[10]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[11]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[12]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[13]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[14]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "n[15]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "caso[0]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "caso[1]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "caso[2]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "caso[3]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "caso[4]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Info (10041): Inferred latch for "caso[5]" at pwm_basico.v(28) File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+Warning (13012): Latch n[15] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[14] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[13] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[12] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[11] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[10] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[9] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[8] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[7] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[6] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[5] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[4] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[3] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[2] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[1] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
+Warning (13012): Latch n[0] has unsafe behavior File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 28
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Q_reg[0] File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/pwm_basico.v Line: 17
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/output_files/pwm_basico.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/output_files/pwm_basico.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
@@ -396,15 +397,15 @@ Info (21057): Implemented 76 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 74 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4756 megabytes
-    Info: Processing ended: Fri Jul 30 17:00:33 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 4755 megabytes
+    Info: Processing ended: Tue Aug 03 14:18:09 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/PWM/output_files/pwm_basico.map.smsg.
+The suppressed messages can be found in C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/PWM/output_files/pwm_basico.map.smsg.
 
 

@@ -34,8 +34,11 @@ module test_VGA(
 );
 
 
-localparam AW = 4; 
-localparam DW = 3;
+localparam AW = 4; /*Número de bits necesitados para las direcciones de memoria. En este caso
+como se utilizan solo 16 posiciones para representar 16 rectangulos en toda la pantalla, solo se necesitan
+4 bits.
+*/
+localparam DW = 3; //número de bits para el color, como se tiene RGB 111, solo son 3 bits.
 
 
 localparam RED_VGA =   3'b100;
@@ -44,7 +47,6 @@ localparam BLUE_VGA =  3'b001;
 
 
 wire clk25M;
-
 
 
 wire  [AW-1: 0] DP_RAM_addr_in;  
@@ -64,7 +66,7 @@ wire [8:0]VGA_posY;		   // Determinar la pos de memoria que viene del VGA
 	assign VGA_G = data_RGB444[1];
 	assign VGA_B = data_RGB444[0];
 
-
+	//Divisor de frecuencia de 50M a 25M
 	reg [1:0] cfreq=0;
 	assign clk25M = cfreq[0];
 	always @(posedge clk) begin
@@ -138,6 +140,30 @@ always @ (VGA_posX, VGA_posY) begin
 	else begin DP_RAM_addr_out=0;	end
 
 end
+*/
+
+/*
+En estos condicionales se tienen todas las posibilidades y la referencia para el color de cada rectángulo.
+Por ser un driver de 480x640, se dividen en 4 cada dimensión y se tienen valores para dividir rectángulos.
+Cuando la posición en X y Y corresponden a los cuadros, posición adquiere el valor correspondiente al lugar 
+del teclado semejante a la pantalla. Esta es la dirección para leer el dato del banco de registros.
+
+dirColor es el valor de lectura del banco de registros. Tiene un valor entre 0 y 7, el cual se utiliza como la dirección
+para la memoria utilizada para los colores, que tiene 7 valores posibles para el rgb111 y están en orden:
+
+111-Blanco
+100-Rojo
+010-Verde
+001-Azul
+110-Amarillo
+011-Cyan
+101-Magenta
+000-Negro
+
+De este modo se almacenan los colores para cada rectángulo.
+
+Cuando no se cumplen estas condiciones, la dirección a la memoria de colores es 0, es decir, a blanco. Esto aplica para bordes de la pantalla
+y algunos pixeles que no se tienen en cuenta por errores de precisión.
 */
 always @ (VGA_posX, VGA_posY) begin
 		if ((VGA_posX<=160) && (VGA_posY<=120)&&(VGA_posX>=0)&&(VGA_posY>=0)) begin posicion=15;	DP_RAM_addr_out=dirColor;	end

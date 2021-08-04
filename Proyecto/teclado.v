@@ -6,9 +6,18 @@ module Teclado(clk,fila,col,posicion,opr);
 	output reg opr;
 	
 	reg[7:0] caso;
+	reg opr1=0; 
+	reg opr2=0; 
+	reg opr3=0; 
+	reg opr4=0; 
 	reg [1:0] count=0;
 
-	
+
+	assign opr=opr1|opr2|opr3|opr4;
+
+	/*
+	Dependiendo de la combinación de caso, el valor de posicion varia entre 0 y 15. Por defecto se configura en 0.
+	*/
 	always@(*)
 		case(caso)
 			8'b00010001: posicion=4'b0000; // F1C1
@@ -35,32 +44,25 @@ module Teclado(clk,fila,col,posicion,opr);
 		posicion=4'b0000;
 	end
 	
-// Divisor de frecuecia
+// Divisor de frecuecia utilizado para los cambios de valores en las columnas. 
 wire enable;
 reg [26:0] cfreq=0;
 assign enable = cfreq[16];
 always @(posedge clk) begin
 		cfreq<=cfreq+1;
 end	
-
-
+ 
 always@(posedge enable)begin
 		count<= count+1;
-		if(~(fila==4'b0000)) begin
-			opr=1'b1;
-		end else begin
-			opr=1'b0;
-		end
 
 		case (count) 
-			2'h0: begin col<=4'b0001; if(~(fila==0)) caso={col,fila}; end
+			2'h0: begin col<=4'b0001; if(~(fila==0))begin  caso={col,fila};opr1=1; end else begin opr1=0; end end
 			 
-			2'h1: begin col<=4'b0010; if(~(fila==0)) caso={col,fila}; end
+			2'h1: begin col<=4'b0010; if(~(fila==0))begin  caso={col,fila};opr2=1; end else begin opr2=0; end end
 			 
-			2'h2: begin col<=4'b0100; if(~(fila==0)) caso={col,fila}; end
+			2'h2: begin col<=4'b0100; if(~(fila==0))begin  caso={col,fila};opr3=1; end else begin opr3=0; end end
 			 
-			2'h3: begin col<=4'b1000; if(~(fila==0)) caso={col,fila}; end
-
+			2'h3: begin col<=4'b1000; if(~(fila==0))begin  caso={col,fila};opr4=1; end else begin opr4=0; end end
 		endcase
 end
 
