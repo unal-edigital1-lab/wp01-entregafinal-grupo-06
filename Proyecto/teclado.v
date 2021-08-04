@@ -3,7 +3,7 @@ module Teclado(clk,fila,col,posicion,opr);
 	input [3:0]fila;
 	output reg [3:0]col;
 	output reg[3:0]posicion;
-	output reg opr;
+	output wire opr;
 	
 	reg[7:0] caso;
 	reg opr1=0; 

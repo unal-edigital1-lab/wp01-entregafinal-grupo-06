@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 
-module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,bell,sseg,an);
+module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,bell,oprN,sseg,an);
 	input clk; //reloj
 	input rst; //boton de reset
 	output [3:0]col; //Salida hacia las columnas del teclado matricial
@@ -12,47 +12,24 @@ module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,bell,sseg,
 	output wire VGA_G;  // Bit del color verde de VGA
 	output wire VGA_B;  // Bit del color azul de VGA
 	output bell;
-
-	//input [3:0]prueba;
-	//input pruebaOPR;
 	//input [3:0] posT;
-	//output oprN;
+	//input opr;
+	output oprN;
 	output [0:6] sseg;
 	output [3:0] an;
 	
-wire [3:0] filaAntirrebote;
 wire [3:0] posT; //Wire que conecta la posición del boton hundido del teclado matricial, varía entre 0 y 15
 reg [3:0] RegPrueba;
 wire [3:0] posVGA; //valor que varía entre 0 y 15 y se usa para leer la posición de memoria del banco de registro
 wire opr; //wire de oprimido, que es 1 cuando un boton del teclado matricial está pulsado
-wire oprAR;
 wire [3:0] datOutR; //Se usa para leer el dato de lectura del banco de registro con dirección configurada por posVGA
 wire [3:0] posDispay;	
 reg [11:0] Nfreq; //Valor de N que determina la frecuencia de la señal del PWM
-wire pruebaOPRAntiR;
-wire [3:0] pruebaAntiR;
 wire salidaPWM;
 
 assign bell=salidaPWM; //
-//assign oprN=~opr;
-/*
-always@(*)begin
-	RegPrueba=prueba;
-end
+assign oprN=~opr;
 
-antirrebote bloqueOPR(.clk(clk),.ButtonIn(pruebaOPR),.ButtonOut(pruebaOPRAntiR));
-antirrebote fila3(.clk(clk),.ButtonIn(prueba[3]),.ButtonOut(pruebaAntiR[3]));
-antirrebote fila2(.clk(clk),.ButtonIn(prueba[2]),.ButtonOut(pruebaAntiR[2]));
-antirrebote fila1(.clk(clk),.ButtonIn(prueba[1]),.ButtonOut(pruebaAntiR[1]));
-antirrebote fila0(.clk(clk),.ButtonIn(prueba[0]),.ButtonOut(pruebaAntiR[0]));
-
-antirrebote fila3(.clk(clk),.ButtonIn(fila[3]),.ButtonOut(filaAntirrebote[3]));
-antirrebote fila2(.clk(clk),.ButtonIn(fila[2]),.ButtonOut(filaAntirrebote[2]));
-antirrebote fila1(.clk(clk),.ButtonIn(fila[1]),.ButtonOut(filaAntirrebote[1]));
-antirrebote fila0(.clk(clk),.ButtonIn(fila[0]),.ButtonOut(filaAntirrebote[0]));
-
-//antirrebote bloqueOPR(.clk(clk),.ButtonIn(opr),.ButtonOut(oprAR));	
-*/
 
 
 /*
@@ -106,25 +83,24 @@ test_VGA VGA(
 	.VGA_B(VGA_B),   	
 );
 
-reg [9:0] mil=750;
-	always @(*) begin
-		RegPrueba=posT;
-		Nfreq=mil+50*RegPrueba;
-		/*
-			if(opr) begin
-			RegPrueba=4'b1111;
-			//bell=salidaPWM;
-		end	
-		else begin
-			RegPrueba=4'b0000;
-			//bell=0;
-		end
-		*/
-	end
+reg [9:0] mil=1000;
+reg [3:0] posPWM=0;
 	
+	always @(posedge opr) begin
+		posPWM<=posT;
+	end
+
+always @(*) begin
+	Nfreq=mil+50*posPWM;
+end 
+	
+	
+	
+//assign Nfreq=mil+50*posPWM;
+
 pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM));
 
-Display display(.sseg(sseg),.an(an),.numA(posT), .clk(clk));
+//Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
 
 
 endmodule 

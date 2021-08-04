@@ -1,5 +1,5 @@
 |Top
-clk => clk.IN5
+clk => clk.IN4
 rst => _.IN1
 rst => _.IN1
 col[0] <= Teclado:teclado.col
@@ -16,17 +16,18 @@ VGA_R <= test_VGA:VGA.VGA_R
 VGA_G <= test_VGA:VGA.VGA_G
 VGA_B <= test_VGA:VGA.VGA_B
 bell <= pwm_basico:pwm.pwm_out
-sseg[6] <= Display:display.sseg
-sseg[5] <= Display:display.sseg
-sseg[4] <= Display:display.sseg
-sseg[3] <= Display:display.sseg
-sseg[2] <= Display:display.sseg
-sseg[1] <= Display:display.sseg
-sseg[0] <= Display:display.sseg
-an[0] <= Display:display.an
-an[1] <= Display:display.an
-an[2] <= Display:display.an
-an[3] <= Display:display.an
+oprN <= opr.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= <GND>
+sseg[5] <= <GND>
+sseg[4] <= <GND>
+sseg[3] <= <GND>
+sseg[2] <= <GND>
+sseg[1] <= <GND>
+sseg[0] <= <GND>
+an[0] <= <GND>
+an[1] <= <GND>
+an[2] <= <GND>
+an[3] <= <GND>
 
 
 |Top|Teclado:teclado
@@ -57,17 +58,13 @@ clk => cfreq[23].CLK
 clk => cfreq[24].CLK
 clk => cfreq[25].CLK
 clk => cfreq[26].CLK
-fila[0] => Equal0.IN3
-fila[0] => Equal1.IN31
+fila[0] => Equal0.IN31
 fila[0] => caso[0].DATAIN
-fila[1] => Equal0.IN2
-fila[1] => Equal1.IN30
+fila[1] => Equal0.IN30
 fila[1] => caso[1].DATAIN
-fila[2] => Equal0.IN1
-fila[2] => Equal1.IN29
+fila[2] => Equal0.IN29
 fila[2] => caso[2].DATAIN
-fila[3] => Equal0.IN0
-fila[3] => Equal1.IN28
+fila[3] => Equal0.IN28
 fila[3] => caso[3].DATAIN
 col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -77,7 +74,7 @@ posicion[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 posicion[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 posicion[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 posicion[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-opr <= opr~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opr <= opr.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top|BancoRegistro:banco
@@ -314,72 +311,5 @@ Nentrada[9] => Equal1.IN14
 Nentrada[10] => Equal1.IN13
 Nentrada[11] => Equal1.IN12
 pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Top|Display:display
-sseg[6] <= BCDtoSSeg:bcdtosseg.SSeg
-sseg[5] <= BCDtoSSeg:bcdtosseg.SSeg
-sseg[4] <= BCDtoSSeg:bcdtosseg.SSeg
-sseg[3] <= BCDtoSSeg:bcdtosseg.SSeg
-sseg[2] <= BCDtoSSeg:bcdtosseg.SSeg
-sseg[1] <= BCDtoSSeg:bcdtosseg.SSeg
-sseg[0] <= BCDtoSSeg:bcdtosseg.SSeg
-an[0] <= an[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-an[1] <= an[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-an[2] <= an[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-an[3] <= an[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-numA[0] => Mux3.IN3
-numA[1] => Mux2.IN3
-numA[2] => Mux1.IN3
-numA[3] => Mux0.IN3
-numA[4] => Mux3.IN2
-numA[5] => Mux2.IN2
-numA[6] => Mux1.IN2
-numA[7] => Mux0.IN2
-numA[8] => Mux3.IN1
-numA[9] => Mux2.IN1
-numA[10] => Mux1.IN1
-numA[11] => Mux0.IN1
-clk => cfreq[0].CLK
-clk => cfreq[1].CLK
-clk => cfreq[2].CLK
-clk => cfreq[3].CLK
-clk => cfreq[4].CLK
-clk => cfreq[5].CLK
-clk => cfreq[6].CLK
-clk => cfreq[7].CLK
-clk => cfreq[8].CLK
-clk => cfreq[9].CLK
-clk => cfreq[10].CLK
-clk => cfreq[11].CLK
-clk => cfreq[12].CLK
-clk => cfreq[13].CLK
-clk => cfreq[14].CLK
-clk => cfreq[15].CLK
-clk => cfreq[16].CLK
-clk => cfreq[17].CLK
-clk => cfreq[18].CLK
-clk => cfreq[19].CLK
-clk => cfreq[20].CLK
-clk => cfreq[21].CLK
-clk => cfreq[22].CLK
-clk => cfreq[23].CLK
-clk => cfreq[24].CLK
-clk => cfreq[25].CLK
-clk => cfreq[26].CLK
-
-
-|Top|Display:display|BCDtoSSeg:bcdtosseg
-BCD[0] => Decoder0.IN3
-BCD[1] => Decoder0.IN2
-BCD[2] => Decoder0.IN1
-BCD[3] => Decoder0.IN0
-SSeg[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-SSeg[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-SSeg[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-SSeg[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-SSeg[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-SSeg[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
