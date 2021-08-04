@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at pwm_basico.v(13): object "N" differs only in case from object "n" in the same scope File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 13
+Info (10281): Verilog HDL Declaration information at pwm_basico.v(14): object "N" differs only in case from object "n" in the same scope File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v Line: 14
 Warning (10268): Verilog HDL information at teclado.v(55): always construct contains both blocking and non-blocking assignments File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v Line: 55

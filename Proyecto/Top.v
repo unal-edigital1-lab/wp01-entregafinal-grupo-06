@@ -27,7 +27,7 @@ wire [3:0] posDispay;
 reg [11:0] Nfreq; //Valor de N que determina la frecuencia de la señal del PWM
 wire salidaPWM;
 
-assign bell=salidaPWM; //
+assign bell=salidaPWM & opr; //
 assign oprN=~opr;
 
 
@@ -83,7 +83,7 @@ test_VGA VGA(
 	.VGA_B(VGA_B),   	
 );
 
-reg [9:0] mil=1000;
+parameter [9:0] mil=1000;
 reg [3:0] posPWM=0;
 	
 	always @(posedge opr) begin
@@ -91,16 +91,16 @@ reg [3:0] posPWM=0;
 	end
 
 always @(*) begin
-	Nfreq=mil+50*posPWM;
+	Nfreq=mil+100*posPWM;
 end 
 	
 	
 	
 //assign Nfreq=mil+50*posPWM;
 
-pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM));
+pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM),.opr(opr));
 
-//Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
+Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
 
 
 endmodule 
