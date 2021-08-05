@@ -24,7 +24,7 @@ wire [3:0] posVGA; //valor que varía entre 0 y 15 y se usa para leer la posici�
 wire opr; //wire de oprimido, que es 1 cuando un boton del teclado matricial está pulsado
 wire [3:0] datOutR; //Se usa para leer el dato de lectura del banco de registro con dirección configurada por posVGA
 wire [3:0] posDispay;	
-reg [11:0] Nfreq; //Valor de N que determina la frecuencia de la señal del PWM
+wire [11:0] Nfreq; //Valor de N que determina la frecuencia de la señal del PWM
 wire salidaPWM;
 
 assign bell=salidaPWM & opr; //
@@ -84,20 +84,15 @@ test_VGA VGA(
 );
 
 parameter [9:0] mil=1000;
+parameter [5:0] mult=50;
 reg [3:0] posPWM=0;
 	
 	always @(posedge opr) begin
 		posPWM<=posT;
 	end
 
-always @(*) begin
-	Nfreq=mil+100*posPWM;
-end 
+	assign Nfreq=mil+mult*posPWM;
 	
-	
-	
-//assign Nfreq=mil+50*posPWM;
-
 pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM),.opr(opr));
 
 Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
