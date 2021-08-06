@@ -32,7 +32,7 @@ module buffer_ram_dp#(
 	input reset
 	);
 
-// Calcular el numero de posiciones totales de memoria 
+// Calcular el nmero de posiciones totales de memoria 
 localparam NPOS = 2 ** AW; // Memoria
 
  reg [DW-1: 0] ram [0: NPOS-1]; 

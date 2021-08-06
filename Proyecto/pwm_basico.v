@@ -4,8 +4,7 @@ module pwm_basico
 	#(parameter R = 6)(
 	input clk,
 	input [11:0] Nentrada,
-	output pwm_out,
-	input opr
+	output pwm_out
 	);
 	
 	reg [R - 1:0] Q_reg=0;
@@ -14,8 +13,13 @@ module pwm_basico
 	reg[11:0] N; //El valor N externo que determina la frecuencia de salida
 	reg [11:0] n=0;
 	
+<<<<<<< HEAD
 	always @(posedge opr) begin
 		N<=Nentrada; 
+=======
+	always @(*) begin
+		N=Nentrada;
+>>>>>>> parent of fa7bf9a (Final push)
 	end
 	 
 
@@ -35,6 +39,7 @@ module pwm_basico
 	n=n+1; //Contador de cuantos periodos de pwm han transcurrido en el intervalo
 	end
 	
+<<<<<<< HEAD
 	if(n>=N)begin //cuando n es igual a N, es decir el número asignado de periodos para cada intervalo, el caso cambia, y el contador n vuelve a 0.
 		begin
 			if(caso>=35) caso=0;
@@ -44,6 +49,12 @@ module pwm_basico
 			n=0;
 		end
 		end
+=======
+	if(n==N)begin //cuando n es igual a N, es decir el número asignado de periodos para cada intervalo, el caso cambia, y el contador n vuelve a 0.
+		if(caso>=35) caso=0;
+		else caso=caso+1;	
+		n=0;end
+>>>>>>> parent of fa7bf9a (Final push)
 	
 	case(caso) //Todos los cambios de porcentaje del ciclo dependiendo del intervalo entre 0 y 35 de la onda senoidal
 			0: ciclo=2**R*0.5; // 
