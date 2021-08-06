@@ -1,0 +1,129 @@
+|Top
+clk => clk.IN2
+salidaPWM << pwm_basico:pwm.pwm_out
+sseg[6] << Display:display.sseg
+sseg[5] << Display:display.sseg
+sseg[4] << Display:display.sseg
+sseg[3] << Display:display.sseg
+sseg[2] << Display:display.sseg
+sseg[1] << Display:display.sseg
+sseg[0] << Display:display.sseg
+an[0] << Display:display.an
+an[1] << Display:display.an
+an[2] << Display:display.an
+an[3] << Display:display.an
+n[0] << pwm_basico:pwm.nChiquita
+n[1] << pwm_basico:pwm.nChiquita
+n[2] << pwm_basico:pwm.nChiquita
+n[3] << pwm_basico:pwm.nChiquita
+n[4] << pwm_basico:pwm.nChiquita
+n[5] << pwm_basico:pwm.nChiquita
+n[6] << pwm_basico:pwm.nChiquita
+n[7] << pwm_basico:pwm.nChiquita
+n[8] << pwm_basico:pwm.nChiquita
+n[9] << pwm_basico:pwm.nChiquita
+n[10] << pwm_basico:pwm.nChiquita
+n[11] << pwm_basico:pwm.nChiquita
+
+
+|Top|pwm_basico:pwm
+clk => Q_reg[0].CLK
+clk => Q_reg[1].CLK
+clk => Q_reg[2].CLK
+clk => Q_reg[3].CLK
+clk => Q_reg[4].CLK
+clk => Q_reg[5].CLK
+pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+salidaN[0] <= <GND>
+salidaN[1] <= <GND>
+salidaN[2] <= <GND>
+salidaN[3] <= <GND>
+salidaN[4] <= <GND>
+salidaN[5] <= <VCC>
+salidaN[6] <= <GND>
+salidaN[7] <= <VCC>
+salidaN[8] <= <VCC>
+salidaN[9] <= <VCC>
+salidaN[10] <= <VCC>
+salidaN[11] <= <VCC>
+nChiquita[0] <= n[0].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[1] <= n[1].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[2] <= n[2].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[3] <= n[3].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[4] <= n[4].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[5] <= n[5].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[6] <= n[6].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[7] <= n[7].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[8] <= n[8].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[9] <= n[9].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[10] <= n[10].DB_MAX_OUTPUT_PORT_TYPE
+nChiquita[11] <= n[11].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display:display
+sseg[6] <= BCDtoSSeg:bcdtosseg.SSeg
+sseg[5] <= BCDtoSSeg:bcdtosseg.SSeg
+sseg[4] <= BCDtoSSeg:bcdtosseg.SSeg
+sseg[3] <= BCDtoSSeg:bcdtosseg.SSeg
+sseg[2] <= BCDtoSSeg:bcdtosseg.SSeg
+sseg[1] <= BCDtoSSeg:bcdtosseg.SSeg
+sseg[0] <= BCDtoSSeg:bcdtosseg.SSeg
+an[0] <= an[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+an[1] <= an[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+an[2] <= an[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+an[3] <= an[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+numA[0] => Mux3.IN3
+numA[1] => Mux2.IN3
+numA[2] => Mux1.IN3
+numA[3] => Mux0.IN3
+numA[4] => Mux3.IN2
+numA[5] => Mux2.IN2
+numA[6] => Mux1.IN2
+numA[7] => Mux0.IN2
+numA[8] => Mux3.IN1
+numA[9] => Mux2.IN1
+numA[10] => Mux1.IN1
+numA[11] => Mux0.IN1
+clk => cfreq[0].CLK
+clk => cfreq[1].CLK
+clk => cfreq[2].CLK
+clk => cfreq[3].CLK
+clk => cfreq[4].CLK
+clk => cfreq[5].CLK
+clk => cfreq[6].CLK
+clk => cfreq[7].CLK
+clk => cfreq[8].CLK
+clk => cfreq[9].CLK
+clk => cfreq[10].CLK
+clk => cfreq[11].CLK
+clk => cfreq[12].CLK
+clk => cfreq[13].CLK
+clk => cfreq[14].CLK
+clk => cfreq[15].CLK
+clk => cfreq[16].CLK
+clk => cfreq[17].CLK
+clk => cfreq[18].CLK
+clk => cfreq[19].CLK
+clk => cfreq[20].CLK
+clk => cfreq[21].CLK
+clk => cfreq[22].CLK
+clk => cfreq[23].CLK
+clk => cfreq[24].CLK
+clk => cfreq[25].CLK
+clk => cfreq[26].CLK
+
+
+|Top|Display:display|BCDtoSSeg:bcdtosseg
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

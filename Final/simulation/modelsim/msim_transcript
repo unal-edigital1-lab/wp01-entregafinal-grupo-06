@@ -1,0 +1,89 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:58 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v 
+# -- Compiling module Top
+# 
+# Top level modules:
+# 	Top
+# End time: 15:19:58 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:58 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v 
+# -- Compiling module pwm_basico
+# 
+# Top level modules:
+# 	pwm_basico
+# End time: 15:19:58 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:58 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Display.v 
+# -- Compiling module Display
+# 
+# Top level modules:
+# 	Display
+# End time: 15:19:58 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BCDtoSSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:58 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BCDtoSSeg.v 
+# -- Compiling module BCDtoSSeg
+# 
+# Top level modules:
+# 	BCDtoSSeg
+# End time: 15:19:58 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final {C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:59 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final" C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v 
+# -- Compiling module Top_tb
+# 
+# Top level modules:
+# 	Top_tb
+# End time: 15:19:59 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Top_tb 
+# Start time: 15:19:59 on Aug 06,2021
+# Loading work.Top_tb
+# Loading work.Top
+# Loading work.pwm_basico
+# Loading work.Display
+# Loading work.BCDtoSSeg
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 5, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Top_tb/uut File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v Line: 16
+# ** Warning: (vsim-3722) C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v(16): [TFMPC] - Missing connection for port 'sseg'.
+# ** Warning: (vsim-3722) C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v(16): [TFMPC] - Missing connection for port 'an'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v(26)
+#    Time: 1843200 ns  Iteration: 0  Instance: /Top_tb
+# Break in Module Top_tb at C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top_tb.v line 26
+# End time: 15:20:54 on Aug 06,2021, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 3

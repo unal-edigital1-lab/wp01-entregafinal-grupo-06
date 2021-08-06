@@ -3,27 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'Q_reg[0]'
-Slack : -4.219
-TNS   : -73.326
+Slack : -4.067
+TNS   : -73.467
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -1.687
-TNS   : -7.959
+Slack : -1.521
+TNS   : -6.883
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.758
+Slack : 0.566
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Q_reg[0]'
-Slack : 0.943
+Slack : 0.944
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'Q_reg[0]'
-Slack : -6.258
-TNS   : -92.797
+Slack : -6.022
+TNS   : -90.627
 
 Type  : Slow 1200mV 85C Model Removal 'Q_reg[0]'
-Slack : 0.361
+Slack : 0.302
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -31,31 +31,31 @@ Slack : -3.000
 TNS   : -11.922
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Q_reg[0]'
-Slack : 0.360
+Slack : 0.378
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'Q_reg[0]'
-Slack : -3.829
-TNS   : -66.216
+Slack : -3.723
+TNS   : -67.262
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.357
-TNS   : -6.693
+Slack : -1.266
+TNS   : -5.896
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.711
+Slack : 0.544
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Q_reg[0]'
-Slack : 0.872
+Slack : 0.874
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'Q_reg[0]'
-Slack : -5.699
-TNS   : -84.213
+Slack : -5.533
+TNS   : -84.145
 
 Type  : Slow 1200mV 0C Model Removal 'Q_reg[0]'
-Slack : 0.361
+Slack : 0.268
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -63,39 +63,39 @@ Slack : -3.000
 TNS   : -11.922
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Q_reg[0]'
-Slack : 0.198
+Slack : 0.226
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'Q_reg[0]'
-Slack : -1.227
-TNS   : -18.603
+Slack : -1.208
+TNS   : -18.625
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.604
-TNS   : -2.453
+Slack : -0.546
+TNS   : -2.162
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.200
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Q_reg[0]'
-Slack : 0.396
+Slack : 0.398
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'Q_reg[0]'
-Slack : -2.363
-TNS   : -34.747
+Slack : -1.991
+TNS   : -29.537
 
 Type  : Fast 1200mV 0C Model Removal 'Q_reg[0]'
-Slack : 0.131
+Slack : 0.060
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -9.000
+TNS   : -9.018
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Q_reg[0]'
-Slack : 0.339
+Slack : 0.307
 TNS   : 0.000
 
 ------------------------------------------------------------

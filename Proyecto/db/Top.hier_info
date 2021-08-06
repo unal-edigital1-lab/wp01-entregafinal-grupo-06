@@ -1,44 +1,32 @@
 |Top
-clk => clk.IN4
+clk => clk.IN3
 rst => _.IN1
-col[0] << Teclado:teclado.col
-col[1] << Teclado:teclado.col
-col[2] << Teclado:teclado.col
-col[3] << Teclado:teclado.col
+col[0] <= Teclado:teclado.col
+col[1] <= Teclado:teclado.col
+col[2] <= Teclado:teclado.col
+col[3] <= Teclado:teclado.col
 fila[0] => fila[0].IN1
 fila[1] => fila[1].IN1
 fila[2] => fila[2].IN1
 fila[3] => fila[3].IN1
-VGA_Hsync_n << <GND>
-VGA_Vsync_n << <GND>
-VGA_R << <GND>
-VGA_G << <GND>
-VGA_B << <GND>
-bell << pwm_basico:pwm.pwm_out
-oprN << opr.DB_MAX_OUTPUT_PORT_TYPE
-sseg[6] << Display:display.sseg
-sseg[5] << Display:display.sseg
-sseg[4] << Display:display.sseg
-sseg[3] << Display:display.sseg
-sseg[2] << Display:display.sseg
-sseg[1] << Display:display.sseg
-sseg[0] << Display:display.sseg
-an[0] << Display:display.an
-an[1] << Display:display.an
-an[2] << Display:display.an
-an[3] << Display:display.an
-N[0] => N[0].IN1
-N[1] => N[1].IN1
-N[2] => N[2].IN1
-N[3] => N[3].IN1
-N[4] => N[4].IN1
-N[5] => N[5].IN1
-N[6] => N[6].IN1
-N[7] => N[7].IN1
-N[8] => N[8].IN1
-N[9] => N[9].IN1
-N[10] => N[10].IN1
-N[11] => N[11].IN1
+VGA_Hsync_n <= <GND>
+VGA_Vsync_n <= <GND>
+VGA_R <= <GND>
+VGA_G <= <GND>
+VGA_B <= <GND>
+salidaPWM <= pwm_basico:pwm.pwm_out
+oprN <= opr.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= Display:display.sseg[6]
+sseg[5] <= Display:display.sseg[5]
+sseg[4] <= Display:display.sseg[4]
+sseg[3] <= Display:display.sseg[3]
+sseg[2] <= Display:display.sseg[2]
+sseg[1] <= Display:display.sseg[1]
+sseg[0] <= Display:display.sseg[0]
+an[0] <= Display:display.an[0]
+an[1] <= Display:display.an[1]
+an[2] <= Display:display.an[2]
+an[3] <= Display:display.an[3]
 
 
 |Top|Teclado:teclado
@@ -128,18 +116,6 @@ clk => Q_reg[2].CLK
 clk => Q_reg[3].CLK
 clk => Q_reg[4].CLK
 clk => Q_reg[5].CLK
-N[0] => Equal1.IN31
-N[1] => Equal1.IN30
-N[2] => Equal1.IN29
-N[3] => Equal1.IN28
-N[4] => Equal1.IN27
-N[5] => Equal1.IN26
-N[6] => Equal1.IN25
-N[7] => Equal1.IN24
-N[8] => Equal1.IN23
-N[9] => Equal1.IN22
-N[10] => Equal1.IN21
-N[11] => Equal1.IN20
 pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 

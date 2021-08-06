@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "salidaPWM",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "an[0]",
+					"strict" : false
+				},
+				{
+					"name" : "an[1]",
+					"strict" : false
+				},
+				{
+					"name" : "an[2]",
+					"strict" : false
+				},
+				{
+					"name" : "an[3]",
+					"strict" : false
+				},
+				{
+					"name" : "n[0]",
+					"strict" : false
+				},
+				{
+					"name" : "n[1]",
+					"strict" : false
+				},
+				{
+					"name" : "n[2]",
+					"strict" : false
+				},
+				{
+					"name" : "n[3]",
+					"strict" : false
+				},
+				{
+					"name" : "n[4]",
+					"strict" : false
+				},
+				{
+					"name" : "n[5]",
+					"strict" : false
+				},
+				{
+					"name" : "n[6]",
+					"strict" : false
+				},
+				{
+					"name" : "n[7]",
+					"strict" : false
+				},
+				{
+					"name" : "n[8]",
+					"strict" : false
+				},
+				{
+					"name" : "n[9]",
+					"strict" : false
+				},
+				{
+					"name" : "n[10]",
+					"strict" : false
+				},
+				{
+					"name" : "n[11]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
