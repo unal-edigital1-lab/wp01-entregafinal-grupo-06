@@ -12,22 +12,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "sseg[4]",
-					"strict" : false
-				},
-				{
-					"name" : "sseg[3]",
-					"strict" : false
-				},
-				{
-					"name" : "sseg[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sseg[1]",
-					"strict" : false
-				},
-				{
 					"name" : "an[0]",
 					"strict" : false
 				},
@@ -89,6 +73,22 @@
 				},
 				{
 					"name" : "n[11]",
+					"strict" : false
+				},
+				{
+					"name" : "posT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "posT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "posT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "posT[0]",
 					"strict" : false
 				},
 				{

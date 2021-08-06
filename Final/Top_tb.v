@@ -9,13 +9,14 @@ module Top_tb(
 	
 	//wire [R - 1:0]ciclo;
 	wire pwm_out;
-	reg[11:0]N=1;
+	reg[3:0]posT=1;
 	wire [11:0] n;
 	
 	//instanciacion del modulo
 	Top uut(
 		//.N(N),
 		.clk(clk),
+		.posT(posT),
 		.salidaPWM(pwm_out),
 		.n(n)
 	);
@@ -23,7 +24,7 @@ module Top_tb(
 	
 	
 	initial
-		#(2**(R+1)*36*N*T*20) $stop;
+		#(2**(R+1)*36*posT*T*20) $stop;
 		
 	//Generando señal de reloj
 	
@@ -46,11 +47,11 @@ module Top_tb(
 		reset = 1'b1;
 		
 		
-	#(2**(R+1)*36*N*T*2+1000) N = 2;
+	#(2**(R+1)*36*posT*T*2+1000) posT = 2;
 	
-	#(2**(R+1)*36*N*T*2+2000) N = 3;
+	#(2**(R+1)*36*posT*T*2+2000) posT = 3;
 	
-	#(2**(R+1)*36*N*T*2+200) N = 4;
+	#(2**(R+1)*36*posT*T*2+200) posT = 4;
 	end
 	
 		

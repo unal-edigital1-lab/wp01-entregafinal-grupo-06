@@ -4,18 +4,15 @@ module pwm_basico
 	#(parameter R = 6)(
 	input clk,
 	//output reg [R - 1:0] ciclo,
-	///input [11:0] cableN,
-	//input [3:0] posT,
-	output pwm_out, 
-	output [11:0] salidaN,
-	output [11:0] nChiquita
+	output pwm_out,
+	output [11:0] nChiquita,
+	input [3:0]posT,
+	output [3:0]Nsalida
 	);
 	
-	reg [11:0] prueba=2000;
-
-	//wire[11:0] cableN;
-
-	reg [3:0] posT=15;
+	
+	
+	
 	
 	//Contador de flanco positivo
 	reg [11:0] N=0;
@@ -23,42 +20,65 @@ module pwm_basico
 	reg [R - 1:0] ciclo=0;
 	reg [5:0]caso =0;
 	reg [11:0] n=0;
-	
-	//assign cableN=prueba;
-	assign salidaN=N;
+	//reg [3:0]posT=1;
 	assign nChiquita=n;
+	assign Nsalida=N;
 	
-	/*
-	always @(*)begin
-		N=cableN;	
-	end*/
 	
 	assign pwm_out = (Q_reg <ciclo);
+	
+	
+	/*
+	always@(*)begin
+		case(posT)
+		4'b0000: N=1;
+		4'b0001: N=2;
+		4'b0010: N=3;
+		4'b0011: N=4;
+		4'b0100: N=5;
+		4'b0101: N=6;
+		4'b0110: N=7;
+		4'b0111: N=8;
+		4'b1000: N=9;
+		4'b1001: N=10;
+		4'b1010: N=11;
+		4'b1011: N=12;
+		4'b1100: N=13;
+		4'b1101: N=14;
+		4'b1110: N=15;
+		4'b1111: N=16;
+		default N=0;
+		endcase
+	end
+	*/
+	
+	always@(*)begin
+		case(posT)
+		4'b0000: N=1000;
+		4'b0001: N=1200;
+		4'b0010: N=1400;
+		4'b0011: N=1600;
+		4'b0100: N=1800;
+		4'b0101: N=2000;
+		4'b0110: N=2200;
+		4'b0111: N=2400;
+		4'b1000: N=2600;
+		4'b1001: N=2800;
+		4'b1010: N=3000;
+		4'b1011: N=3200;
+		4'b1100: N=3400;
+		4'b1101: N=3600;
+		4'b1110: N=3800;
+		4'b1111: N=4000;
+		default N=0;
+		endcase
+	end
+		
+	
 	always @(posedge clk)
 	begin
 		Q_reg <= Q_reg+1;
 		
-	end
-	always@(*)begin
-		case(posT)
-		4'b0000: N=12'b001111101000;
-		4'b0001: N=12'b010010110000;
-		4'b0010: N=12'b010101111000;
-		4'b0011: N=12'b011001000000;
-		4'b0100: N=12'b011100001000;
-		4'b0101: N=12'b011111010000;
-		4'b0110: N=12'b100010011000;
-		4'b0111: N=12'b100101100000;
-		4'b1000: N=12'b101000101000;
-		4'b1001: N=12'b101011110000;
-		4'b1010: N=12'b101110111000;
-		4'b1011: N=12'b110010000000;
-		4'b1100: N=12'b110101001000;
-		4'b1101: N=12'b111000010000;
-		4'b1110: N=12'b111011011000;
-		4'b1111: N=12'b111110100000;
-		default N=0;
-		endcase
 	end
 	
 	always @(*) begin
@@ -66,7 +86,7 @@ module pwm_basico
 	n=n+1;
 	end
 	
-	if(n>=4000)begin
+	if(n>=N)begin
 		if(caso>=35) caso=0;
 		else caso=caso+1;	
 		n=0;end
@@ -112,8 +132,13 @@ module pwm_basico
 		endcase
 		
 	end
-
-
+	
 
 	
 endmodule	
+
+
+
+
+
+

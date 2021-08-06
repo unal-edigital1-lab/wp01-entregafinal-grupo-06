@@ -1,8 +1,9 @@
 `timescale 1ns/1ps
 
 
-module Top(clk/*,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B*/,salidaPWM,sseg,an,n);
+module Top(clk/*,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B*/,salidaPWM,sseg,an,n,posT);
 	input clk; //reloj
+	input [3:0]posT;
 	/*input rst; //boton de reset
 	output [3:0]col; //Salida hacia las columnas del teclado matricial
 	input [3:0]fila; //Entrada de las filas del teclado matricial 
@@ -100,10 +101,10 @@ reg [11:0] N=3000;
 //wire [11:0] cableN;
 //assign cableN=N;
 wire [11:0] salidaN;
-reg posT[3:0];
+//reg posT[3:0];
 
 	
-pwm_basico#(6)pwm(.clk(clk),.pwm_out(salidaPWM),.salidaN(salidaN),.nChiquita(n));
+pwm_basico#(6)pwm(.clk(clk),.posT(posT),.pwm_out(salidaPWM),.nChiquita(n),.Nsalida(salidaN));
 
 Display display(.sseg(sseg),.an(an),.numA(salidaN),.clk(clk));
 

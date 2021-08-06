@@ -1,29 +1,33 @@
 |Top
 clk => clk.IN2
-salidaPWM << pwm_basico:pwm.pwm_out
-sseg[6] << Display:display.sseg
-sseg[5] << Display:display.sseg
-sseg[4] << Display:display.sseg
-sseg[3] << Display:display.sseg
-sseg[2] << Display:display.sseg
-sseg[1] << Display:display.sseg
-sseg[0] << Display:display.sseg
-an[0] << Display:display.an
-an[1] << Display:display.an
-an[2] << Display:display.an
-an[3] << Display:display.an
-n[0] << pwm_basico:pwm.nChiquita
-n[1] << pwm_basico:pwm.nChiquita
-n[2] << pwm_basico:pwm.nChiquita
-n[3] << pwm_basico:pwm.nChiquita
-n[4] << pwm_basico:pwm.nChiquita
-n[5] << pwm_basico:pwm.nChiquita
-n[6] << pwm_basico:pwm.nChiquita
-n[7] << pwm_basico:pwm.nChiquita
-n[8] << pwm_basico:pwm.nChiquita
-n[9] << pwm_basico:pwm.nChiquita
-n[10] << pwm_basico:pwm.nChiquita
-n[11] << pwm_basico:pwm.nChiquita
+salidaPWM <= pwm_basico:pwm.pwm_out
+sseg[6] <= Display:display.sseg
+sseg[5] <= Display:display.sseg
+sseg[4] <= Display:display.sseg
+sseg[3] <= Display:display.sseg
+sseg[2] <= Display:display.sseg
+sseg[1] <= Display:display.sseg
+sseg[0] <= Display:display.sseg
+an[0] <= Display:display.an
+an[1] <= Display:display.an
+an[2] <= Display:display.an
+an[3] <= Display:display.an
+n[0] <= pwm_basico:pwm.nChiquita
+n[1] <= pwm_basico:pwm.nChiquita
+n[2] <= pwm_basico:pwm.nChiquita
+n[3] <= pwm_basico:pwm.nChiquita
+n[4] <= pwm_basico:pwm.nChiquita
+n[5] <= pwm_basico:pwm.nChiquita
+n[6] <= pwm_basico:pwm.nChiquita
+n[7] <= pwm_basico:pwm.nChiquita
+n[8] <= pwm_basico:pwm.nChiquita
+n[9] <= pwm_basico:pwm.nChiquita
+n[10] <= pwm_basico:pwm.nChiquita
+n[11] <= pwm_basico:pwm.nChiquita
+posT[0] => posT[0].IN1
+posT[1] => posT[1].IN1
+posT[2] => posT[2].IN1
+posT[3] => posT[3].IN1
 
 
 |Top|pwm_basico:pwm
@@ -34,18 +38,6 @@ clk => Q_reg[3].CLK
 clk => Q_reg[4].CLK
 clk => Q_reg[5].CLK
 pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-salidaN[0] <= <GND>
-salidaN[1] <= <GND>
-salidaN[2] <= <GND>
-salidaN[3] <= <GND>
-salidaN[4] <= <GND>
-salidaN[5] <= <VCC>
-salidaN[6] <= <GND>
-salidaN[7] <= <VCC>
-salidaN[8] <= <VCC>
-salidaN[9] <= <VCC>
-salidaN[10] <= <VCC>
-salidaN[11] <= <VCC>
 nChiquita[0] <= n[0].DB_MAX_OUTPUT_PORT_TYPE
 nChiquita[1] <= n[1].DB_MAX_OUTPUT_PORT_TYPE
 nChiquita[2] <= n[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -58,6 +50,24 @@ nChiquita[8] <= n[8].DB_MAX_OUTPUT_PORT_TYPE
 nChiquita[9] <= n[9].DB_MAX_OUTPUT_PORT_TYPE
 nChiquita[10] <= n[10].DB_MAX_OUTPUT_PORT_TYPE
 nChiquita[11] <= n[11].DB_MAX_OUTPUT_PORT_TYPE
+posT[0] => Decoder1.IN3
+posT[0] => Decoder2.IN2
+posT[0] => Decoder3.IN1
+posT[0] => LessThan1.IN24
+posT[0] => Nsalida[3].DATAIN
+posT[1] => Decoder0.IN2
+posT[1] => Decoder1.IN2
+posT[1] => Decoder2.IN1
+posT[1] => Decoder3.IN0
+posT[2] => Decoder0.IN1
+posT[2] => Decoder1.IN1
+posT[2] => Decoder2.IN0
+posT[3] => Decoder0.IN0
+posT[3] => Decoder1.IN0
+Nsalida[0] <= <GND>
+Nsalida[1] <= <GND>
+Nsalida[2] <= <GND>
+Nsalida[3] <= posT[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top|Display:display
