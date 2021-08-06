@@ -1,0 +1,121 @@
+# Reading pref.tcl
+# do Top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:13 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/pwm_basico.v 
+# -- Compiling module pwm_basico
+# 
+# Top level modules:
+# 	pwm_basico
+# End time: 11:45:13 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BCDtoSSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:14 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BCDtoSSeg.v 
+# -- Compiling module BCDtoSSeg
+# 
+# Top level modules:
+# 	BCDtoSSeg
+# End time: 11:45:14 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:14 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Display.v 
+# -- Compiling module Display
+# 
+# Top level modules:
+# 	Display
+# End time: 11:45:14 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:14 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v 
+# -- Compiling module BancoRegistro
+# 
+# Top level modules:
+# 	BancoRegistro
+# End time: 11:45:14 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:14 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/teclado.v 
+# -- Compiling module Teclado
+# 
+# Top level modules:
+# 	Teclado
+# End time: 11:45:14 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:14 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v 
+# -- Compiling module Top
+# 
+# Top level modules:
+# 	Top
+# End time: 11:45:14 on Aug 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto {C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:14 on Aug 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto" C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v 
+# -- Compiling module Top_tb
+# 
+# Top level modules:
+# 	Top_tb
+# End time: 11:45:15 on Aug 06,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Top_tb 
+# Start time: 11:45:15 on Aug 06,2021
+# Loading work.Top_tb
+# Loading work.Top
+# Loading work.Teclado
+# Loading work.BancoRegistro
+# Loading work.pwm_basico
+# Loading work.Display
+# Loading work.BCDtoSSeg
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 14, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Top_tb/uut File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v Line: 16
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'rst'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'col'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'fila'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'VGA_Hsync_n'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'VGA_Vsync_n'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'oprN'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'sseg'.
+# ** Warning: (vsim-3722) C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(16): [TFMPC] - Missing connection for port 'an'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'datOutR'. The port definition is at: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/BancoRegistro.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /Top_tb/uut/banco File: C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top.v Line: 57
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v(25)
+#    Time: 1843200 ns  Iteration: 0  Instance: /Top_tb
+# Break in Module Top_tb at C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/Top_tb.v line 25
+# End time: 11:49:49 on Aug 06,2021, Elapsed time: 0:04:34
+# Errors: 0, Warnings: 13

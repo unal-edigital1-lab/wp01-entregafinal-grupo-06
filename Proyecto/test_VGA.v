@@ -77,7 +77,7 @@ buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
 Se debe configurar AW  según los calculos realizados en el Wp01
 se recomiendia dejar DW a 8, con el fin de optimizar recursos  y hacer RGB 332
 **************************************************************************** */
-buffer_ram_dp #( AW,DW,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/image.men")
+buffer_ram_dp #( AW,DW,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/image.men")
 	DP_RAM(  
 	.clk_w(clk), 
 	.addr_in(DP_RAM_addr_in), 

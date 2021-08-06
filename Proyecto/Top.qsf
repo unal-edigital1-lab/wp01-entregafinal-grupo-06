@@ -105,4 +105,11 @@ set_location_assignment PIN_67 -to posT[1] -disable
 set_location_assignment PIN_68 -to posT[0] -disable
 set_location_assignment PIN_69 -to oprN
 set_location_assignment PIN_58 -to opr -disable
+set_global_assignment -name VERILOG_FILE Top_tb.v
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Top_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME Top_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Top_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Top_tb -section_id Top_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Top_tb.v -section_id Top_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

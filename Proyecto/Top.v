@@ -1,11 +1,12 @@
 `timescale 1ns/1ps
 
 
-module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,bell,oprN,sseg,an);
+module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,bell,oprN,sseg,an,N);
 	input clk; //reloj
 	input rst; //boton de reset
 	output [3:0]col; //Salida hacia las columnas del teclado matricial
 	input [3:0]fila; //Entrada de las filas del teclado matricial 
+	input [11:0]N;
 	output wire VGA_Hsync_n;  // Bit de sincronización horizontal de la VGA
 	output wire VGA_Vsync_n;  // Bit de sincronización vertical de la VGA
 	output wire VGA_R;	// Bit del color rojo de VGA
@@ -53,7 +54,7 @@ Se encuentra la dirección local del archivo de precarga de memoria, inicialment
 
 El rst se niega debido a que en la FPGA el pulsador es normalmente cerrados.
 */	
-BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
+BancoRegistro #( 4,3,"C:/Users/andre/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
 .addrR(posVGA),
 .addrW(posT),
 .RegWrite(opr),
@@ -69,7 +70,6 @@ posicion es una salida dirigida al addrR para la dirección de lectura del banco
 de esa posición.
 
 rst se niega por lo dicho anteriormente.
-*/
 
 test_VGA VGA(
 	.clk(clk),           
@@ -81,7 +81,8 @@ test_VGA VGA(
 	.VGA_R(VGA_R),	
 	.VGA_G(VGA_G),  
 	.VGA_B(VGA_B),   	
-);
+);*/
+
 
 parameter [9:0] mil=1000;
 parameter [5:0] mult=100;
@@ -93,9 +94,9 @@ reg [3:0] posPWM=0;
 
 	assign Nfreq=mil+mult*posT;
 	
-pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM),.opr(opr));
+pwm_basico#(6)pwm(.clk(clk),.N(N),.pwm_out(salidaPWM));
 
-Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
+Display display(.sseg(sseg),.an(an),.numA(Nfreq),.clk(clk));
 
 
 endmodule 

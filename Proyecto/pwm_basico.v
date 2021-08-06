@@ -3,42 +3,35 @@
 module pwm_basico
 	#(parameter R = 6)(
 	input clk,
-	input [11:0] Nentrada,
-	output pwm_out,
-	input opr
+	input [11:0] N,
+	//output reg [R - 1:0] ciclo,
+	output pwm_out
 	);
 	
+	
+	//Contador de flanco positivo
 	reg [R - 1:0] Q_reg=0;
 	reg [R - 1:0] ciclo=0;
-	reg [5:0]caso =0; //Número de caso del intervalo de la señal, puede ser entre 0 y 35
-	reg[11:0] N; //El valor N externo que determina la frecuencia de salida
-	reg [11:0] n=0;
-	
-	always @(*) begin
-		N=Nentrada;
-	end
-	 
-	//El pwm es 1 cuando Q_reg aún no llega a su valor de ciclo, cuando llega a él, es 0 por lo que resta del periodo del pwm
-	assign pwm_out = (Q_reg <ciclo);	
-	
+	reg [5:0]caso =0;
+	reg [15:0] n=0;
+	assign pwm_out = (Q_reg <ciclo);
 	always @(posedge clk)
 	begin
 		Q_reg <= Q_reg+1;
+		
 	end
 	
-
 	always @(*) begin
 	if(Q_reg==2**R-1) begin 
-	n=n+1; //Contador de cuantos periodos de pwm han transcurrido en el intervalo
+	n=n+1;
 	end
 	
-	
-	if(n==N)begin //cuando n es igual a N, es decir el número asignado de periodos para cada intervalo, el caso cambia, y el contador n vuelve a 0.
+	if(n==N)begin
 		if(caso>=35) caso=0;
 		else caso=caso+1;	
-		n=0; end
+		n=0;end
 	
-	case(caso) //Todos los cambios de porcentaje del ciclo dependiendo del intervalo entre 0 y 35 de la onda senoidal
+	case(caso)
 			0: ciclo=2**R*0.5; // 
 			1: ciclo=2**R*0.5893; // 
 			2: ciclo=2**R*0.6757; // 
@@ -75,10 +68,11 @@ module pwm_basico
 			33: ciclo=2**R*0.3243;
 			34: ciclo=2**R*0.4107;
 			35: ciclo=2**R*0.5;
-			default:     ciclo=2**R-1; 
+			default:     ciclo=2**R-1; // 
 		endcase
 		
 	end
+	
 
 	
 endmodule	
