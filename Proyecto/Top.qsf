@@ -97,7 +97,7 @@ set_location_assignment PIN_124 -to sseg[3]
 set_location_assignment PIN_121 -to sseg[4]
 set_location_assignment PIN_120 -to sseg[5]
 set_location_assignment PIN_119 -to sseg[6]
-set_location_assignment PIN_53 -to bell
+set_location_assignment PIN_51 -to bell
 set_global_assignment -name QIP_FILE Controlador.qip
 set_location_assignment PIN_65 -to posT[3] -disable
 set_location_assignment PIN_66 -to posT[2] -disable

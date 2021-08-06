@@ -52,32 +52,7 @@ always @(posedge clk) begin
 		cfreq<=cfreq+1;
 end	
  
-always@(posedge enable)begin
-		count<= count+1;
 
-
-		if(~(fila==0))begin
-			caso={col,fila};
-		end
-
-		begin
-		case (count) 
-			2'h0: begin col<=4'b0001; if(~(fila==0))begin opr1=1; end else begin opr1=0; end end
-			 
-			2'h1: begin col<=4'b0010; if(~(fila==0))begin opr2=1; end else begin opr2=0; end end
-			 
-			2'h2: begin col<=4'b0100; if(~(fila==0))begin opr3=1; end else begin opr3=0; end end
-			 
-			2'h3: begin col<=4'b1000; if(~(fila==0))begin opr4=1; end else begin opr4=0; end end
-		endcase			
-		end
-
-
-end
-
-
-
-/*
  
 always@(posedge enable)begin
 		count<= count+1;
@@ -92,8 +67,5 @@ always@(posedge enable)begin
 			2'h3: begin col<=4'b1000; if(~(fila==0))begin  caso={col,fila};opr4=1; end else begin opr4=0; end end
 		endcase
 end
-
-
-*/
 
 endmodule 

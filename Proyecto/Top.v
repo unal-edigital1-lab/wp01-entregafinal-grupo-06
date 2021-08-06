@@ -83,35 +83,19 @@ test_VGA VGA(
 	.VGA_B(VGA_B),   	
 );
 
-<<<<<<< HEAD
 parameter [9:0] mil=1000;
-parameter [5:0] mult=50;
-=======
-reg [9:0] mil=1000;
->>>>>>> parent of fa7bf9a (Final push)
+parameter [5:0] mult=100;
 reg [3:0] posPWM=0;
 	
 	always @(posedge opr) begin
 		posPWM<=posT;
 	end
 
-<<<<<<< HEAD
-	assign Nfreq=mil+mult*posPWM;
+	assign Nfreq=mil+mult*posT;
 	
 pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM),.opr(opr));
-=======
-always @(*) begin
-	Nfreq=mil+50*posPWM;
-end 
-	
-	
-	
-//assign Nfreq=mil+50*posPWM;
 
-pwm_basico#(6)pwm(.clk(clk),.Nentrada(Nfreq),.pwm_out(salidaPWM));
->>>>>>> parent of fa7bf9a (Final push)
-
-//Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
+Display display(.sseg(sseg),.an(an),.numA(Nfreq), .clk(clk));
 
 
 endmodule 
