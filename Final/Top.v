@@ -21,16 +21,18 @@ wire opr; //wire de oprimido, que es 1 cuando un boton del teclado matricial est
 wire [3:0] datOutR; //Se usa para leer el dato de lectura del banco de registro con dirección configurada por posVGA	
 
 
-wire wirePWM;
-assign salidaPWM=wirePWM & opr;
-assign led=wirePWM & opr;
+wire wirePWM; //Wire que conecta la salida del PWM
+assign salidaPWM=wirePWM & opr; //Wire asignado a un pin de la fpga, se activa el PWM cuando está encendido opr.
+assign led=wirePWM & opr; //Wire asignado a otro pin de la fpga, se activa el PWM cuando está encendido opr.
 
 
 
-/*Para el teclado se tiene como salida col, que varía constantemente, y fila de entrada, que recolecta los valores para determinar
+/*
+Para el teclado se tiene como salida col, que varía constantemente, y fila de entrada, que recolecta los valores para determinar
 si algun botón está siendo pulsado.
 
-posicion es un valor entre 0 y 15 que determina esta posición pulsada.*/
+posicion es un valor entre 0 y 15 que determina esta posición pulsada.
+*/
 
 
 Teclado teclado(
@@ -41,11 +43,11 @@ Teclado teclado(
 .opr(opr)
 );
 	
-
-/*Módulo del banco de registro, 4 bits para direcciones y 3 para el valor. 
+/*
+Módulo del banco de registro, 4 bits para direcciones y 3 para el valor. 
 Se encuentra la dirección local del archivo de precarga de memoria, inicialmente todos están en 000.
-
-El rst se niega debido a que en la FPGA el pulsador es normalmente cerrados.*/
+El rst se niega debido a que en la FPGA el pulsador es normalmente cerrados.
+*/
 
 BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
 .addrR(posVGA),
