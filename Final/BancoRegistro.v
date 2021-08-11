@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
-module BancoRegistro #(      		 //   #( Parametros
-			//parameter MEMORYREG ="./reg16.men",
+module BancoRegistro #( 
          parameter BIT_ADDR = 4,  //   BIT_ADDR Número de bit para la dirección
          parameter BIT_DATO = 3, //		longitud dato: 2**BIT_DATO 
          parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"

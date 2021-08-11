@@ -50,9 +50,7 @@ set_global_assignment -name VERILOG_FILE timer.v
 set_global_assignment -name VERILOG_FILE test_VGA.v
 set_global_assignment -name VERILOG_FILE teclado.v
 set_global_assignment -name VERILOG_FILE pwm_basico.v
-set_global_assignment -name VERILOG_FILE Display.v
 set_global_assignment -name VERILOG_FILE buffer_ram_dp.v
-set_global_assignment -name VERILOG_FILE BCDtoSSeg.v
 set_global_assignment -name VERILOG_FILE BancoRegistro.v
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -69,19 +67,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_51 -to salidaPWM
+set_location_assignment PIN_44 -to salidaPWM
 set_location_assignment PIN_23 -to clk
-set_location_assignment PIN_127 -to sseg[0]
-set_location_assignment PIN_126 -to sseg[1]
-set_location_assignment PIN_125 -to sseg[2]
-set_location_assignment PIN_124 -to sseg[3]
-set_location_assignment PIN_121 -to sseg[4]
-set_location_assignment PIN_120 -to sseg[5]
-set_location_assignment PIN_119 -to sseg[6]
-set_location_assignment PIN_133 -to an[3]
-set_location_assignment PIN_132 -to an[2]
-set_location_assignment PIN_129 -to an[1]
-set_location_assignment PIN_128 -to an[0]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
@@ -90,4 +77,19 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Top_tb -section_id eda_simulatio
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Top_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Top_tb -section_id Top_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Top_tb.v -section_id Top_tb
+set_location_assignment PIN_55 -to led
+set_location_assignment PIN_28 -to col[3]
+set_location_assignment PIN_31 -to col[2]
+set_location_assignment PIN_33 -to col[1]
+set_location_assignment PIN_38 -to col[0]
+set_location_assignment PIN_30 -to fila[3]
+set_location_assignment PIN_32 -to fila[2]
+set_location_assignment PIN_34 -to fila[1]
+set_location_assignment PIN_39 -to fila[0]
+set_location_assignment PIN_86 -to rst
+set_location_assignment PIN_144 -to VGA_B
+set_location_assignment PIN_1 -to VGA_G
+set_location_assignment PIN_142 -to VGA_Hsync_n
+set_location_assignment PIN_143 -to VGA_Vsync_n
+set_location_assignment PIN_2 -to VGA_R
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

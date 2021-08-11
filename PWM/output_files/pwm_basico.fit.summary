@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri Aug 06 12:20:14 2021
+Fitter Status : Successful - Wed Aug 11 11:43:35 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : pwm_basico
 Top-level Entity Name : pwm_basico
 Family : Cyclone IV E
 Device : EP4CE10E22C8
 Timing Models : Final
-Total logic elements : 74 / 10,320 ( < 1 % )
-    Total combinational functions : 74 / 10,320 ( < 1 % )
-    Dedicated logic registers : 6 / 10,320 ( < 1 % )
-Total registers : 6
+Total logic elements : 46 / 10,320 ( < 1 % )
+    Total combinational functions : 46 / 10,320 ( < 1 % )
+    Dedicated logic registers : 28 / 10,320 ( < 1 % )
+Total registers : 28
 Total pins : 2 / 92 ( 2 % )
 Total virtual pins : 0
 Total memory bits : 0 / 423,936 ( 0 % )

@@ -1,45 +1,36 @@
 `timescale 1ns/1ps
 
 
-module Top(clk/*,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B*/,salidaPWM,sseg,an,n,posT);
+module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,salidaPWM,led);
 	input clk; //reloj
-	input [3:0]posT;
-	/*input rst; //boton de reset
+	input rst; //boton de reset
 	output [3:0]col; //Salida hacia las columnas del teclado matricial
 	input [3:0]fila; //Entrada de las filas del teclado matricial 
-	input [11:0]N;
 	output wire VGA_Hsync_n;  // Bit de sincronización horizontal de la VGA
 	output wire VGA_Vsync_n;  // Bit de sincronización vertical de la VGA
 	output wire VGA_R;	// Bit del color rojo de VGA
 	output wire VGA_G;  // Bit del color verde de VGA
-	output wire VGA_B;  // Bit del color azul de VGA*/
+	output wire VGA_B;  // Bit del color azul de VGA
 	output salidaPWM;
-	//input [3:0] posT;
-	//input opr;
-	//output oprN;
-	output [0:6] sseg;
-	output [3:0] an;
-	output [11:0] n;
-/*	
+	output led;
+
+
 wire [3:0] posT; //Wire que conecta la posición del boton hundido del teclado matricial, varía entre 0 y 15
-reg [3:0] RegPrueba;
 wire [3:0] posVGA; //valor que varía entre 0 y 15 y se usa para leer la posición de memoria del banco de registro
 wire opr; //wire de oprimido, que es 1 cuando un boton del teclado matricial está pulsado
-wire [3:0] datOutR; //Se usa para leer el dato de lectura del banco de registro con dirección configurada por posVGA
-wire [3:0] posDispay;	
-wire [11:0] Nfreq; //Valor de N que determina la frecuencia de la señal del PWM
-//wire salidaPWM;
+wire [3:0] datOutR; //Se usa para leer el dato de lectura del banco de registro con dirección configurada por posVGA	
 
-//assign bell=salidaPWM; //
-assign oprN=~opr;
 
+wire wirePWM;
+assign salidaPWM=wirePWM & opr;
+assign led=wirePWM & opr;
 
 
 
-Para el teclado se tiene como salida col, que varía constantemente, y fila de entrada, que recolecta los valores para determinar
+/*Para el teclado se tiene como salida col, que varía constantemente, y fila de entrada, que recolecta los valores para determinar
 si algun botón está siendo pulsado.
 
-posicion es un valor entre 0 y 15 que determina esta posición pulsada.
+posicion es un valor entre 0 y 15 que determina esta posición pulsada.*/
 
 
 Teclado teclado(
@@ -51,10 +42,10 @@ Teclado teclado(
 );
 	
 
-Módulo del banco de registro, 4 bits para direcciones y 3 para el valor. 
+/*Módulo del banco de registro, 4 bits para direcciones y 3 para el valor. 
 Se encuentra la dirección local del archivo de precarga de memoria, inicialmente todos están en 000.
 
-El rst se niega debido a que en la FPGA el pulsador es normalmente cerrados.
+El rst se niega debido a que en la FPGA el pulsador es normalmente cerrados.*/
 
 BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
 .addrR(posVGA),
@@ -66,12 +57,12 @@ BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proye
 );
 
 
-Para el bloque de VGA se tienen unas modificaciones al entregado para el proyecto.
+/*Para el bloque de VGA se tienen unas modificaciones al entregado para el proyecto.
 
 posicion es una salida dirigida al addrR para la dirección de lectura del banco de registro, y datOutR es el dato
 de esa posición.
 
-rst se niega por lo dicho anteriormente.
+rst se niega por lo dicho anteriormente.*/
 
 test_VGA VGA(
 	.clk(clk),           
@@ -86,27 +77,8 @@ test_VGA VGA(
 );
 
 
-parameter [9:0] mil=1000;
-parameter [5:0] mult=100;
-reg [3:0] posPWM=0;
-reg [11:0] N=1000;
 	
-	always @(posedge opr) begin
-		posPWM<=posT;
-	end
-
-	assign Nfreq=mil+mult*posT;
-*/	
-reg [11:0] N=3000;
-//wire [11:0] cableN;
-//assign cableN=N;
-wire [11:0] salidaN;
-//reg posT[3:0];
-
-	
-pwm_basico#(6)pwm(.clk(clk),.posT(posT),.pwm_out(salidaPWM),.nChiquita(n),.Nsalida(salidaN));
-
-Display display(.sseg(sseg),.an(an),.numA(salidaN),.clk(clk));
+pwm_basico#(6)pwm(.clk(clk),.posT(posT),.pwm_out(wirePWM));
 
 
 endmodule 

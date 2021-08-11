@@ -16,9 +16,9 @@ module Top_tb(
 	Top uut(
 		//.N(N),
 		.clk(clk),
-		.posT(posT),
-		.salidaPWM(pwm_out),
-		.n(n)
+		//.posT(posT),
+		.salidaPWM(pwm_out)
+		//.n(n)
 	);
 	
 	

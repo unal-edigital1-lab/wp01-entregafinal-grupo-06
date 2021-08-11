@@ -57,14 +57,14 @@ reg  [AW-1: 0] DP_RAM_addr_out;
 	
 
 wire [DW-1:0]data_mem;	   // Salida de dp_ram al driver VGA
-wire [DW-1:0]data_RGB444;  // salida del driver VGA al puerto
+wire [DW-1:0]data_RGB111;  // salida del driver VGA al puerto
 wire [9:0]VGA_posX;		   // Determinar la pos de memoria que viene del VGA
 wire [8:0]VGA_posY;		   // Determinar la pos de memoria que viene del VGA
 
 
-	assign VGA_R = data_RGB444[2];
-	assign VGA_G = data_RGB444[1];
-	assign VGA_B = data_RGB444[0];
+	assign VGA_R = data_RGB111[2];
+	assign VGA_G = data_RGB111[1];
+	assign VGA_B = data_RGB111[0];
 
 	//Divisor de frecuencia de 50M a 25M
 	reg [1:0] cfreq=0;
@@ -93,8 +93,8 @@ VGA_Driver640x480 VGA640x480
 (
 	.rst(rst),
 	.clk(clk25M), 				// 25MHz  para 60 hz de 640x480
-	.pixelIn(data_mem), 		// entrada del valor de color  pixel RGB 444 
-	.pixelOut(data_RGB444), // salida del valor pixel a la VGA 
+	.pixelIn(data_mem), 		// entrada del valor de color  pixel RGB 111 
+	.pixelOut(data_RGB111), // salida del valor pixel a la VGA 
 	.Hsync_n(VGA_Hsync_n),	// señal de sincronizaciÓn en horizontal negada
 	.Vsync_n(VGA_Vsync_n),	// señal de sincronizaciÓn en vertical negada 
 	.posX(VGA_posX), 			// posición en horizontal del pixel siguiente

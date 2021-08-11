@@ -4,95 +4,71 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "col[0]",
+					"strict" : false
+				},
+				{
+					"name" : "col[1]",
+					"strict" : false
+				},
+				{
+					"name" : "col[2]",
+					"strict" : false
+				},
+				{
+					"name" : "col[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Hsync_n",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Vsync_n",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B",
+					"strict" : false
+				},
+				{
 					"name" : "salidaPWM",
 					"strict" : false
 				},
 				{
-					"name" : "sseg[6]",
+					"name" : "led",
 					"strict" : false
 				},
 				{
-					"name" : "an[0]",
-					"strict" : false
-				},
-				{
-					"name" : "an[1]",
-					"strict" : false
-				},
-				{
-					"name" : "an[2]",
-					"strict" : false
-				},
-				{
-					"name" : "an[3]",
-					"strict" : false
-				},
-				{
-					"name" : "n[0]",
-					"strict" : false
-				},
-				{
-					"name" : "n[1]",
-					"strict" : false
-				},
-				{
-					"name" : "n[2]",
-					"strict" : false
-				},
-				{
-					"name" : "n[3]",
-					"strict" : false
-				},
-				{
-					"name" : "n[4]",
-					"strict" : false
-				},
-				{
-					"name" : "n[5]",
-					"strict" : false
-				},
-				{
-					"name" : "n[6]",
-					"strict" : false
-				},
-				{
-					"name" : "n[7]",
-					"strict" : false
-				},
-				{
-					"name" : "n[8]",
-					"strict" : false
-				},
-				{
-					"name" : "n[9]",
-					"strict" : false
-				},
-				{
-					"name" : "n[10]",
-					"strict" : false
-				},
-				{
-					"name" : "n[11]",
-					"strict" : false
-				},
-				{
-					"name" : "posT[3]",
-					"strict" : false
-				},
-				{
-					"name" : "posT[1]",
-					"strict" : false
-				},
-				{
-					"name" : "posT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "posT[0]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "fila[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[3]",
 					"strict" : false
 				}
 			]

@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 module pwm_basico
-	#(parameter R = 6)(
+	#(parameter R = 6, parameter N=2000)(
 	input clk,
 	//output reg [R - 1:0] ciclo,
 	output pwm_out
@@ -9,7 +9,6 @@ module pwm_basico
 	
 	
 	//Contador de flanco positivo
-	reg [11:0] N=5000;
 	reg [R - 1:0] Q_reg=0;
 	reg [R - 1:0] ciclo=0;
 	reg [5:0]caso =0;
@@ -19,9 +18,7 @@ module pwm_basico
 	begin
 		Q_reg <= Q_reg+1;
 		
-	end
 	
-	always @(*) begin
 	if(Q_reg==2**R-1) begin 
 	n=n+1;
 	end
@@ -30,7 +27,9 @@ module pwm_basico
 		if(caso>=35) caso=0;
 		else caso=caso+1;	
 		n=0;end
+	end
 	
+	always @(*) begin
 	case(caso)
 			0: ciclo=2**R*0.5; // 
 			1: ciclo=2**R*0.5893; // 
@@ -75,5 +74,4 @@ module pwm_basico
 	
 
 	
-endmodule	
-	
+endmodule
