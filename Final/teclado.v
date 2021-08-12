@@ -10,9 +10,11 @@ module Teclado(clk,fila,col,posicion,opr);
 	reg opr2=0; 
 	reg opr3=0; 
 	reg opr4=0; 
-	reg [1:0] count=0;
+	reg [1:0] count=0; //Contador para realizar el barrido de columnas
 
-
+	/*
+	Cuando cualquier sub opr está activado, el opr también lo está.
+	*/
 	assign opr=opr1|opr2|opr3|opr4;
 
 	/*
@@ -55,8 +57,12 @@ end
 
  
 always@(posedge enable)begin
-		count<= count+1;
-
+		count<= count+1; //En cada pulsación del enable cambia el valor de count para realizar el barrido de columnas.
+		/*
+		Para todas las columnas, si el valor leido de fila no es 0, es porque está activada una posición. Se almacena su
+		valor de columna y fila concatenandolas en el valor de "caso", y el valor correspondiente de opr se activa. Si no se cumple la 
+		condición, su valor de opr es 0.
+		*/
 		case (count) 
 			2'h0: begin col<=4'b0001; if(~(fila==0))begin  caso={col,fila};opr1=1; end else begin opr1=0; end end
 			 
