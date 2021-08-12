@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 
-module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,salidaPWM,led);
+module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,salidaPWM);
 	input clk; //reloj
 	input rst; //boton de reset
 	output [3:0]col; //Salida hacia las columnas del teclado matricial
@@ -12,7 +12,6 @@ module Top(clk,rst,col,fila,VGA_Hsync_n,VGA_Vsync_n,VGA_R,VGA_G,VGA_B,salidaPWM,
 	output wire VGA_G;  // Bit del color verde de VGA
 	output wire VGA_B;  // Bit del color azul de VGA
 	output salidaPWM;
-	output led;
 
 
 wire [3:0] posT; //Wire que conecta la posición del boton hundido del teclado matricial, varía entre 0 y 15
@@ -23,7 +22,6 @@ wire [3:0] datOutR; //Se usa para leer el dato de lectura del banco de registro 
 
 wire wirePWM; //Wire que conecta la salida del PWM
 assign salidaPWM=wirePWM & opr; //Wire asignado a un pin de la fpga, se activa el PWM cuando está encendido opr.
-assign led=wirePWM & opr; //Wire asignado a otro pin de la fpga, se activa el PWM cuando está encendido opr.
 
 
 
@@ -49,7 +47,7 @@ Se encuentra la dirección local del archivo de precarga de memoria, inicialment
 El rst se niega debido a que en la FPGA el pulsador es normalmente cerrados.
 */
 
-BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men")banco(
+BancoRegistro #( 4,3,"C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/memDir.men")banco(
 .addrR(posVGA),
 .addrW(posT),
 .RegWrite(opr),

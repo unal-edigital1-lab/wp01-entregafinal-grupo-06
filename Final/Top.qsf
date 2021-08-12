@@ -77,7 +77,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Top_tb -section_id eda_simulatio
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Top_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Top_tb -section_id Top_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Top_tb.v -section_id Top_tb
-set_location_assignment PIN_55 -to led
 set_location_assignment PIN_28 -to col[3]
 set_location_assignment PIN_31 -to col[2]
 set_location_assignment PIN_33 -to col[1]

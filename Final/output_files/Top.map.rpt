@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Wed Aug 11 17:18:24 2021
+Wed Aug 11 19:22:20 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,16 +54,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 11 17:18:23 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 11 19:22:20 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 351                                         ;
-;     Total combinational functions  ; 298                                         ;
+; Total logic elements               ; 342                                         ;
+;     Total combinational functions  ; 289                                         ;
 ;     Dedicated logic registers      ; 125                                         ;
 ; Total registers                    ; 125                                         ;
-; Total pins                         ; 17                                          ;
+; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -190,36 +190,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 351                 ;
-;                                             ;                     ;
-; Total combinational functions               ; 298                 ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 175                 ;
-;     -- 3 input functions                    ; 29                  ;
-;     -- <=2 input functions                  ; 94                  ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 240                 ;
-;     -- arithmetic mode                      ; 58                  ;
-;                                             ;                     ;
-; Total registers                             ; 125                 ;
-;     -- Dedicated logic registers            ; 125                 ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 17                  ;
-;                                             ;                     ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; Teclado:teclado|opr ;
-; Maximum fan-out                             ; 49                  ;
-; Total fan-out                               ; 1354                ;
-; Average fan-out                             ; 2.96                ;
-+---------------------------------------------+---------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 342       ;
+;                                             ;           ;
+; Total combinational functions               ; 289       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 174       ;
+;     -- 3 input functions                    ; 26        ;
+;     -- <=2 input functions                  ; 89        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 231       ;
+;     -- arithmetic mode                      ; 58        ;
+;                                             ;           ;
+; Total registers                             ; 125       ;
+;     -- Dedicated logic registers            ; 125       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 16        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 59        ;
+; Total fan-out                               ; 1377      ;
+; Average fan-out                             ; 3.09      ;
++---------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -227,11 +227,11 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name       ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
-; |Top                                 ; 298 (3)             ; 125 (0)                   ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |Top                                           ; Top               ; work         ;
-;    |BancoRegistro:banco|             ; 78 (78)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|BancoRegistro:banco                       ; BancoRegistro     ; work         ;
+; |Top                                 ; 289 (3)             ; 125 (0)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |Top                                           ; Top               ; work         ;
+;    |BancoRegistro:banco|             ; 32 (32)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|BancoRegistro:banco                       ; BancoRegistro     ; work         ;
 ;    |Teclado:teclado|                 ; 38 (38)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Teclado:teclado                           ; Teclado           ; work         ;
-;    |pwm_basico:pwm|                  ; 83 (83)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|pwm_basico:pwm                            ; pwm_basico        ; work         ;
-;    |test_VGA:VGA|                    ; 96 (64)             ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA                              ; test_VGA          ; work         ;
+;    |pwm_basico:pwm|                  ; 90 (90)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|pwm_basico:pwm                            ; pwm_basico        ; work         ;
+;    |test_VGA:VGA|                    ; 126 (94)            ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA                              ; test_VGA          ; work         ;
 ;       |VGA_Driver640x480:VGA640x480| ; 29 (29)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480 ; VGA_Driver640x480 ; work         ;
 ;       |buffer_ram_dp:DP_RAM|         ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|test_VGA:VGA|buffer_ram_dp:DP_RAM         ; buffer_ram_dp     ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
@@ -277,7 +277,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Total registers                              ; 125   ;
 ; Number of registers using Synchronous Clear  ; 6     ;
 ; Number of registers using Synchronous Load   ; 19    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 48    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 71    ;
 ; Number of registers using Preset             ; 0     ;
@@ -290,31 +290,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countY[5] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |Top|test_VGA:VGA|VGA_Driver640x480:VGA640x480|countX[6] ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Top|BancoRegistro:banco|Mux5                            ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |Top|test_VGA:VGA|DP_RAM_addr_out[0]                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BancoRegistro:banco                                           ;
-+----------------+--------------------------------------------------------------------------+----------------+
-; Parameter Name ; Value                                                                    ; Type           ;
-+----------------+--------------------------------------------------------------------------+----------------+
-; BIT_ADDR       ; 4                                                                        ; Signed Integer ;
-; BIT_DATO       ; 3                                                                        ; Signed Integer ;
-; MEMORYREG      ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men ; String         ;
-+----------------+--------------------------------------------------------------------------+----------------+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BancoRegistro:banco                                        ;
++----------------+-----------------------------------------------------------------------+----------------+
+; Parameter Name ; Value                                                                 ; Type           ;
++----------------+-----------------------------------------------------------------------+----------------+
+; BIT_ADDR       ; 4                                                                     ; Signed Integer ;
+; BIT_DATO       ; 3                                                                     ; Signed Integer ;
+; MEMORYREG      ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/memDir.men ; String         ;
++----------------+-----------------------------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: test_VGA:VGA|buffer_ram_dp:DP_RAM                            ;
-+----------------+-------------------------------------------------------------------------+----------------+
-; Parameter Name ; Value                                                                   ; Type           ;
-+----------------+-------------------------------------------------------------------------+----------------+
-; AW             ; 4                                                                       ; Signed Integer ;
-; DW             ; 3                                                                       ; Signed Integer ;
-; imageFILE      ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/image.men ; String         ;
-+----------------+-------------------------------------------------------------------------+----------------+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_VGA:VGA|buffer_ram_dp:DP_RAM                         ;
++----------------+----------------------------------------------------------------------+----------------+
+; Parameter Name ; Value                                                                ; Type           ;
++----------------+----------------------------------------------------------------------+----------------+
+; AW             ; 4                                                                    ; Signed Integer ;
+; DW             ; 3                                                                    ; Signed Integer ;
+; imageFILE      ; C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/image.men ; String         ;
++----------------+----------------------------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -371,26 +373,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
+; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 125                         ;
-;     ENA               ; 56                          ;
+;     ENA               ; 8                           ;
+;     ENA CLR           ; 48                          ;
 ;     ENA SCLR          ; 6                           ;
 ;     ENA SLD           ; 9                           ;
 ;     SLD               ; 10                          ;
 ;     plain             ; 44                          ;
-; cycloneiii_lcell_comb ; 298                         ;
+; cycloneiii_lcell_comb ; 289                         ;
 ;     arith             ; 58                          ;
 ;         2 data inputs ; 50                          ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 240                         ;
+;     normal            ; 231                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 10                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 175                         ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 174                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 5.19                        ;
+; Average LUT depth     ; 5.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -409,7 +412,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Aug 11 17:18:13 2021
+    Info: Processing started: Wed Aug 11 19:22:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -438,9 +441,10 @@ Info (12128): Elaborating entity "Teclado" for hierarchy "Teclado:teclado" File:
 Warning (10230): Verilog HDL assignment warning at teclado.v(52): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/teclado.v Line: 52
 Warning (10230): Verilog HDL assignment warning at teclado.v(58): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/teclado.v Line: 58
 Info (12128): Elaborating entity "BancoRegistro" for hierarchy "BancoRegistro:banco" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 57
-Warning (10036): Verilog HDL or VHDL warning at BancoRegistro.v(27): object "enable" assigned a value but never read File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 27
-Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(32): truncated value with size 32 to match size of target (27) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 32
-Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(44): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 44
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(29): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 29
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(28): truncated value with size 32 to match size of target (5) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 28
+Warning (10230): Verilog HDL assignment warning at BancoRegistro.v(31): truncated value with size 32 to match size of target (3) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at BancoRegistro.v(26): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 26
 Info (12128): Elaborating entity "test_VGA" for hierarchy "test_VGA:VGA" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 77
 Warning (10230): Verilog HDL assignment warning at test_VGA.v(73): truncated value with size 32 to match size of target (2) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/test_VGA.v Line: 73
 Warning (10235): Verilog HDL Always Construct warning at test_VGA.v(129): variable "dirColor" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/test_VGA.v Line: 129
@@ -474,32 +478,31 @@ Warning (10230): Verilog HDL assignment warning at VGA_driver.v(71): truncated v
 Info (12128): Elaborating entity "pwm_basico" for hierarchy "pwm_basico:pwm" File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 81
 Warning (10036): Verilog HDL or VHDL warning at pwm_basico.v(21): object "Nsalida" assigned a value but never read File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 21
 Warning (10230): Verilog HDL assignment warning at pwm_basico.v(21): truncated value with size 13 to match size of target (1) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 21
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(51): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 51
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(52): truncated value with size 32 to match size of target (13) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 52
-Warning (10230): Verilog HDL assignment warning at pwm_basico.v(56): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 56
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(54): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 54
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(55): truncated value with size 32 to match size of target (13) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 55
+Warning (10230): Verilog HDL assignment warning at pwm_basico.v(59): truncated value with size 32 to match size of target (6) File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 59
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 21
+    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 20
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 21
-Info (276014): Found 2 instances of uninferred RAM logic
+    Warning (12110): Net "datOutR[3]" is missing source, defaulting to GND File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/Top.v Line: 20
+Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "test_VGA:VGA|buffer_ram_dp:DP_RAM|ram" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/buffer_ram_dp.v Line: 38
-    Info (276004): RAM logic "BancoRegistro:banco|breg" is uninferred due to inappropriate RAM size File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/BancoRegistro.v Line: 22
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/db/Top.ram0_buffer_ram_dp_faaedf64.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/db/Top.ram0_buffer_ram_dp_f2dac8aa.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 11 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/output_files/Top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 369 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 358 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Wed Aug 11 17:18:24 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 353 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Wed Aug 11 19:22:20 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

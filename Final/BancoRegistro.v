@@ -3,7 +3,7 @@
 module BancoRegistro #( 
          parameter BIT_ADDR = 4,  //   BIT_ADDR Número de bit para la dirección
          parameter BIT_DATO = 3, //		longitud dato: 2**BIT_DATO 
-         parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Proyecto/memDir.men"//Dirección de la memoria de los valores iniciales
+         parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/memDir.men"//Dirección de la memoria de los valores iniciales
 	)
 	(
     input [BIT_ADDR-1:0] addrR,
@@ -23,9 +23,9 @@ reg [BIT_ADDR: 0] i;
 localparam datRST= 0;
 /* Cuando RegWrite, en este caso corresponde al wire opr del top, se enciende, se aumenta en 1 el banco de registro en la 
 posición indicada por el addrW, correspondiente al posT del top*/
-always @(posedge RegWrite or posedge rst) begin
+always @(negedge RegWrite or posedge rst) begin
       if(rst)begin
-      for(i=0;i<NREG;i=i+1)
+      for(i=0;i<NREG;i=i+1) 
          breg[i] <= datRST;  
       end else
      breg[addrW] <= breg[addrW]+1;

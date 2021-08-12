@@ -1,3 +1,3 @@
 Warning (10268): Verilog HDL information at teclado.v(57): always construct contains both blocking and non-blocking assignments File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/teclado.v Line: 57
-Warning (10268): Verilog HDL information at pwm_basico.v(49): always construct contains both blocking and non-blocking assignments File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 49
+Warning (10268): Verilog HDL information at pwm_basico.v(52): always construct contains both blocking and non-blocking assignments File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 52
 Info (10281): Verilog HDL Declaration information at pwm_basico.v(15): object "N" differs only in case from object "n" in the same scope File: C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/pwm_basico.v Line: 15
