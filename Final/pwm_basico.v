@@ -4,51 +4,26 @@ module pwm_basico
 	#(parameter R = 6)(
 	input clk,
 	output pwm_out,
-	input [3:0]posT
+	input [4:0]datN
 	);
 	
-	
-	
-	
-	
-	//Contador de flanco positivo
-	reg [12:0] N=0;
 	reg [R - 1:0] Q_reg=0;
 	reg [R - 1:0] duty=0;
-	reg [5:0]caso =0;
-	reg [12:0] n=0;
-	
-	assign Nsalida=N;
-	
+	reg [5:0]caso=0;
+	reg [4:0] N=0;
+	reg [4:0] n=0;
+
 	
 	assign pwm_out = (Q_reg <duty);
 	
 	always@(*)begin
-		case(posT)		
-		4'b0000: N=28;
-		4'b0001: N=21;
-		4'b0010: N=17;
-		4'b0011: N=13;
-		
-		4'b0100: N=26;
-		4'b0101: N=20;
-		4'b0110: N=16;
-		4'b0111: N=12;
-		
-		4'b1000: N=24;
-		4'b1001: N=19;
-		4'b1010: N=15;
-		4'b1011: N=11;
-		
-		4'b1100: N=22;
-		4'b1101: N=18;
-		4'b1110: N=14;
-		4'b1111: N=10;
-		default N=0;
-		endcase
+		N=datN;
 	end
 		
-	
+	/*
+	Cada pulso de reloj Q_reg aumenta, cuando llega a su máximo, el contador n aumenta en 1. Cuando n es igual al valor asignado para la
+	frecuencia correspondiente, cambia de caso, indicando que ya transcurrieron los ciclos del PWM correspondientes del intervalo de 10°
+	*/
 	always @(posedge clk)
 	begin
 		Q_reg <= Q_reg+1;
@@ -60,6 +35,11 @@ module pwm_basico
 		n=0;end
 	end
 		
+		
+		
+/*
+Dependiendo del valor de caso, el duty del PWM varía. 
+*/
 always @(*) begin
 	case(caso)
 			0: duty=32; 
@@ -101,7 +81,7 @@ always @(*) begin
 			default:duty=0; 
 		endcase
 	end
-	
+
 endmodule	
 
 

@@ -3,7 +3,7 @@
 module BancoRegistro #( 
          parameter BIT_ADDR = 4,  //   BIT_ADDR Número de bit para la dirección
          parameter BIT_DATO = 3, //		longitud dato: 2**BIT_DATO 
-         parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/memDir.men"//Dirección de la memoria de los valores iniciales
+         parameter MEMORYREG ="C:/Users/equip/Documents/GitHub/wp01-testvga-grupo-6/Final/memDir.men"//Dirección de la memoria de los valores iniciales.
 	)
 	(
     input [BIT_ADDR-1:0] addrR,
@@ -21,8 +21,12 @@ assign  datOutR = breg[addrR]; //El dato de lectura corresponde al dato de la po
 
 reg [BIT_ADDR: 0] i;
 localparam datRST= 0;
-/* Cuando RegWrite, en este caso corresponde al wire opr del top, se enciende, se aumenta en 1 el banco de registro en la 
-posición indicada por el addrW, correspondiente al posT del top*/
+/* Cuando se ha pulsado RegWrite, en este caso corresponde al wire opr del top, se enciende, rst deberia de ser 0 y se aumenta en 1 el banco de registro en la 
+posición indicada por el addrW, correspondiente al posT del top.
+
+Cuando se pulsa rst, y este es de valor 1, se asignan todas las posiciones de memoria a un valor datRST=0, que va a corresponder a blanco.
+
+*/
 always @(negedge RegWrite or posedge rst) begin
       if(rst)begin
       for(i=0;i<NREG;i=i+1) 
@@ -31,7 +35,7 @@ always @(negedge RegWrite or posedge rst) begin
      breg[addrW] <= breg[addrW]+1;
   end
 
-// Lectura inicial de la memoria, que deja a breg en 0 para todas sus posiciones.
+// Lectura inicial de la memoria, utilizando el archivo que se carga en los parámetros del bloque.
 initial begin  
    $readmemb(MEMORYREG, breg);
 end   
