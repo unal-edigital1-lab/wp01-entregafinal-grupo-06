@@ -1094,7 +1094,6 @@ de no poder crearlas de manera adecuada.
 
 ## Video del funcionamiento final del proyecto 
 Se tiene el funcionamiento final del proyecto, que muestra el uso de la VGA simultaneo al teclado y el PWM:
-![imagen_video](video_final/imagen_video.png)
 <a href="https://drive.google.com/drive/folders/1dDGZ2dbaAQDVJQM9an_Z4_oZ2bu8LFgI?usp=sharing"><img src="video_final/imagen_video.png"></a>
 
 ## Conclusiones 
