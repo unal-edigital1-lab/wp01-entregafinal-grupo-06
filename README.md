@@ -1092,6 +1092,9 @@ generando señales de audio limpias sobre cada botón del teclado,
 arreglando así la limitación de sonido que se consideraba inicialmente
 de no poder crearlas de manera adecuada.
 
+## Video del funcionamiento final del proyecto 
+Se tiene el funcionamiento final del proyecto, que muestra el uso de la VGA simultaneo al teclado y el PWM:
+![imagen_video](video_final/imagen_video.png)
 
 ## Conclusiones 
 
